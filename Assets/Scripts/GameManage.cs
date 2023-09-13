@@ -10,10 +10,12 @@ public class GameManage : MonoBehaviour
     public List<GameObject> mapArray;
     public GameObject jugador;
     public GameObject camara;
+    public MiniMapGen MiniMapGen;
     void Start()
     {
         InstanciarMapa(dungeonManager, ref mapArray);
         mapArray = dungeonManager.IngresarPuertasScripts(ref mapArray, this);
+        MiniMapGen.GenerateMiniMap(mapArray);
     }
 
     // Update is called once per frame
