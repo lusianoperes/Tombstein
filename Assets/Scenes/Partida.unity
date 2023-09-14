@@ -1989,7 +1989,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &499072110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4552,6 +4552,8 @@ MonoBehaviour:
   jugador: {fileID: 1620984834}
   camara: {fileID: 153129922}
   MiniMapGen: {fileID: 292583756}
+  SalaActual: {fileID: 0}
+  Counter: 0
 --- !u!4 &1683410456
 Transform:
   m_ObjectHideFlags: 0

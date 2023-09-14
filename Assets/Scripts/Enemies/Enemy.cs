@@ -40,6 +40,9 @@ public class Enemy : MonoBehaviour
     public GameObject RellenoVida;
     public GameObject TextoVida;
 
+    //agregados pata. para que se cuenten los enemigos que se matan y los mande a gamemangae
+    public GameManage GameManage;
+
     void Start()
     {
         enemy = GetComponent<NavMeshAgent>();
@@ -105,6 +108,9 @@ public class Enemy : MonoBehaviour
     {   
         Debug.Log("Mataste a " + enemyName);
         Destroy(gameObject);
+        GameManage.Counter--;
+        if (GameManage.Counter == 0)
+            GameManage.MakeClear();
     }
 
     public void RecieveDamage(int damage)

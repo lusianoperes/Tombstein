@@ -19,7 +19,7 @@ public class MiniMapGen : MonoBehaviour
             test.transform.parent = salaMini.transform;
             if (mapArray[i].GetComponent<Room>().tamañoSala == 10)
             {
-                Debug.Log("pls");
+    
             }
         }
     }

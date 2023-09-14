@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Room : MonoBehaviour
-{
+{   
     public int valorDeCelda;
     public int tamañoSala;
+    public bool IsClear = false;
     public enum Epoca
     {
         Egipto
@@ -33,6 +34,5 @@ public class Room : MonoBehaviour
     }
 
     public TipoDeSala tipoDeSala;
-
-
+    
 }
