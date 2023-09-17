@@ -1,0 +1,406 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.47f1 (5ef4f5b5e2d4) revision 6223093'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22621) 64bit Professional' Language: 'es' Physical Memory: 16294 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity 2020.3.47f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/franc/OneDrive/Documentos/Tombstein
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+50341
+Successfully changed project path to: C:/Users/franc/OneDrive/Documentos/Tombstein
+C:/Users/franc/OneDrive/Documentos/Tombstein
+Using Asset Import Pipeline V2.
+Player connection [15768] Host "[IP] 192.168.0.108 [Port] 1073959392 [Flags] 2 [Guid] 3187821873 [EditorId] 3187821873 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-13F0BCO) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [15768] Host "[IP] 192.168.0.108 [Port] 1073959392 [Flags] 2 [Guid] 3187821873 [EditorId] 3187821873 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-13F0BCO) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 22.34 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.47f1 (5ef4f5b5e2d4)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity 2020.3.47f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/franc/OneDrive/Documentos/Tombstein/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3070 Ti (ID=0x2482)
+    Vendor:   
+    VRAM:     8031 MB
+    Driver:   31.0.15.3667
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity 2020.3.47f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity 2020.3.47f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity 2020.3.47f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56164
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity 2020.3.47f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.000946 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 21.60 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.377 seconds
+Domain Reload Profiling:
+	ReloadAssembly (377ms)
+		BeginReloadAssembly (47ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (282ms)
+			LoadAssemblies (45ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (93ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (18ms)
+			SetupLoadedEditorAssemblies (106ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (22ms)
+				BeforeProcessingInitializeOnLoad (5ms)
+				ProcessInitializeOnLoadAttributes (56ms)
+				ProcessInitializeOnLoadMethodAttributes (20ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001672 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.627 seconds
+Domain Reload Profiling:
+	ReloadAssembly (628ms)
+		BeginReloadAssembly (100ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (16ms)
+		EndReloadAssembly (489ms)
+			LoadAssemblies (66ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (167ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (25ms)
+			SetupLoadedEditorAssemblies (188ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (35ms)
+				ProcessInitializeOnLoadAttributes (139ms)
+				ProcessInitializeOnLoadMethodAttributes (6ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (1ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.36 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1372 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 139.1 MB.
+System memory in use after: 139.1 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 1812.
+Total: 2.391300 ms (FindLiveObjects: 0.096700 ms CreateObjectMapping: 0.034300 ms MarkObjects: 2.194900 ms  DeleteObjects: 0.064800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Resources/Prefabs/Egipto/Props/Jarrones.prefab
+  artifactKey: Guid(9fed153f85455514e8808c3cc807f2bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Jarrones.prefab using Guid(9fed153f85455514e8808c3cc807f2bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a1f8d04145aff7790e28f785e1b00cc') in 0.071474 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000125 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/honey.obj
+  artifactKey: Guid(2b846f06321542b4a8f13403a419d1f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/honey.obj using Guid(2b846f06321542b4a8f13403a419d1f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45cbe649aba5ef9848a7a6195b060a85') in 0.041641 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000118 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Milkjar1.fbx
+  artifactKey: Guid(198563e18dabcdb4883b54ce69254930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Milkjar1.fbx using Guid(198563e18dabcdb4883b54ce69254930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9697d7f9288fcbdd77103a34fb38dea') in 0.014574 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000116 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/JarronesGrandes.prefab
+  artifactKey: Guid(80246b5a8198c1742a30e5256690e9b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/JarronesGrandes.prefab using Guid(80246b5a8198c1742a30e5256690e9b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5586cd0a6afaeb3207190cbdfb26bd0d') in 0.009745 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000116 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Marco Inclina2 _v.prefab
+  artifactKey: Guid(4a42ebe162bc71a4fa53e96cfa55b757) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Marco Inclina2 _v.prefab using Guid(4a42ebe162bc71a4fa53e96cfa55b757) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7f52847ec9727a528086bd974b45ef7') in 0.016827 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000119 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/TapaSarcofago.fbx
+  artifactKey: Guid(5b5875c2ebe4e234a8a86717a8580d2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/TapaSarcofago.fbx using Guid(5b5875c2ebe4e234a8a86717a8580d2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74ba6662c4dee1f77a808e9f27a84467') in 0.010941 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000119 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/model.obj
+  artifactKey: Guid(05235d67dd57e6848a8749d2f5e95d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/model.obj using Guid(05235d67dd57e6848a8749d2f5e95d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '114f5bf3ce18e5af27370fbfb1dbbe94') in 0.330367 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Counter_Straight.fbx
+  artifactKey: Guid(2a02cc56b316e554d93e09d83cf4edee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Counter_Straight.fbx using Guid(2a02cc56b316e554d93e09d83cf4edee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23ebe34b5430f99b7f5aaedd208b14a2') in 0.013473 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000158 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/SpawnWeapon.prefab
+  artifactKey: Guid(c0f5a0aefd4861d4983196c42ac82e85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/SpawnWeapon.prefab using Guid(c0f5a0aefd4861d4983196c42ac82e85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77c4ca1cb1e9a326c0f5772be48f9c3d') in 0.008692 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Column.fbx
+  artifactKey: Guid(bc0ce6b9a4f019349b6edd812ce96371) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Column.fbx using Guid(bc0ce6b9a4f019349b6edd812ce96371) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a0f8711a2076dcc688affe5fe6124a6') in 0.016159 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000124 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Egyptian enter door.fbx
+  artifactKey: Guid(9c47d8635d11f2447be273d1b175ca2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Egyptian enter door.fbx using Guid(9c47d8635d11f2447be273d1b175ca2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2769522c437682ad226540cd27ef740c') in 0.060381 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000123 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Column Variant.prefab
+  artifactKey: Guid(a010cd8b8ca9d754c84b23e9ac329a65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Column Variant.prefab using Guid(a010cd8b8ca9d754c84b23e9ac329a65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90590cd0dc5a2c7b7b2a838927fefad5') in 0.008908 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000118 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/marcopolo 1.prefab
+  artifactKey: Guid(6243e3c8adff014409ca7326796aad4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/marcopolo 1.prefab using Guid(6243e3c8adff014409ca7326796aad4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b0c87c30eadfd505aa4174121222f6f') in 0.012101 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Floor_BricksSeparate2.fbx
+  artifactKey: Guid(eafd9c24544940c4a852b001df0dbadd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Floor_BricksSeparate2.fbx using Guid(eafd9c24544940c4a852b001df0dbadd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f73a12f76ad1867d84c53fbd4e79b9a8') in 0.012512 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000115 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Oriental_rug_01.obj
+  artifactKey: Guid(ed0a6fb673a8fb7439c161702afc78bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Oriental_rug_01.obj using Guid(ed0a6fb673a8fb7439c161702afc78bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2a64f039152c7dd9c672b8d3bfb8e15') in 0.014608 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000122 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/SarcofagoTomb.fbx
+  artifactKey: Guid(5418c111a4d30bc4887ad74f34224dfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/SarcofagoTomb.fbx using Guid(5418c111a4d30bc4887ad74f34224dfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecf7197b1884131524a32b9d48fbec75') in 0.009771 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000118 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/torches.fbx
+  artifactKey: Guid(01098769976fec44fb0fdbf08de2b061) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/torches.fbx using Guid(01098769976fec44fb0fdbf08de2b061) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca8ad79ed1a303be626e015e29db9e8c') in 0.029220 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Bowl1.fbx
+  artifactKey: Guid(35ef6e853941e364b9e320c8cd09e710) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Bowl1.fbx using Guid(35ef6e853941e364b9e320c8cd09e710) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e940d01d3d1d8c23261311a3aa812917') in 0.012962 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 150.407083 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Column.prefab
+  artifactKey: Guid(eaee0d27b637a074a88935074bdc4677) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Column.prefab using Guid(eaee0d27b637a074a88935074bdc4677) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13019bff44051af348ecae4e32957572') in 0.002794 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.762416 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Column.prefab
+  artifactKey: Guid(eaee0d27b637a074a88935074bdc4677) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Column.prefab using Guid(eaee0d27b637a074a88935074bdc4677) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4a93b3e5076e06b8fd2144ec3def718') in 0.011560 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 134.815484 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Counter_St.prefab
+  artifactKey: Guid(5e91400fd74aa5241ac9a2d166efc13b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Counter_St.prefab using Guid(5e91400fd74aa5241ac9a2d166efc13b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2f966cd1cbed669d6385e13bb6db059') in 0.006807 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.356407 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Counter_Straight.prefab
+  artifactKey: Guid(5e91400fd74aa5241ac9a2d166efc13b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Counter_Straight.prefab using Guid(5e91400fd74aa5241ac9a2d166efc13b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43cbcedeba510e4b9f4daadb20881000') in 0.002625 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.219563 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Counter_Straight.prefab
+  artifactKey: Guid(5e91400fd74aa5241ac9a2d166efc13b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Counter_Straight.prefab using Guid(5e91400fd74aa5241ac9a2d166efc13b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65169448aacae83d034dcf1c841ad425') in 0.012446 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.725468 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/EgyptianEnterDoor.prefab
+  artifactKey: Guid(ed4be20b1f975bf43961da49f452593f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/EgyptianEnterDoor.prefab using Guid(ed4be20b1f975bf43961da49f452593f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23b3e075a96e568f94deeafadb337adf') in 0.006444 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.029465 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/EgyptianEnterDoor.prefab
+  artifactKey: Guid(ed4be20b1f975bf43961da49f452593f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/EgyptianEnterDoor.prefab using Guid(ed4be20b1f975bf43961da49f452593f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c89837150f520179113809857b42944') in 0.012810 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.690191 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Floor_Brick.prefab
+  artifactKey: Guid(16a5f0f599cf49547b2c7aa58fc0653b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Floor_Brick.prefab using Guid(16a5f0f599cf49547b2c7aa58fc0653b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c00864333a71b9a25668402a18090cc') in 0.006638 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.421802 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Floor_BricksSeparate.prefab
+  artifactKey: Guid(16a5f0f599cf49547b2c7aa58fc0653b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Floor_BricksSeparate.prefab using Guid(16a5f0f599cf49547b2c7aa58fc0653b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c02e8cd86d494ffe3875aeaa93b46c8') in 0.007098 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.904749 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Floor_BricksSeparate.prefab
+  artifactKey: Guid(16a5f0f599cf49547b2c7aa58fc0653b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Floor_BricksSeparate.prefab using Guid(16a5f0f599cf49547b2c7aa58fc0653b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f9cc2c09ae07a12d1df80e5abe553ac') in 0.010185 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.037095 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/honey.prefab
+  artifactKey: Guid(bfa4c531e7f012642bd30cedb0ed270f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/honey.prefab using Guid(bfa4c531e7f012642bd30cedb0ed270f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd5fe9e6de62d3aeaa27b4ebccfe28ff') in 0.002620 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.457088 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/honey.prefab
+  artifactKey: Guid(bfa4c531e7f012642bd30cedb0ed270f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/honey.prefab using Guid(bfa4c531e7f012642bd30cedb0ed270f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78e6ad5870207485250983e250d23eaa') in 0.013858 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.196773 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/MIlkjar1.prefab
+  artifactKey: Guid(fe30066da1d9e804cac0a7670d359892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/MIlkjar1.prefab using Guid(fe30066da1d9e804cac0a7670d359892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f24decc3f81c1669fec27a774919c4c') in 0.006653 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.986125 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Milkjar1.prefab
+  artifactKey: Guid(fe30066da1d9e804cac0a7670d359892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Milkjar1.prefab using Guid(fe30066da1d9e804cac0a7670d359892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8690fc3833ea3b73fb03f350878b9b53') in 0.002655 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.747820 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Milkjar1.prefab
+  artifactKey: Guid(fe30066da1d9e804cac0a7670d359892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Milkjar1.prefab using Guid(fe30066da1d9e804cac0a7670d359892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da148515580e60963da062ec54829642') in 0.011126 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.835098 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/model.prefab
+  artifactKey: Guid(bdcb39e698f87f344b44b7d56b92d1a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/model.prefab using Guid(bdcb39e698f87f344b44b7d56b92d1a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '914727c2710247b8c6a32098bed628a8') in 0.002567 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.805754 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/model.prefab
+  artifactKey: Guid(bdcb39e698f87f344b44b7d56b92d1a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/model.prefab using Guid(bdcb39e698f87f344b44b7d56b92d1a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '498ff85b7ce96648b9bacf8cfd9232e8') in 0.018736 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.682856 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Oriental_rug.prefab
+  artifactKey: Guid(11957b1a7eae88b4f9ed4eaf6be73b2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Oriental_rug.prefab using Guid(11957b1a7eae88b4f9ed4eaf6be73b2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46cb56039de7423b23aeaa505fadd42e') in 0.007119 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.723235 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Oriental_rug.prefab
+  artifactKey: Guid(11957b1a7eae88b4f9ed4eaf6be73b2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Oriental_rug.prefab using Guid(11957b1a7eae88b4f9ed4eaf6be73b2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c401e18d071f412b7d686ae3c913db69') in 0.011063 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.629037 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/SarcofagoTomb.prefab
+  artifactKey: Guid(b3ebbed39d31c8e4e937250ef54f7191) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/SarcofagoTomb.prefab using Guid(b3ebbed39d31c8e4e937250ef54f7191) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '136f31cb0689096b7ef498928702ddb6') in 0.002522 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.387842 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/SarcofagoTomb.prefab
+  artifactKey: Guid(b3ebbed39d31c8e4e937250ef54f7191) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/SarcofagoTomb.prefab using Guid(b3ebbed39d31c8e4e937250ef54f7191) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd473720eb0472d03ca327cfa9549a0fa') in 0.009468 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.645699 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/TapaSarcofago.prefab
+  artifactKey: Guid(3a0c024242d46ac4f964e5d852229256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/TapaSarcofago.prefab using Guid(3a0c024242d46ac4f964e5d852229256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ccc33d9184fcd3ffdda28a749300ffb') in 0.002543 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.791668 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/TapaSarcofago.prefab
+  artifactKey: Guid(3a0c024242d46ac4f964e5d852229256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/TapaSarcofago.prefab using Guid(3a0c024242d46ac4f964e5d852229256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7e0d4e7fc2be27b48b157b4a6d1f437') in 0.010910 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.456090 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Column Variant.prefab
+  artifactKey: Guid(a010cd8b8ca9d754c84b23e9ac329a65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Column Variant.prefab using Guid(a010cd8b8ca9d754c84b23e9ac329a65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ec96ff3269be0b60fd9f675cf84a2ed') in 0.003056 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000118 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Column.prefab
+  artifactKey: Guid(eaee0d27b637a074a88935074bdc4677) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Column.prefab using Guid(eaee0d27b637a074a88935074bdc4677) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '889d4ffc4d0df1dfa86f61ca612ca31b') in 0.002361 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 29.493175 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/MIlkjar1.prefab
+  artifactKey: Guid(fe30066da1d9e804cac0a7670d359892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/MIlkjar1.prefab using Guid(fe30066da1d9e804cac0a7670d359892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79321a1c695fec602cc3f462c60e7142') in 0.006357 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 25.256650 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Floor_BricksSeparate.prefab
+  artifactKey: Guid(16a5f0f599cf49547b2c7aa58fc0653b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Floor_BricksSeparate.prefab using Guid(16a5f0f599cf49547b2c7aa58fc0653b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8814fa8731aefca5a4e34808d279114d') in 0.003120 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
