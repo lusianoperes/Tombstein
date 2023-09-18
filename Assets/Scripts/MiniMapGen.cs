@@ -5,22 +5,45 @@ using UnityEngine;
 public class MiniMapGen : MonoBehaviour
 {
     public Canvas salaMini;
-    public GameObject test;
+    public GameManage GameManage;
+    private GameObject test;
+    private GameObject Spawn;
+    private bool MapaAbierto = false;
 
+    private void Start()
+    {
+        salaMini.gameObject.SetActive(false);
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown("m"))
+        {
+            MapaAbierto = !MapaAbierto;
+            salaMini.gameObject.SetActive(MapaAbierto);
+        }
+    }
     public void GenerateMiniMap(List<GameObject> mapArray)
     {
-        //test = Instantiate(salaMini.transform.Find("Sala").gameObject,new Vector3(1*500,0, 1*1000), Quaternion.identity);
-        //test.transform.parent = salaMini.transform;
-        //Debug.Log(test.GetComponent<RectTransform>().localPosition.x);
         for (int i = 0; i < mapArray.Count; i++)
-
         {
-            test = Instantiate(salaMini.transform.Find("Sala").gameObject,new Vector3((mapArray[i].GetComponent<Room>().valorDeCelda - mapArray[i].GetComponent<Room>().valorDeCelda / 10 * 10)*100, (mapArray[i].GetComponent<Room>().valorDeCelda / 10)*100, 0), Quaternion.identity);
-            test.transform.parent = salaMini.transform;
-            if (mapArray[i].GetComponent<Room>().tamañoSala == 10)
+            test = Instantiate(salaMini.transform.GetChild(2).GetChild(0).gameObject, new Vector2 (salaMini.transform.GetChild(2).GetChild(0).GetComponent<RectTransform>().position.x + (40 * (mapArray[i].GetComponent<Room>().valorDeCelda - mapArray[i].GetComponent<Room>().valorDeCelda / 10 * 10) + 60), salaMini.transform.GetChild(2).GetChild(0).GetComponent<RectTransform>().position.y + (40 * (mapArray[i].GetComponent<Room>().valorDeCelda / 10)) - 15), Quaternion.identity);
+            test.SetActive(true);
+            test.transform.parent = salaMini.transform.GetChild(1);
+
+            if(mapArray[i].GetComponent<Room>().valorDeCelda == 44)
             {
-    
+                Spawn = mapArray[i];
             }
         }
+        test = null;
+        ActualizarMiniMapa(Spawn);
+
+    }
+    public void ActualizarMiniMapa(GameObject SalaActual)
+    {
+
+        Destroy(test);
+        test = Instantiate(salaMini.transform.GetChild(2).GetChild(1).gameObject, new Vector2(salaMini.transform.GetChild(2).GetChild(0).GetComponent<RectTransform>().position.x + (40 * (SalaActual.GetComponent<Room>().valorDeCelda - SalaActual.GetComponent<Room>().valorDeCelda / 10 * 10) + 60), salaMini.transform.GetChild(2).GetChild(0).GetComponent<RectTransform>().position.y + (40 * (SalaActual.GetComponent<Room>().valorDeCelda / 10)) - 15), Quaternion.identity);
+        test.transform.parent = salaMini.transform.GetChild(1);
     }
 }

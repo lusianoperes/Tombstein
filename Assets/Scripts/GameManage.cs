@@ -12,6 +12,7 @@ public class GameManage : MonoBehaviour
     public GameObject camara;
     public MiniMapGen MiniMapGen;
     public GameObject SalaActual;
+    public MiniMapGen miniMapGen;
     public int Counter = 0;
     void Start()
     {
@@ -35,6 +36,7 @@ public class GameManage : MonoBehaviour
             mapArray[i] = Instantiate(mapArray[i], new Vector3((mapArray[i].GetComponent<Room>().valorDeCelda - mapArray[i].GetComponent<Room>().valorDeCelda / 10 * 10) * 300, 0, (mapArray[i].GetComponent<Room>().valorDeCelda / 10) * 300), Quaternion.identity);
             if (mapArray[i].GetComponent<Room>().valorDeCelda == 44)
             {
+                SalaActual = mapArray[i];
                 mapArray[i].GetComponent<Room>().IsClear = true;
                 jugador.transform.position = new Vector3(mapArray[i].transform.position.x, 10, mapArray[i].transform.position.z);
                 camara.GetComponent<CameraMovement>().room = mapArray[i].transform.GetChild(0).transform;
@@ -68,6 +70,8 @@ public class GameManage : MonoBehaviour
     {
         SalaActual = Sala;
         Counter = 0;
+
+        miniMapGen.ActualizarMiniMapa(SalaActual);
 
         if (!Sala.GetComponent<Room>().IsClear)
         {

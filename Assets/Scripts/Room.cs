@@ -5,7 +5,7 @@ using UnityEngine;
 public class Room : MonoBehaviour
 {   
     public int valorDeCelda;
-    public int tamañoSala;
+    public int SalaSize;
     public bool IsClear = false;
     public enum Epoca
     {
