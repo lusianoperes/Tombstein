@@ -8,98 +8,78 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {   
     public string enemyName;
-    
+    public int enemyMaxHp;
+    private int enemyCurrentHp; 
+    public int attackDamage;
+    public float attackRange;
+    public int attackCooldown;
+    private float currentCooldown;
+    public GameObject attackBox;
+    public GameObject RellenoVida;
+    public GameObject TextoVida;
+    private NavMeshAgent enemy;
+    private Transform playerTarget;
 
     public bool melee; //si el ataque sedispara o solo se crea
     
-    public int enemyMaxHp; //old vidaEnemigo
-    public int enemyCurentHp; 
-    public int enemyDamage; //danioAtaqueEnemigo
-
-    public float disAtaqueYEnemigo = 2f;// Donde se crea la caja de daño.
-    public float velAtaqueDistancia = 2f;
-    
-    public float attackSize = 1f;
-    public float cadenciaAtaqueEnemigo = 2f;  //cada cuanto de sipara el ataque
-    public float duracionAtaque = 2f; //tiempo que dura creado elataque
-    public float attackDistance; //distancia a la cual el enemigo no debe acercarse mas. Donde inicia el ataque
-    
-    private float distanciaAlJugador; // distancia actual del jugador
-    private float proximoAtaqueEnemigo = 0f; //cooldown actualizable de ataque
-        
-    public GameObject attackBox;
-    
-    private GameObject jugador;
-    private Transform PlayerTarget;
-    
-    private NavMeshAgent enemy;
-    public LayerMask raycastLayer;
-    
-    
-    
-    public GameObject RellenoVida;
-    public GameObject TextoVida;
-
     void Start()
     {
         enemy = GetComponent<NavMeshAgent>();
-        jugador = GameObject.Find("Jugador");
-        PlayerTarget = jugador.transform ;
-        enemy.stoppingDistance = attackDistance;
-
+        playerTarget = GameObject.Find("Jugador").transform;
+        enemyCurrentHp = enemyMaxHp;
     }
     
     void Update()
     {
-        Vector3 directionToPlayer = (PlayerTarget.position - transform.position).normalized;
-        RaycastHit hit;
-        
-        if (Physics.Raycast(transform.position, directionToPlayer, out hit, 20f))
-        {
-            if (hit.collider.gameObject == PlayerTarget.gameObject)
-            {
-                distanciaAlJugador = Vector3.Distance(transform.position, PlayerTarget.position);
-
-                if (distanciaAlJugador <= attackDistance && Time.time >= proximoAtaqueEnemigo)
-                { 
-                        Vector3 targetPostition = new Vector3( PlayerTarget.position.x, transform.position.y, PlayerTarget.position.z ) ;
-                        transform.LookAt( targetPostition ) ;
-                        Atacar();
-                        proximoAtaqueEnemigo = Time.time + cadenciaAtaqueEnemigo;
-                        
-                }
-            }
-            
-            else
-            {
-                enemy.stoppingDistance = attackDistance;
-            }
-        }
-        enemy.SetDestination(PlayerTarget.position);
+        Move();
+        currentCooldown -= Time.deltaTime;
     }
-    
-    public void Atacar()
+
+    public virtual void Move()
     {
-        Vector3 posicionEnemigo = transform.position;
-        Vector3 direccionMirada = transform.forward;
-        Vector3 posicionSpawn = posicionEnemigo + direccionMirada * disAtaqueYEnemigo;
+        //Configurar NavMeshAgent
+        enemy.SetDestination(playerTarget.position);
+        enemy.stoppingDistance = attackRange;
 
-        var ataqueHitbox = Instantiate(attackBox, posicionSpawn, Quaternion.identity, null);
-        EnemyAttack ataqueHitBData = ataqueHitbox.GetComponent<EnemyAttack>();
-        ataqueHitBData.damage = enemyDamage;
-        ataqueHitBData.lastingTime = duracionAtaque;
-        //ataqueHitBData.Uniform_ResizeAttack(attackSize);
+        //Ver si hay un objeto entre el jugador y el enemigo
+        Vector3 directionToPlayer = (playerTarget.position - transform.position).normalized;
+        RaycastHit hit;
 
-
-        if(!melee)
+        if (Physics.Raycast(transform.position, directionToPlayer, out hit, 20))
         {
-            Rigidbody rb = ataqueHitbox.GetComponent<Rigidbody>();
-
-            rb.AddForce(direccionMirada * velAtaqueDistancia, ForceMode.VelocityChange);
+            if (hit.collider.gameObject == playerTarget.gameObject)
+            {
+                Attack();
+            }
         }
     }
-    
-    
+
+    public virtual void Attack()
+    {
+        float targetDistance = Vector3.Distance(transform.position, playerTarget.position);
+
+        if (targetDistance <= attackRange && currentCooldown <= 0)
+        {
+            //Mirar al jugador
+            Vector3 targetPosition = new Vector3(playerTarget.position.x, transform.position.y, playerTarget.position.z);
+            transform.LookAt(targetPosition);
+
+            //Instanciar ataque y configurarlo
+            Vector3 spawnPosition = transform.position + transform.forward * 2f;
+            var ataqueHitbox = Instantiate(attackBox, spawnPosition, Quaternion.identity, null);
+            EnemyAttack ataqueHitBData = ataqueHitbox.GetComponent<EnemyAttack>();
+            ataqueHitBData.damage = attackDamage;
+            ataqueHitBData.lastingTime = 2f;
+            //ataqueHitBData.Uniform_ResizeAttack(attackSize);
+
+            if(!melee)
+            {
+                Rigidbody rb = ataqueHitbox.GetComponent<Rigidbody>();
+                rb.AddForce(transform.forward * 2f, ForceMode.VelocityChange);
+            }
+            currentCooldown = attackCooldown;
+        }
+    }
     
     public void Die()
     {   
@@ -109,21 +89,16 @@ public class Enemy : MonoBehaviour
 
     public void RecieveDamage(int damage)
     {
-        enemyCurentHp -= damage;
+        enemyCurrentHp -= damage;
         
         float maxWidth = 288.0633f;
 
-        TextoVida.GetComponent<TextMeshProUGUI>().text = enemyCurentHp + " / " + enemyMaxHp;
-        RellenoVida.GetComponent<RectTransform>().sizeDelta = new Vector2(enemyCurentHp * maxWidth / enemyMaxHp, RellenoVida.GetComponent<RectTransform>().sizeDelta.y);
+        TextoVida.GetComponent<TextMeshProUGUI>().text = enemyCurrentHp + " / " + enemyMaxHp;
+        RellenoVida.GetComponent<RectTransform>().sizeDelta = new Vector2(enemyCurrentHp * maxWidth / enemyMaxHp, RellenoVida.GetComponent<RectTransform>().sizeDelta.y);
 
-        if(enemyCurentHp <= 0)
+        if(enemyCurrentHp <= 0)
         {
             Die();
         }
-
     }
-
-    
-
-    
 }
