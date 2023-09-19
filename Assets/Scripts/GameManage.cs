@@ -63,6 +63,7 @@ public class GameManage : MonoBehaviour
     {
         SalaActual.GetComponent<Room>().IsClear = true;
         dungeonManager.IngresarPuertasScriptsSolo(ref mapArray, SalaActual,this);
+        miniMapGen.ActualizarMiniMapa(SalaActual);
         Debug.Log("Masacraste a todos");
     }
 
