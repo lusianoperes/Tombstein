@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6767897841411452178}
+  - component: {fileID: 3836297891236355967}
   m_Layer: 0
   m_Name: JarronesGrandes
   m_TagString: Untagged
@@ -26,7 +27,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 205614593968341284}
   - {fileID: 301526106148110343}
@@ -34,6 +34,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3836297891236355967
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4261295845227986241}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.015478, y: 3.6348877, z: 4.8555813}
+  m_Center: {x: -15.654626, y: -76.611786, z: 20.087395}
 --- !u!1001 &262762491963664364
 PrefabInstance:
   m_ObjectHideFlags: 0
