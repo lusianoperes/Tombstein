@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4000014091459346}
   - component: {fileID: 33000013617450440}
   - component: {fileID: 23000010646845134}
+  - component: {fileID: 5458461734671997937}
   m_Layer: 0
   m_Name: Desert_SandPlateMedium
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5458461734671997937
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000012287201764}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.988134, y: 1.075673, z: 10.9557495}
+  m_Center: {x: 0.009159088, y: 0.53783673, z: 0}
