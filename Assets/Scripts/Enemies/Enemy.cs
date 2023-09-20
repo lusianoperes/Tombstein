@@ -71,13 +71,17 @@ public class Enemy : MonoBehaviour
             ataqueHitBData.damage = attackDamage;
             ataqueHitBData.lastingTime = 2f;
             //ataqueHitBData.Uniform_ResizeAttack(attackSize);
-
+            
             if(!melee)
             {
                 Rigidbody rb = ataqueHitbox.GetComponent<Rigidbody>();
                 rb.AddForce(transform.forward * 2f, ForceMode.VelocityChange);
             }
             currentCooldown = attackCooldown;
+
+            //Retroceso
+            Vector3 retrocesoDirection = (transform.position - playerTarget.position).normalized;
+            transform.GetComponent<Rigidbody>().AddForce(enemy.speed * retrocesoDirection, ForceMode.Impulse);
         }
     }
     
