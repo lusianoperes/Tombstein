@@ -10,79 +10,164 @@ public class Enemy : MonoBehaviour
     public string enemyName;
     public int enemyMaxHp;
     private int enemyCurrentHp; 
+    public float enemySpeed;
     public int attackDamage;
     public float attackRange;
     public int attackCooldown;
-    private float currentCooldown;
+    public int attackSpeed;
+    public float repositionDistance = 1.5f;
     public GameObject attackBox;
     public GameObject RellenoVida;
     public GameObject TextoVida;
-    private NavMeshAgent enemy;
-    private Transform playerTarget;
 
+    private NavMeshAgent enemy;
+    private Transform player;
+    private float currentCooldown = 0f;
+    private GameObject attackHitbox;
+
+    ///////////////////////////////
     public bool melee; //si el ataque sedispara o solo se crea
-    
+    ///////////////////////////////
+
+    private enum EnemyState
+    {
+        Idle,
+        MovingToPlayer,
+        Attacking,
+        Repositioning
+    }
+    private EnemyState currentState = EnemyState.Idle;
+
     void Start()
     {
         enemy = GetComponent<NavMeshAgent>();
-        playerTarget = GameObject.Find("Jugador").transform;
+        player = GameObject.Find("Jugador").transform;
         enemyCurrentHp = enemyMaxHp;
+        enemy.speed = enemySpeed;
+        TextoVida.GetComponent<TextMeshProUGUI>().text = enemyMaxHp+"";
+    }
+
+    IEnumerator EnemyAI()
+    {
+        while (true)
+        {
+            switch (currentState)
+            {
+                case EnemyState.Idle:
+                    if (Vector3.Distance(transform.position, player.position) < attackRange)
+                    {
+                        currentState = EnemyState.Attacking;
+                    }
+                    else
+                    {
+                        currentState = EnemyState.MovingToPlayer;
+                    }
+                    break;
+
+                case EnemyState.MovingToPlayer:
+                    Move();
+                    yield return new WaitUntil(() => !enemy.pathPending && enemy.remainingDistance <= attackRange);
+                    if (Vector3.Distance(transform.position, player.position) <= attackRange)
+                    {
+                        currentState = EnemyState.Attacking;
+                    }
+                    break;
+
+                case EnemyState.Attacking:
+                    if (Vector3.Distance(transform.position, player.position) <= attackRange && isLookingTarget(player))
+                    {
+                        Attack(player);
+                        currentState = EnemyState.Repositioning;
+                    }
+                    else
+                    {
+                        currentState = EnemyState.MovingToPlayer;
+                    }
+                    break;
+
+                case EnemyState.Repositioning:
+                    Vector3 oppositeDirection = transform.position - player.position;
+                    Vector3 destination = transform.position + oppositeDirection.normalized * repositionDistance;
+                    MoveTo(destination);
+                    yield return new WaitUntil(() => !enemy.pathPending && enemy.remainingDistance < 2f);
+                    currentState = EnemyState.Idle;
+                    break;
+            }
+            yield return null;
+        }
     }
     
     void Update()
     {
-        Move();
-        currentCooldown -= Time.deltaTime;
+        StartCoroutine(EnemyAI());
     }
 
     public virtual void Move()
     {
-        //Configurar NavMeshAgent
-        enemy.SetDestination(playerTarget.position);
-        enemy.stoppingDistance = attackRange;
+        ChaseTarget(player);
+        LookAtTarget(player);
+    }
 
-        //Ver si hay un objeto entre el jugador y el enemigo
-        Vector3 directionToPlayer = (playerTarget.position - transform.position).normalized;
-        RaycastHit hit;
+    public virtual void Attack(Transform target)
+    {
+        float targetDistance = Vector3.Distance(transform.position, target.position);
 
-        if (Physics.Raycast(transform.position, directionToPlayer, out hit, 20))
+        if (targetDistance <= attackRange && Time.time >= currentCooldown)
         {
-            if (hit.collider.gameObject == playerTarget.gameObject)
-            {
-                Attack();
-            }
+            LookAtTarget(player);
+            SpawnAttackHitBox();
+            currentCooldown = Time.time + attackCooldown;
         }
     }
 
-    public virtual void Attack()
+    private void ChaseTarget(Transform target)
     {
-        float targetDistance = Vector3.Distance(transform.position, playerTarget.position);
+        enemy.SetDestination(target.position);
+        enemy.stoppingDistance = attackRange;
+    }
 
-        if (targetDistance <= attackRange && currentCooldown <= 0)
+    private bool MoveTo(Vector3 position){
+        LookAtTarget(player);
+        enemy.SetDestination(position);
+        enemy.stoppingDistance = 0;
+        return transform.position == position;
+    }
+
+    private bool isLookingTarget(Transform target)
+    {
+        Vector3 directionToTarget = (target.position - transform.position).normalized;
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, directionToTarget, out hit, 30)){
+            return hit.collider.gameObject == target.gameObject;
+        };
+        return true;
+    }
+
+    private void LookAtTarget(Transform target)
+    {
+        Vector3 lookDirection = target.position - transform.position;
+        lookDirection.y = 0f;
+        transform.rotation = Quaternion.LookRotation(lookDirection);
+    }
+
+    private void SpawnAttackHitBox()
+    {
+        Vector3 spawnPosition = transform.position + transform.forward * 2f;
+
+        attackHitbox = Instantiate(attackBox, spawnPosition, Quaternion.identity, null);
+        attackHitbox.transform.rotation = transform.rotation;
+        EnemyAttack ataqueHitBData = attackHitbox.GetComponent<EnemyAttack>();
+    
+        ataqueHitBData.damage = attackDamage;
+        ataqueHitBData.lastingTime = 2f;
+        //ataqueHitBData.Uniform_ResizeAttack(attackSize);
+
+        if (!melee)
         {
-            //Mirar al jugador
-            Vector3 targetPosition = new Vector3(playerTarget.position.x, transform.position.y, playerTarget.position.z);
-            transform.LookAt(targetPosition);
-
-            //Instanciar ataque y configurarlo
-            Vector3 spawnPosition = transform.position + transform.forward * 2f;
-            var ataqueHitbox = Instantiate(attackBox, spawnPosition, Quaternion.identity, null);
-            EnemyAttack ataqueHitBData = ataqueHitbox.GetComponent<EnemyAttack>();
-            ataqueHitBData.damage = attackDamage;
-            ataqueHitBData.lastingTime = 2f;
-            //ataqueHitBData.Uniform_ResizeAttack(attackSize);
-            
-            if(!melee)
-            {
-                Rigidbody rb = ataqueHitbox.GetComponent<Rigidbody>();
-                rb.AddForce(transform.forward * 2f, ForceMode.VelocityChange);
-            }
-            currentCooldown = attackCooldown;
-
-            //Retroceso
-            Vector3 retrocesoDirection = (transform.position - playerTarget.position).normalized;
-            transform.GetComponent<Rigidbody>().AddForce(enemy.speed * retrocesoDirection, ForceMode.Impulse);
+            Rigidbody rb = attackHitbox.GetComponent<Rigidbody>();
+            rb.AddForce(transform.forward * attackSpeed, ForceMode.VelocityChange);
         }
+        currentCooldown = attackCooldown;
     }
     
     public void Die()
