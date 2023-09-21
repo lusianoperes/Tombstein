@@ -29,6 +29,32 @@ public class GameManage : MonoBehaviour
         for (int i = 0; i < mapArray.Count; i++)
         {
             mapArray[i] = Instantiate(mapArray[i], new Vector3((mapArray[i].GetComponent<Room>().valorDeCelda - mapArray[i].GetComponent<Room>().valorDeCelda / 10 * 10) * 300, 0, (mapArray[i].GetComponent<Room>().valorDeCelda / 10) * 300), Quaternion.identity);
+            
+            NavMeshSurface surfaceComponent = mapArray[i].GetComponent<NavMeshSurface>();
+            if (surfaceComponent != null)
+            {
+                surfaceComponent.enabled = true;
+            }
+            
+            Transform enemigos = mapArray[i].transform.Find("Enemigos");
+            if (enemigos != null)
+            {
+                foreach (Transform child in enemigos)
+                {
+                    NavMeshAgent navMeshAgent = child.GetComponent<NavMeshAgent>();
+                    if (navMeshAgent != null)
+                    {
+                        navMeshAgent.enabled = true;
+                    }
+                    
+                    Enemy enemyComponent = child.GetComponent<Enemy>();
+                    if (enemyComponent != null)
+                    {
+                        enemyComponent.enabled = true;
+                    }
+                }
+            }
+            
             if (mapArray[i].GetComponent<Room>().valorDeCelda == 44)
             {
                 jugador.transform.position = new Vector3(mapArray[i].transform.position.x, 10, mapArray[i].transform.position.z);
