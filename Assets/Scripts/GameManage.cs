@@ -5,23 +5,28 @@ using UnityEngine;
 public class GameManage : MonoBehaviour
 {
     public DungeonManager dungeonManager;
-    public int erasRecorridas = 0;
+    public MiniMapGen miniMapGen;
+
     public Room.Etapa etapa = Room.Etapa.Primera;
-    public List<GameObject> mapArray;
     public GameObject jugador;
     public GameObject camara;
-    public MiniMapGen MiniMapGen;
+
+    public GameObject MiniSalaActual;
     public GameObject SalaActual;
-    public MiniMapGen miniMapGen;
+
+    public List<GameObject> mapArray;
+    public List<GameObject> MinimapArray = new List<GameObject>();
+
     public int Counter = 0;
+    public int erasRecorridas = 0;
     void Start()
     {
         InstanciarMapa(dungeonManager, ref mapArray);
-        mapArray = dungeonManager.IngresarPuertasScripts(ref mapArray, this);
-        MiniMapGen.GenerateMiniMap(mapArray);
+        MinimapArray =  miniMapGen.InstanciarMiniMapa(ref mapArray, ref MinimapArray, ref MiniSalaActual);
+        mapArray = dungeonManager.IngresarPuertasScripts(ref mapArray, this, ref MinimapArray);
+        miniMapGen.ActualizarMiniMapa(MiniSalaActual,SalaActual);
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -33,14 +38,17 @@ public class GameManage : MonoBehaviour
         
         for (int i = 0; i < mapArray.Count; i++)
         {
-            mapArray[i] = Instantiate(mapArray[i], new Vector3((mapArray[i].GetComponent<Room>().valorDeCelda - mapArray[i].GetComponent<Room>().valorDeCelda / 10 * 10) * 300, 0, (mapArray[i].GetComponent<Room>().valorDeCelda / 10) * 300), Quaternion.identity);
+            mapArray[i] = Instantiate(mapArray[i], new Vector3((mapArray[i].GetComponent<Room>().valorDeCelda - mapArray[i].GetComponent<Room>().valorDeCelda / 10 * 10) * 300, 0, (mapArray[i].GetComponent<Room>().valorDeCelda / 10) * 300), Quaternion.identity); //salas realaes
+            mapArray[i].gameObject.SetActive(false);
             if (mapArray[i].GetComponent<Room>().valorDeCelda == 44)
             {
+                mapArray[i].gameObject.SetActive(true);
                 SalaActual = mapArray[i];
                 mapArray[i].GetComponent<Room>().IsClear = true;
                 jugador.transform.position = new Vector3(mapArray[i].transform.position.x, 10, mapArray[i].transform.position.z);
                 camara.GetComponent<CameraMovement>().room = mapArray[i].transform.GetChild(0).transform;
             }
+            
         }
     }
 
@@ -62,17 +70,21 @@ public class GameManage : MonoBehaviour
     public void MakeClear()
     {
         SalaActual.GetComponent<Room>().IsClear = true;
-        dungeonManager.IngresarPuertasScriptsSolo(ref mapArray, SalaActual,this);
-        miniMapGen.ActualizarMiniMapa(SalaActual);
+        dungeonManager.IngresarPuertasScriptsSolo(ref mapArray, SalaActual,this,ref MinimapArray);
+        miniMapGen.ActualizarMiniMapa(MiniSalaActual, SalaActual);
         Debug.Log("Masacraste a todos");
     }
 
-    public void TeleportarJugador(GameObject plano, GameObject Sala)
+    public void TeleportarJugador(GameObject plano, GameObject Sala, GameObject MiniMapPlano)
     {
+        SalaActual.SetActive(false);
+        Sala.SetActive(true);
+
         SalaActual = Sala;
+        MiniSalaActual = MiniMapPlano;
         Counter = 0;
 
-        miniMapGen.ActualizarMiniMapa(SalaActual);
+        miniMapGen.ActualizarMiniMapa(MiniMapPlano, SalaActual);
 
         if (!Sala.GetComponent<Room>().IsClear)
         {
@@ -85,7 +97,7 @@ public class GameManage : MonoBehaviour
             }
             else
             {
-                dungeonManager.SetearObjetosDefault(Sala);
+                dungeonManager.SetearObjetosDefault(Sala,false);
                 Debug.Log("hora de matar monstruos");
 
                 for (int i = 0; i < Counter; i++)

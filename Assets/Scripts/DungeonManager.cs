@@ -332,7 +332,7 @@ public class DungeonManager : MonoBehaviour
         return valorMasAlejado;
     }
     
-    public void BuscarPorNombre(GameObject mapArrayi, GameObject mapArrayk, string Direccion, string direccionContraria, GameManage gameManage)
+    public void BuscarPorNombre(GameObject mapArrayi, GameObject mapArrayk, int k, string Direccion, string direccionContraria, GameManage gameManage, List<GameObject> MinimapPiso)
     {
         mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion).Find("Puerta").gameObject.SetActive(false);
         mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion).Find("Puerta Invisible").gameObject.SetActive(false);
@@ -340,14 +340,15 @@ public class DungeonManager : MonoBehaviour
         mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion).Find("Relleno").GetComponent<BoxCollider>().enabled = false;
 
         if (!mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion).Find("Spawnpoint").gameObject.TryGetComponent<Tepear>(out Tepear hinge))
-        mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion).Find("Spawnpoint").gameObject.AddComponent<Tepear>();
+            mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion).Find("Spawnpoint").gameObject.AddComponent<Tepear>();
 
         mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion).Find("Spawnpoint").gameObject.GetComponent<Tepear>().gameManage = gameManage;
         mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion).Find("Spawnpoint").gameObject.GetComponent<Tepear>().plano = mapArrayk.transform.GetChild(0).Find("Lateral " + direccionContraria).Find("TPPlayer").gameObject;
         mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion).Find("Spawnpoint").gameObject.GetComponent<Tepear>().Sala = mapArrayk;
+        mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion).Find("Spawnpoint").gameObject.GetComponent<Tepear>().MiniMapPlano = MinimapPiso[k];
     }
 
-    public void SetearObjetosDefault(GameObject mapArrayi)
+    public void SetearObjetosDefault(GameObject mapArrayi, bool SacarMarco)
     {
         string[] Direccion = new string[] {
             "inferior", "superior", "derecha", "izquierda"
@@ -355,28 +356,31 @@ public class DungeonManager : MonoBehaviour
 
         for (int i=0;i<Direccion.Length;i++)
         {
+            if (SacarMarco)
+            {
+                mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion[i]).Find("Marco").gameObject.SetActive(false);
+            }
             mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion[i]).Find("Puerta").gameObject.SetActive(true);
             mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion[i]).Find("Puerta Invisible").gameObject.SetActive(true);
-            mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion[i]).Find("Marco").gameObject.SetActive(false);
             mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion[i]).Find("Relleno").GetComponent<BoxCollider>().enabled = true;
         }
     }
 
-    public List<GameObject> IngresarPuertasScripts(ref List<GameObject> mapArray, GameManage gameManage)
+    public List<GameObject> IngresarPuertasScripts(ref List<GameObject> mapArray, GameManage gameManage, ref List<GameObject> MinimapArray)
     {
         for (int i = 0; i< mapArray.Count; i++)
         {
-            SetearObjetosDefault(mapArray[i]);
+            SetearObjetosDefault(mapArray[i],true);
 
-            IngresarPuertasScriptsSolo(ref mapArray, mapArray[i], gameManage);
+            IngresarPuertasScriptsSolo(ref mapArray, mapArray[i], gameManage, ref MinimapArray);
         }
 
             return mapArray;
     }
 
-    public void IngresarPuertasScriptsSolo(ref List<GameObject> mapArrayList,GameObject mapArray, GameManage gameManage)
+    public void IngresarPuertasScriptsSolo(ref List<GameObject> mapArrayList,GameObject mapArray, GameManage gameManage, ref List<GameObject> MinimapArray)
     {
-            SetearObjetosDefault(mapArray);
+            SetearObjetosDefault(mapArray,true);
 
             for (int k = 0; k < mapArrayList.Count; k++)
             {
@@ -384,25 +388,25 @@ public class DungeonManager : MonoBehaviour
                 if (mapArray.GetComponent<Room>().valorDeCelda == mapArrayList[k].GetComponent<Room>().valorDeCelda + 10)
                 {
 
-                    BuscarPorNombre(mapArray, mapArrayList[k], "inferior", "superior", gameManage);
+                    BuscarPorNombre(mapArray, mapArrayList[k],k, "inferior", "superior", gameManage, MinimapArray);
 
                 }
                 if (mapArray.GetComponent<Room>().valorDeCelda == mapArrayList[k].GetComponent<Room>().valorDeCelda - 10)
                 {
 
-                    BuscarPorNombre(mapArray, mapArrayList[k], "superior", "inferior", gameManage);
+                    BuscarPorNombre(mapArray, mapArrayList[k],k, "superior", "inferior", gameManage, MinimapArray);
 
                 }
                 if (mapArray.GetComponent<Room>().valorDeCelda == mapArrayList[k].GetComponent<Room>().valorDeCelda + 1)
                 {
 
-                    BuscarPorNombre(mapArray, mapArrayList[k], "izquierda", "derecha", gameManage);
+                    BuscarPorNombre(mapArray, mapArrayList[k], k, "izquierda", "derecha", gameManage, MinimapArray);
 
                 }
                 if (mapArray.GetComponent<Room>().valorDeCelda == mapArrayList[k].GetComponent<Room>().valorDeCelda - 1)
                 {
 
-                    BuscarPorNombre(mapArray, mapArrayList[k], "derecha", "izquierda", gameManage);
+                    BuscarPorNombre(mapArray, mapArrayList[k], k, "derecha", "izquierda", gameManage, MinimapArray);
 
                 }
             }

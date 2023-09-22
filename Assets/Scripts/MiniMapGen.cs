@@ -6,80 +6,99 @@ public class MiniMapGen : MonoBehaviour
 {
     public Canvas salaMini;
     public GameManage GameManage;
-    private GameObject salaAGenerar;
+    public Camera MiniMapCamera;
+    private GameObject[] Iconos;
     private GameObject Spawn;
+    private GameObject Player;
+    public Material Completada;
+    GameObject[] salaAGenerar;
     private bool MapaAbierto = false;
 
     private void Start()
     {
-        salaMini.gameObject.SetActive(false);
+        Iconos = Resources.LoadAll<GameObject>("Prefabs/Egipto/Layouts/MiniMap/Iconos");
+        salaAGenerar = Resources.LoadAll<GameObject>("Prefabs/Egipto/Layouts/MiniMap/Salas");
     }
     private void Update()
     {
         if (Input.GetKeyDown("m"))
         {
+            if (!MapaAbierto)
+            {
+                ActualizarMiniMapa(Spawn, GameManage.SalaActual);
+                MiniMapCamera.GetComponent<Camera>().orthographicSize = 2750;
+            }
+            else
+            {
+                ActualizarMiniMapa(GameManage.MiniSalaActual, GameManage.SalaActual);
+                MiniMapCamera.GetComponent<Camera>().orthographicSize = 789;
+
+            }
             MapaAbierto = !MapaAbierto;
-            salaMini.gameObject.SetActive(MapaAbierto);
+            salaMini.transform.GetChild(0).gameObject.SetActive(MapaAbierto);
+            salaMini.transform.GetChild(1).gameObject.SetActive(!MapaAbierto);
         }
     }
-    public void GenerateMiniMap(List<GameObject> mapArray)
+
+    public List<GameObject> InstanciarMiniMapa(ref List<GameObject> mapArray, ref List<GameObject> MinimapArray, ref GameObject MiniSalaActual)
     {
+        int size = 0;
+        GameObject Sala;
         for (int i = 0; i < mapArray.Count; i++)
         {
-            AgregarIconos(0, mapArray[i]);
-
-            if(mapArray[i].GetComponent<Room>().valorDeCelda == 44)
+            switch (mapArray[i].GetComponent<Room>().SalaSize)
             {
-                Spawn = mapArray[i];
-            }
+                case 12:
+                    size = 3;
+                    break;
+                case 10:
+                    size = 2;
+                    break;
+                case 75:
+                    size = 1;
+                    break;
+                case 5:
+                    size = 0;
+                    break;
 
-            if(mapArray[i].GetComponent<Room>().tipoDeSala == Room.TipoDeSala.Npc)
+                default: break;
+            }
+      
+            if(mapArray[i].GetComponent<Room>().tipoDeSala == Room.TipoDeSala.Jefe)
             {
-                AgregarIconos(3, mapArray[i]);
+                Instantiate(Iconos[1].gameObject, new Vector3((mapArray[i].GetComponent<Room>().valorDeCelda - mapArray[i].GetComponent<Room>().valorDeCelda / 10 * 10) * 500 + 3000, 500, (mapArray[i].GetComponent<Room>().valorDeCelda / 10) * 500 + 3000), Quaternion.identity);
             }
-
-            if (mapArray[i].GetComponent<Room>().tipoDeSala == Room.TipoDeSala.Jefe)
+            if (mapArray[i].GetComponent<Room>().tipoDeSala == Room.TipoDeSala.Npc)
             {
-                AgregarIconos(4, mapArray[i]);
+                Instantiate(Iconos[3].gameObject, new Vector3((mapArray[i].GetComponent<Room>().valorDeCelda - mapArray[i].GetComponent<Room>().valorDeCelda / 10 * 10) * 500 + 3000, 500, (mapArray[i].GetComponent<Room>().valorDeCelda / 10) * 500 + 3000), Quaternion.identity);
             }
-
             if (mapArray[i].GetComponent<Room>().tipoDeSala == Room.TipoDeSala.Minijefe)
             {
-                AgregarIconos(5, mapArray[i]);
+                Instantiate(Iconos[2].gameObject, new Vector3((mapArray[i].GetComponent<Room>().valorDeCelda - mapArray[i].GetComponent<Room>().valorDeCelda / 10 * 10) * 500 + 3000, 500, (mapArray[i].GetComponent<Room>().valorDeCelda / 10) * 500 + 3000), Quaternion.identity);
             }
 
-            if(mapArray[i].GetComponent<Room>().SalaSize == 10)
+            Sala = Instantiate(salaAGenerar[size].gameObject, new Vector3((mapArray[i].GetComponent<Room>().valorDeCelda - mapArray[i].GetComponent<Room>().valorDeCelda / 10 * 10) * 500 + 3000, 0, (mapArray[i].GetComponent<Room>().valorDeCelda / 10) * 500 + 3000), Quaternion.identity);
+            MinimapArray.Add(Sala);
+            if (mapArray[i].GetComponent<Room>().valorDeCelda == 44)
             {
-                salaMini.transform.GetChild(2).GetChild(0).GetComponent<RectTransform>().localScale = new Vector3(0.1795932f, 0.1795932f, 0.1795932f);
-            }
-
-            if (mapArray[i].GetComponent<Room>().SalaSize == 75)
-            {
-                salaMini.transform.GetChild(2).GetChild(0).GetComponent<RectTransform>().localScale = new Vector3(0.124028f, 0.124028f, 0.124028f);
-            }
-
-            if (mapArray[i].GetComponent<Room>().SalaSize == 75)
-            {
-                salaMini.transform.GetChild(2).GetChild(0).GetComponent<RectTransform>().localScale = new Vector3(0.07677455f, 0.07677455f, 0.07677455f);
+                Player = Instantiate(Iconos[0].gameObject, new Vector3((mapArray[i].GetComponent<Room>().valorDeCelda - mapArray[i].GetComponent<Room>().valorDeCelda / 10 * 10) * 500 + 3000, 500, (mapArray[i].GetComponent<Room>().valorDeCelda / 10) * 500 + 3000), Quaternion.identity);
+                Spawn = Sala;
+                Debug.Log(Sala);
+                MiniSalaActual = Sala;
             }
         }
-        salaAGenerar = null;
-        ActualizarMiniMapa(Spawn);
-
+        return MinimapArray;
     }
-    public void ActualizarMiniMapa(GameObject SalaActual)
+
+    public void ActualizarMiniMapa(GameObject SalaActual, GameObject SalaReal)
     {
-        Destroy(salaAGenerar);
-        if (SalaActual.GetComponent<Room>().IsClear)
+        if (SalaReal.GetComponent<Room>().IsClear)
         {
-            AgregarIconos(2, SalaActual);
+            SalaActual.GetComponent<MeshRenderer>().material = Completada;
         }
-        AgregarIconos(1, SalaActual);
+
+        Player.transform.position = new Vector3(SalaActual.transform.position.x, 500, SalaActual.transform.position.z);
+        MiniMapCamera.transform.position = new Vector3(SalaActual.transform.position.x,551, SalaActual.transform.position.z); 
     }
 
-    public void AgregarIconos(int NumeroDeSala, GameObject sala)
-    {
-        salaAGenerar = Instantiate(salaMini.transform.GetChild(2).GetChild(NumeroDeSala).gameObject, new Vector2(salaMini.transform.GetChild(2).GetChild(0).GetComponent<RectTransform>().position.x + (40 * (sala.GetComponent<Room>().valorDeCelda - sala.GetComponent<Room>().valorDeCelda / 10 * 10) + 60), salaMini.transform.GetChild(2).GetChild(0).GetComponent<RectTransform>().position.y + (40 * (sala.GetComponent<Room>().valorDeCelda / 10)) - 15), Quaternion.identity);
-        salaAGenerar.transform.parent = salaMini.transform.GetChild(1);
-    }
 }

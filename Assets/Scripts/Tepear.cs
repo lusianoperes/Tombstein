@@ -6,6 +6,7 @@ public class Tepear : MonoBehaviour
 {
     public GameObject plano;
     public GameObject Sala;
+    public GameObject MiniMapPlano;
     public GameManage gameManage;
 
     private void OnCollisionEnter(Collision collision)
@@ -13,7 +14,7 @@ public class Tepear : MonoBehaviour
         
         if (collision.collider.CompareTag("Player"))
         {
-            gameManage.TeleportarJugador(plano,Sala);
+            gameManage.TeleportarJugador(plano,Sala,MiniMapPlano);
         }
     }
 }
