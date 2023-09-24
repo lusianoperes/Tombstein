@@ -5,91 +5,104 @@ using JetBrains.Annotations;
 using TMPro;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour
-{   
+public class Enemy : MonoBehaviour {
+    [Header("General")]
     public string enemyName;
     public int enemyMaxHp;
     private int enemyCurrentHp; 
     public float enemySpeed;
+
+    [Header("Attack")]
     public int attackDamage;
     public float attackRange;
     public int attackCooldown;
     public int attackSpeed;
-    public float repositionDistance = 1.5f;
-    public GameObject attackBox;
+    public float attackCasting; //Tiempo de ejecución de ataque
+    public float attackDuration; //Tiempo de vida de la hitbox
+    public GameObject attack1;
+    ///////////////////////////////
+    public bool melee; //Borrar, los ataques deben ser melee o a rango no todo el enemigo (esto para generalizar)
+    ///////////////////////////////
+
+    [Header("Life Bar")]
     public GameObject RellenoVida;
     public GameObject TextoVida;
 
-    private NavMeshAgent enemy;
+    private NavMeshAgent navMeshAgent;
     private Transform player;
-    private float currentCooldown = 0f;
-    private GameObject attackHitbox;
+    private float lastAttack = 0;
+    private float pathUpdateDelay = 0.2f;
+    private float pathUpdateDeadline;
+    private float escapeDistance = 2f;
 
-    ///////////////////////////////
-    public bool melee; //si el ataque sedispara o solo se crea
-    ///////////////////////////////
+    private void Awake() {
+        navMeshAgent = GetComponent<NavMeshAgent>();
+    }
+
+    void Start()
+    {
+        player = GameObject.Find("Jugador").transform;
+        enemyCurrentHp = enemyMaxHp;
+        navMeshAgent.speed = enemySpeed;
+        navMeshAgent.stoppingDistance = attackRange;
+        TextoVida.GetComponent<TextMeshProUGUI>().text = enemyMaxHp+"";
+        StartCoroutine(EnemyAI());
+    }
 
     private enum EnemyState
     {
         Idle,
-        MovingToPlayer,
+        Chasing,
         Attacking,
         Repositioning
     }
     private EnemyState currentState = EnemyState.Idle;
 
-    void Start()
-    {
-        enemy = GetComponent<NavMeshAgent>();
-        player = GameObject.Find("Jugador").transform;
-        enemyCurrentHp = enemyMaxHp;
-        enemy.speed = enemySpeed;
-        TextoVida.GetComponent<TextMeshProUGUI>().text = enemyMaxHp+"";
-    }
-
-    IEnumerator EnemyAI()
+    public virtual IEnumerator EnemyAI()
     {
         while (true)
         {
             switch (currentState)
             {
-                case EnemyState.Idle:
-                    if (Vector3.Distance(transform.position, player.position) < attackRange)
-                    {
-                        currentState = EnemyState.Attacking;
-                    }
-                    else
-                    {
-                        currentState = EnemyState.MovingToPlayer;
-                    }
-                    break;
-
-                case EnemyState.MovingToPlayer:
-                    Move();
-                    yield return new WaitUntil(() => !enemy.pathPending && enemy.remainingDistance <= attackRange);
-                    if (Vector3.Distance(transform.position, player.position) <= attackRange)
-                    {
-                        currentState = EnemyState.Attacking;
-                    }
-                    break;
-
-                case EnemyState.Attacking:
-                    if (Vector3.Distance(transform.position, player.position) <= attackRange && isLookingTarget(player))
-                    {
-                        Attack(player);
+                case EnemyState.Idle: //Logica de cambio de estados
+                    bool inRange = Vector3.Distance(transform.position, player.position) <= attackRange;
+                    if (Time.time - lastAttack >= attackCooldown || lastAttack == 0) {
+                        if (inRange) {
+                            currentState = EnemyState.Attacking;
+                        }
+                        else {
+                            currentState = EnemyState.Chasing;
+                        }
+                    } else {
                         currentState = EnemyState.Repositioning;
                     }
-                    else
-                    {
-                        currentState = EnemyState.MovingToPlayer;
-                    }
                     break;
 
-                case EnemyState.Repositioning:
-                    Vector3 oppositeDirection = transform.position - player.position;
-                    Vector3 destination = transform.position + oppositeDirection.normalized * repositionDistance;
-                    MoveTo(destination);
-                    yield return new WaitUntil(() => !enemy.pathPending && enemy.remainingDistance < 2f);
+                case EnemyState.Chasing: //Logica de Movimiento
+                    navMeshAgent.stoppingDistance = attackRange;
+                    Move(player);
+                    currentState = EnemyState.Idle;
+                    break;
+
+                case EnemyState.Attacking: //Logica de Ataque
+                    Attack(attack1, !melee);
+                    yield return new WaitForSeconds(attackCasting);
+                    lastAttack = Time.time;
+                    currentState = EnemyState.Idle;
+                    break;
+
+                case EnemyState.Repositioning: //Logica de Escape (que hace despues de atacar)
+                    LookAtTarget(player);
+                    Vector3 directionToPlayer = player.position - transform.position;
+                    float distanceToPlayer = directionToPlayer.magnitude;
+
+                    if (distanceToPlayer <= 5 /*Aca iria el rango del jugador*/)
+                    {
+                        Vector3 escapeDirection = -directionToPlayer.normalized;
+                        Vector3 escapeDestination = transform.position + escapeDirection * escapeDistance;
+                        navMeshAgent.SetDestination(escapeDestination);
+                        navMeshAgent.stoppingDistance = 0;
+                    }
                     currentState = EnemyState.Idle;
                     break;
             }
@@ -99,77 +112,41 @@ public class Enemy : MonoBehaviour
     
     void Update()
     {
-        StartCoroutine(EnemyAI());
+
     }
 
-    public virtual void Move()
-    {
-        ChaseTarget(player);
-        LookAtTarget(player);
-    }
-
-    public virtual void Attack(Transform target)
-    {
-        float targetDistance = Vector3.Distance(transform.position, target.position);
-
-        if (targetDistance <= attackRange && Time.time >= currentCooldown)
-        {
-            LookAtTarget(player);
-            SpawnAttackHitBox();
-            currentCooldown = Time.time + attackCooldown;
+    public virtual void Move(Transform target){
+        if (Time.time >= pathUpdateDeadline) {
+            pathUpdateDeadline = Time.time + pathUpdateDelay;
+            navMeshAgent.SetDestination(target.position);
         }
     }
 
-    private void ChaseTarget(Transform target)
+    private void Attack(GameObject attackPrefab, bool isProjectile)
     {
-        enemy.SetDestination(target.position);
-        enemy.stoppingDistance = attackRange;
-    }
-
-    private bool MoveTo(Vector3 position){
-        LookAtTarget(player);
-        enemy.SetDestination(position);
-        enemy.stoppingDistance = 0;
-        return transform.position == position;
-    }
-
-    private bool isLookingTarget(Transform target)
-    {
-        Vector3 directionToTarget = (target.position - transform.position).normalized;
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, directionToTarget, out hit, 30)){
-            return hit.collider.gameObject == target.gameObject;
-        };
-        return true;
-    }
-
-    private void LookAtTarget(Transform target)
-    {
-        Vector3 lookDirection = target.position - transform.position;
-        lookDirection.y = 0f;
-        transform.rotation = Quaternion.LookRotation(lookDirection);
-    }
-
-    private void SpawnAttackHitBox()
-    {
-        Vector3 spawnPosition = transform.position + transform.forward * 2f;
-
-        attackHitbox = Instantiate(attackBox, spawnPosition, Quaternion.identity, null);
-        attackHitbox.transform.rotation = transform.rotation;
-        EnemyAttack ataqueHitBData = attackHitbox.GetComponent<EnemyAttack>();
+        Vector3 attackSpawn = transform.position + transform.forward * transform.localScale.x;
+        GameObject attackInstantiated = Instantiate(attackPrefab, attackSpawn, Quaternion.identity);
+        attackInstantiated.transform.rotation = transform.rotation;
+        EnemyAttack attackStats = attackInstantiated.GetComponent<EnemyAttack>();
     
-        ataqueHitBData.damage = attackDamage;
-        ataqueHitBData.lastingTime = 2f;
-        //ataqueHitBData.Uniform_ResizeAttack(attackSize);
+        attackStats.damage = attackDamage;
+        attackStats.lastingTime = attackDuration;
+        //attackStats.Uniform_ResizeAttack(attackSize);
 
-        if (!melee)
+        if (isProjectile)
         {
-            Rigidbody rb = attackHitbox.GetComponent<Rigidbody>();
+            Rigidbody rb = attackInstantiated.GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * attackSpeed, ForceMode.VelocityChange);
         }
-        currentCooldown = attackCooldown;
     }
-    
+
+    private void LookAtTarget (Transform target) {
+        Vector3 lookPos = target.position - transform.position;
+        lookPos.y = 0;
+        Quaternion rotation = Quaternion.LookRotation(lookPos);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 0.2f);
+    }
+
     public void Die()
     {   
         Debug.Log("Mataste a " + enemyName);
