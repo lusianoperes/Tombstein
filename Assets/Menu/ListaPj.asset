@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fba4c5903ec174e910ad3b49f844ba, type: 3}
+  m_Name: ListaPj
+  m_EditorClassIdentifier: 
+  personajes:
+  - objeto_Jugador: {fileID: 7822310536491944377, guid: ad8ebe3bcf5ccdc4e8f2780c661c7327, type: 3}
+    nombre_Personaje: Neandertal
+    descripcion_Personaje: Ancestro previo al hombre moderno. Cuenta con una fuerza
+      y resistencia impresionantes,pero no es muy astuto.
+    Puntos_Base: 'SALUD: 600 FUERZA: 50 AGILIDAD: 50 DESTREZA: D   ITEMS INICIALES:
+      Garrote De Madera'
+  - objeto_Jugador: {fileID: 7769899733921051365, guid: d580afa4ed4ff5a49bca0a8cfbd6b70e, type: 3}
+    nombre_Personaje: FRANZINI
+    descripcion_Personaje: 'es normal y fuma '
+    Puntos_Base: amigo es chiste no fuma

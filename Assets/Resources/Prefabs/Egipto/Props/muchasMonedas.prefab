@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3718372828050127687}
+  - component: {fileID: -8107654797715254803}
   m_Layer: 0
   m_Name: muchasMonedas
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 2646909704590449618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5.1744, y: 5.1744, z: 5.1744}
   m_Children:
   - {fileID: 4113770561363183839}
   - {fileID: 475334334793398935}
@@ -37,6 +38,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &-8107654797715254803
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2646909704590449618}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &470813704773487167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44,6 +58,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3718372828050127687}
     m_Modifications:
+    - target: {fileID: -94579502840847184, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+      propertyPath: m_Size.x
+      value: 0.049258854
+      objectReference: {fileID: 0}
+    - target: {fileID: -94579502840847184, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+      propertyPath: m_Size.z
+      value: 0.054475777
+      objectReference: {fileID: 0}
+    - target: {fileID: -94579502840847184, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+      propertyPath: m_Center.x
+      value: 0.008086023
+      objectReference: {fileID: 0}
+    - target: {fileID: -94579502840847184, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+      propertyPath: m_Center.z
+      value: -0.0037998627
+      objectReference: {fileID: 0}
     - target: {fileID: 1950871307682000, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
       propertyPath: m_Name
       value: GoldCoins (9)
@@ -118,6 +148,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3718372828050127687}
     m_Modifications:
+    - target: {fileID: -94579502840847184, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+      propertyPath: m_Size.x
+      value: 0.051026292
+      objectReference: {fileID: 0}
+    - target: {fileID: -94579502840847184, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+      propertyPath: m_Size.z
+      value: 0.058243465
+      objectReference: {fileID: 0}
+    - target: {fileID: -94579502840847184, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+      propertyPath: m_Center.x
+      value: -0.0006238628
+      objectReference: {fileID: 0}
+    - target: {fileID: -94579502840847184, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+      propertyPath: m_Center.z
+      value: -0.0019160201
+      objectReference: {fileID: 0}
     - target: {fileID: 1950871307682000, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
       propertyPath: m_Name
       value: GoldCoins (3)
@@ -340,6 +386,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3718372828050127687}
     m_Modifications:
+    - target: {fileID: -94579502840847184, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+      propertyPath: m_Size.x
+      value: 0.05885246
+      objectReference: {fileID: 0}
+    - target: {fileID: -94579502840847184, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+      propertyPath: m_Size.z
+      value: 0.055074416
+      objectReference: {fileID: 0}
+    - target: {fileID: -94579502840847184, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+      propertyPath: m_Center.x
+      value: 0.0032892234
+      objectReference: {fileID: 0}
+    - target: {fileID: -94579502840847184, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+      propertyPath: m_Center.z
+      value: 0.0064939344
+      objectReference: {fileID: 0}
     - target: {fileID: 1950871307682000, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
       propertyPath: m_Name
       value: GoldCoins (6)
@@ -414,6 +476,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3718372828050127687}
     m_Modifications:
+    - target: {fileID: -94579502840847184, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+      propertyPath: m_Size.x
+      value: 0.042821296
+      objectReference: {fileID: 0}
+    - target: {fileID: -94579502840847184, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+      propertyPath: m_Size.z
+      value: 0.057680313
+      objectReference: {fileID: 0}
+    - target: {fileID: -94579502840847184, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+      propertyPath: m_Center.x
+      value: 0.011304801
+      objectReference: {fileID: 0}
+    - target: {fileID: -94579502840847184, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+      propertyPath: m_Center.z
+      value: 0.005190994
+      objectReference: {fileID: 0}
     - target: {fileID: 1950871307682000, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
       propertyPath: m_Name
       value: GoldCoins (8)
@@ -488,6 +566,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3718372828050127687}
     m_Modifications:
+    - target: {fileID: -94579502840847184, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+      propertyPath: m_Size.x
+      value: 0.051388882
+      objectReference: {fileID: 0}
+    - target: {fileID: -94579502840847184, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+      propertyPath: m_Center.x
+      value: -0.00044256955
+      objectReference: {fileID: 0}
+    - target: {fileID: -94579502840847184, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+      propertyPath: m_Center.z
+      value: 0.0014966952
+      objectReference: {fileID: 0}
     - target: {fileID: 1950871307682000, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
       propertyPath: m_Name
       value: GoldCoins (4)
