@@ -407,7 +407,6 @@ public class DungeonManager : MonoBehaviour
                 {
 
                     BuscarPorNombre(mapArray, mapArrayList[k], k, "derecha", "izquierda", gameManage, MinimapArray);
-
                 }
             }
 
