@@ -29,7 +29,7 @@ public class MiniMapGen : MonoBehaviour
         {
             if (!MapaAbierto)
             {
-                MiniMapCamera.transform.position = new Vector3(Spawn.transform.position.x, 600, Spawn.transform.position.z);
+                ActualizarMiniMapa(GameManage.MiniSalaActual, GameManage.SalaActual);
                 MiniMapCamera.GetComponent<Camera>().orthographicSize = 2750;
             }
             else
@@ -111,8 +111,15 @@ public class MiniMapGen : MonoBehaviour
             SalaActual.GetComponent<MeshRenderer>().material = Completada;
         }
 
-        Player.transform.position = new Vector3(SalaActual.transform.position.x, 551, SalaActual.transform.position.z);
-        MiniMapCamera.transform.position = new Vector3(SalaActual.transform.position.x,600, SalaActual.transform.position.z); 
+        if (MapaAbierto)
+        {
+            Player.transform.position = new Vector3(SalaActual.transform.position.x, 551, SalaActual.transform.position.z);
+            MiniMapCamera.transform.position = new Vector3(SalaActual.transform.position.x, 600, SalaActual.transform.position.z);
+        }
+        else
+        {
+            MiniMapCamera.transform.position = new Vector3(Spawn.transform.position.x, 600, Spawn.transform.position.z);
+        }
     }
 
     public void GenerarPuente(GameObject Sala, GameObject SalaReal, List<GameObject> mapArray)

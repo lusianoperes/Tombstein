@@ -1368,6 +1368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 411578132}
   - component: {fileID: 411578131}
+  - component: {fileID: 411578130}
   m_Layer: 0
   m_Name: MiniMapCam
   m_TagString: Untagged
@@ -1375,6 +1376,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!192 &411578130
+OcclusionArea:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411578129}
+  serializedVersion: 2
+  m_Size: {x: 7.85, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+  m_IsViewVolume: 1
 --- !u!20 &411578131
 Camera:
   m_ObjectHideFlags: 0
