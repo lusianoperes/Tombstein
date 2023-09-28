@@ -15,15 +15,15 @@ C:/Users/franc/OneDrive/Documentos/Tombstein
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54579
+57666
 Successfully changed project path to: C:/Users/franc/OneDrive/Documentos/Tombstein
 C:/Users/franc/OneDrive/Documentos/Tombstein
 Using Asset Import Pipeline V2.
-Player connection [18204] Host "[IP] 192.168.100.47 [Port] 3221443040 [Flags] 2 [Guid] 2590772115 [EditorId] 2590772115 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-E94L0OGD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [1156] Host "[IP] 192.168.1.6 [Port] 2953007584 [Flags] 2 [Guid] 3855539615 [EditorId] 3855539615 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-E94L0OGD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [18204] Host "[IP] 192.168.100.47 [Port] 3221443040 [Flags] 2 [Guid] 2590772115 [EditorId] 2590772115 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-E94L0OGD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [1156] Host "[IP] 192.168.1.6 [Port] 2953007584 [Flags] 2 [Guid] 3855539615 [EditorId] 3855539615 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-E94L0OGD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 63.11 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 64.40 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.47f1 (5ef4f5b5e2d4)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity 2020.3.47f1/Editor/Data/Resources/UnitySubsystems
@@ -39,89 +39,89 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity 2020.3.47f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity 2020.3.47f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity 2020.3.47f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56184
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56536
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity 2020.3.47f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002093 seconds.
+Registered in 0.001977 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 70.91 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 59.33 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.943 seconds
+- Completed reload, in  0.942 seconds
 Domain Reload Profiling:
-	ReloadAssembly (943ms)
-		BeginReloadAssembly (95ms)
+	ReloadAssembly (942ms)
+		BeginReloadAssembly (98ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
 		EndReloadAssembly (733ms)
-			LoadAssemblies (93ms)
+			LoadAssemblies (96ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (239ms)
+			SetupTypeCache (231ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (44ms)
-			SetupLoadedEditorAssemblies (287ms)
+			SetupLoadedEditorAssemblies (285ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
+				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (71ms)
+				RefreshPlugins (59ms)
 				BeforeProcessingInitializeOnLoad (14ms)
-				ProcessInitializeOnLoadAttributes (145ms)
-				ProcessInitializeOnLoadMethodAttributes (48ms)
+				ProcessInitializeOnLoadAttributes (138ms)
+				ProcessInitializeOnLoadMethodAttributes (65ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004165 seconds.
+Registered in 0.004331 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.61 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.503 seconds
+- Completed reload, in  1.522 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1505ms)
-		BeginReloadAssembly (222ms)
+	ReloadAssembly (1523ms)
+		BeginReloadAssembly (217ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (8ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (30ms)
-		EndReloadAssembly (1191ms)
-			LoadAssemblies (141ms)
+			CreateAndSetChildDomain (28ms)
+		EndReloadAssembly (1200ms)
+			LoadAssemblies (147ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (411ms)
+			SetupTypeCache (392ms)
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (62ms)
-			SetupLoadedEditorAssemblies (460ms)
+			SetupLoadedEditorAssemblies (483ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
+				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (86ms)
-				ProcessInitializeOnLoadAttributes (342ms)
-				ProcessInitializeOnLoadMethodAttributes (16ms)
+				BeforeProcessingInitializeOnLoad (88ms)
+				ProcessInitializeOnLoadAttributes (362ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
 				AfterProcessingInitializeOnLoad (7ms)
-				EditorAssembliesLoaded (1ms)
+				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.77 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1373 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 152.4 MB.
-System memory in use after: 152.4 MB.
+Unloading 1378 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 153.6 MB.
+System memory in use after: 153.6 MB.
 
-Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 1830.
-Total: 4.420700 ms (FindLiveObjects: 0.198800 ms CreateObjectMapping: 0.088100 ms MarkObjects: 3.998300 ms  DeleteObjects: 0.134200 ms)
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 1835.
+Total: 4.000600 ms (FindLiveObjects: 0.172800 ms CreateObjectMapping: 0.069000 ms MarkObjects: 3.630800 ms  DeleteObjects: 0.126800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -135,391 +135,1395 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Moderados 10x10.prefab
-  artifactKey: Guid(6394ab31b69f6b44a9a2824514859c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Moderados 10x10.prefab using Guid(6394ab31b69f6b44a9a2824514859c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fc997edbc39a43db8dd6aed7a63248d') in 0.522973 seconds 
+  path: Assets/Resources/Prefabs/Egipto/Props/muchasMonedas.prefab
+  artifactKey: Guid(25893c98352b8084fb6686cf934944cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/muchasMonedas.prefab using Guid(25893c98352b8084fb6686cf934944cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c8123784eb0c19e9d457c4f7b11b91c') in 0.284952 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000584 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Debiles 12x12.prefab
-  artifactKey: Guid(c502439a59d59a74eac46a678a25b69d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Debiles 12x12.prefab using Guid(c502439a59d59a74eac46a678a25b69d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b297769ca0c0d7c5608c33b4b56fc85c') in 0.328038 seconds 
+  Time since last request: 0.000496 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/EscombroConAntorcha.prefab
+  artifactKey: Guid(506b173ff58264f4a860687b56ea0e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/EscombroConAntorcha.prefab using Guid(506b173ff58264f4a860687b56ea0e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb1c73222563018421fd913db3b16835') in 0.185969 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000329 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Npc 1 5x5.prefab
-  artifactKey: Guid(cbf2ae0b6b962b947875d6531f0c8c29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Npc 1 5x5.prefab using Guid(cbf2ae0b6b962b947875d6531f0c8c29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7abcc02a14bc6f2c06e3320ccb2a15a') in 0.062694 seconds 
+  Time since last request: 0.000272 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/EscombroConAntorcha2.prefab
+  artifactKey: Guid(b2f004677ed5b4c46b8500ac3df25817) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/EscombroConAntorcha2.prefab using Guid(b2f004677ed5b4c46b8500ac3df25817) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39aba9847a3ba05ab3c4e149823d36af') in 0.030298 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000306 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos MuchosDebiles 7.5x7.5.prefab
-  artifactKey: Guid(c4e4ee8ea99a9b243a9fcd8b7841b05a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos MuchosDebiles 7.5x7.5.prefab using Guid(c4e4ee8ea99a9b243a9fcd8b7841b05a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8eb25d6434d6abb091b9dc03994004f5') in 0.148726 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000320 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 7.5x7.5.prefab
-  artifactKey: Guid(e522b16026c90254ca24854246fbe7f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 7.5x7.5.prefab using Guid(e522b16026c90254ca24854246fbe7f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad8972602bd4855dba5a9b77f039a99b') in 0.134105 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000321 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes2 5x5.prefab
-  artifactKey: Guid(b18c61bf915a66d45ae07da508d7ea14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes2 5x5.prefab using Guid(b18c61bf915a66d45ae07da508d7ea14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bca8d8213f427c61911f3f4411bbb481') in 0.432598 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000351 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes2 7.5x7.5.prefab
-  artifactKey: Guid(0f4dcce1e1151fd49ace1ec6e8a2662f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes2 7.5x7.5.prefab using Guid(0f4dcce1e1151fd49ace1ec6e8a2662f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92a2ff3f78b1f1ec74b8d4a4635b5487') in 0.124621 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000320 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Debiles 7.5x7.5.prefab
-  artifactKey: Guid(cb8c1c5f305fa7e4aa15568e0dbb6f51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Debiles 7.5x7.5.prefab using Guid(cb8c1c5f305fa7e4aa15568e0dbb6f51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18011a9f7328709a40e318771004bd70') in 0.126360 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000348 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
-  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7aa04c706673786d44a4f7e01f65d349') in 0.093349 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000327 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Spawn Completo 5x5.prefab
-  artifactKey: Guid(dbd856371b5759d458464c7cf699cbae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Spawn Completo 5x5.prefab using Guid(dbd856371b5759d458464c7cf699cbae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be11b25dfabfa00898f36fb0f8413c75') in 0.101578 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000360 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos MuchosDebiles 10x10.prefab
-  artifactKey: Guid(2bf85dc826f1e9641a8cc60eb9190919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos MuchosDebiles 10x10.prefab using Guid(2bf85dc826f1e9641a8cc60eb9190919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f885c1eb7c2ad359ff818b4b1706927') in 0.146985 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000331 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 5x5.prefab
-  artifactKey: Guid(b0f672cad2bd3424da514a5122316e80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 5x5.prefab using Guid(b0f672cad2bd3424da514a5122316e80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0979063a9102749b360735f1212a6da8') in 0.199204 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000287 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos MuchosEnemigos 5x5.prefab
-  artifactKey: Guid(588d3086a43bfd04ea894f05d4fecc2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos MuchosEnemigos 5x5.prefab using Guid(588d3086a43bfd04ea894f05d4fecc2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2abfdb0bcc5cc6006935751caad6fa4e') in 0.151254 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000333 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 10x10.prefab
-  artifactKey: Guid(368b1f56fdb3844458c31a14696db4a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 10x10.prefab using Guid(368b1f56fdb3844458c31a14696db4a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '785b2fe8380b344688189cd9c8fd11bf') in 0.159069 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000454 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Spawn Semivacio 5x5.prefab
-  artifactKey: Guid(5953675a55f3d0f4d869d3fb5f7de82c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Spawn Semivacio 5x5.prefab using Guid(5953675a55f3d0f4d869d3fb5f7de82c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3be8267b48bc55f2ee11f990ee3d2e1') in 0.082848 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000319 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 12x12.prefab
-  artifactKey: Guid(2da34b57df75c944f96afb42e143cf32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 12x12.prefab using Guid(2da34b57df75c944f96afb42e143cf32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f25d507f13b852fec828609b756fc18') in 0.146685 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000474 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Spawn Vacio 5x5.prefab
-  artifactKey: Guid(0c960ed777f1bf74a95ad6fc3c3e3e28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Spawn Vacio 5x5.prefab using Guid(0c960ed777f1bf74a95ad6fc3c3e3e28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31ab1b3106f784bfe5050608bc771b88') in 0.048077 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000306 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 7.5x7.5.prefab
-  artifactKey: Guid(fd06110884305dd419007075a0d4a02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 7.5x7.5.prefab using Guid(fd06110884305dd419007075a0d4a02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2967b6ab39adebb62c1b5503c662b3db') in 0.080642 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000339 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Sala Descanso 1 5x5.prefab
-  artifactKey: Guid(d7d0464fd3b401449b2caeb14a016a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Sala Descanso 1 5x5.prefab using Guid(d7d0464fd3b401449b2caeb14a016a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7eb33cea8df42d286e285a57e1fbdc1a') in 0.046261 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000287 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Debiles2 5x5.prefab
-  artifactKey: Guid(4a82a99c9ec95df479c512c526d23ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Debiles2 5x5.prefab using Guid(4a82a99c9ec95df479c512c526d23ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b430b09b25b537d099f8d6a4884f74f7') in 0.139278 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000812 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Moderados 7.5x7.5.prefab
-  artifactKey: Guid(761524aa8cc7cc14a84f9ac4940e3a4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Moderados 7.5x7.5.prefab using Guid(761524aa8cc7cc14a84f9ac4940e3a4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5248921176644400a0f32c5b5bc996de') in 0.124120 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000352 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Debiles 10x10.prefab
-  artifactKey: Guid(db47323289326a543aba78a126751863) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Debiles 10x10.prefab using Guid(db47323289326a543aba78a126751863) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72e2edc83663e1058bd2c4fc32ad95dc') in 0.146078 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000339 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos DistanciaModerados 12x12.prefab
-  artifactKey: Guid(51bd410bb3452de4a97a08f4bb242123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos DistanciaModerados 12x12.prefab using Guid(51bd410bb3452de4a97a08f4bb242123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdfb8d51f92ea0f195f1bec59fdfa41d') in 0.145887 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000333 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Npc 1 7.5x7.5.prefab
-  artifactKey: Guid(1759cf2a3c43faf428aeef8045bf7527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Npc 1 7.5x7.5.prefab using Guid(1759cf2a3c43faf428aeef8045bf7527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '207a3c0dfb56415faf0faba2a03e9dc5') in 0.055926 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000351 seconds.
+  Time since last request: 91.094223 seconds.
   path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Jefe 12x12.prefab
   artifactKey: Guid(89094ce15c0324642a069444cb5011cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Jefe 12x12.prefab using Guid(89094ce15c0324642a069444cb5011cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8136e3a52ae45e66b80fe066110a7933') in 0.148785 seconds 
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Jefe 12x12.prefab using Guid(89094ce15c0324642a069444cb5011cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef3a02ff5226c2ef80d5e93d8a17acd7') in 0.384061 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000313 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos DébilesRango 5x5.prefab
-  artifactKey: Guid(d01ad3295f46e854f9f3379c9bc368c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos DébilesRango 5x5.prefab using Guid(d01ad3295f46e854f9f3379c9bc368c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed2fa77cf3b6f4ef79d31484213b1737') in 0.216661 seconds 
+  Time since last request: 1518.753042 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 7.5x7.5.prefab
+  artifactKey: Guid(fd06110884305dd419007075a0d4a02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 7.5x7.5.prefab using Guid(fd06110884305dd419007075a0d4a02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c95b168ba06fabeefde4412749257759') in 0.121082 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000389 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes2 12x12.prefab
-  artifactKey: Guid(5dddb99ba599943408f0c77443725c97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes2 12x12.prefab using Guid(5dddb99ba599943408f0c77443725c97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd90d6c64a33a7a2dda693362f1786458') in 0.139565 seconds 
+  Time since last request: 119.895204 seconds.
+  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Model/LowPoly_Env_Set1.FBX
+  artifactKey: Guid(eb8566b6e75507e48bd8ec4fff8f4dd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Model/LowPoly_Env_Set1.FBX using Guid(eb8566b6e75507e48bd8ec4fff8f4dd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1fdbbb7af0c70141153740d5ae83bb5') in 1.437281 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000352 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos DebilesMuchos 12x12.prefab
-  artifactKey: Guid(38427f4281ca14b48bdfc69070e1c773) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos DebilesMuchos 12x12.prefab using Guid(38427f4281ca14b48bdfc69070e1c773) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88d30d058695bc5d833aa130229f56b8') in 0.135688 seconds 
+  Time since last request: 1.311741 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 7.5x7.5.prefab
+  artifactKey: Guid(fd06110884305dd419007075a0d4a02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 7.5x7.5.prefab using Guid(fd06110884305dd419007075a0d4a02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc321c5202f250fd34deff6753393963') in 0.109125 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 8.589794 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Medium_F.prefab
-  artifactKey: Guid(4c65c362d8007bd49b543e018d6efe83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Medium_F.prefab using Guid(4c65c362d8007bd49b543e018d6efe83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f0fc01670fa6552f98bf57bc9908635') in 0.095282 seconds 
+  Time since last request: 15.905425 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Escombros.prefab
+  artifactKey: Guid(22b03f13c86bb89419df8a8fd20048cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Escombros.prefab using Guid(22b03f13c86bb89419df8a8fd20048cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbb425fe2342bdf102fe603d9342985b') in 0.018604 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000334 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Small_B.prefab
-  artifactKey: Guid(5fddf1925bf916745a9dab05702faae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Small_B.prefab using Guid(5fddf1925bf916745a9dab05702faae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e895f02d076378a65a320d09107f20c') in 0.029536 seconds 
+  Time since last request: 76.324236 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Escombros.prefab
+  artifactKey: Guid(22b03f13c86bb89419df8a8fd20048cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Escombros.prefab using Guid(22b03f13c86bb89419df8a8fd20048cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b7631f239d75122b700b3a49c362f42') in 0.034332 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000378 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Small_C.prefab
-  artifactKey: Guid(73ea625b84bc5794fbdc765d4f9b248d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Small_C.prefab using Guid(73ea625b84bc5794fbdc765d4f9b248d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e21a5955dc5434d526f9d0cfe7207aa') in 0.033750 seconds 
+  Time since last request: 16.178486 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Escombros.prefab
+  artifactKey: Guid(22b03f13c86bb89419df8a8fd20048cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Escombros.prefab using Guid(22b03f13c86bb89419df8a8fd20048cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '985ca8f2d4a14369ecff9884d3cbd7f2') in 0.043609 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000396 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Sand_Plane_Medium_A.prefab
-  artifactKey: Guid(8a60797ad2c984c4a857602e0cc49941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Sand_Plane_Medium_A.prefab using Guid(8a60797ad2c984c4a857602e0cc49941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbf5e39fe2ee071df2830ced333c80a8') in 0.030947 seconds 
+  Time since last request: 9.298639 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Escombros.prefab
+  artifactKey: Guid(22b03f13c86bb89419df8a8fd20048cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Escombros.prefab using Guid(22b03f13c86bb89419df8a8fd20048cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dd6e67c07d2ae0336fde1b3e9975084') in 0.036783 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.420044 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Escombros.prefab
+  artifactKey: Guid(22b03f13c86bb89419df8a8fd20048cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Escombros.prefab using Guid(22b03f13c86bb89419df8a8fd20048cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d19a908cfee4cddd5c0de909295096e') in 0.038798 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.042935 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Escombros.prefab
+  artifactKey: Guid(22b03f13c86bb89419df8a8fd20048cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Escombros.prefab using Guid(22b03f13c86bb89419df8a8fd20048cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52526b6758d41fc1b4141cf3dad65f2c') in 0.034384 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.240388 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Escombros.prefab
+  artifactKey: Guid(22b03f13c86bb89419df8a8fd20048cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Escombros.prefab using Guid(22b03f13c86bb89419df8a8fd20048cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a741243f8b4ad3c8b2e8d3377549b14') in 0.034455 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.050569 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Escombros.prefab
+  artifactKey: Guid(22b03f13c86bb89419df8a8fd20048cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Escombros.prefab using Guid(22b03f13c86bb89419df8a8fd20048cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78d5f96a119bad7d81fbf17e610fbdf1') in 0.038887 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.064191 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Jefe 12x12.prefab
+  artifactKey: Guid(89094ce15c0324642a069444cb5011cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Jefe 12x12.prefab using Guid(89094ce15c0324642a069444cb5011cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76efc4bac09cd6aa54719d64a145177c') in 0.133539 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 187.474980 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 7.5x7.5.prefab
+  artifactKey: Guid(fd06110884305dd419007075a0d4a02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 7.5x7.5.prefab using Guid(fd06110884305dd419007075a0d4a02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a23b1091520e1dc786dc1b825dc49cee') in 0.120303 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 53.984052 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes2 10x10.prefab
+  artifactKey: Guid(3708e132702f6f847a76ec45a5417f5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes2 10x10.prefab using Guid(3708e132702f6f847a76ec45a5417f5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2850e63d429bce6c7524a651ad4e66b2') in 0.017074 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 129.539862 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Escombros2.prefab
+  artifactKey: Guid(49712ffcede8b694c8c60221da1ba35b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Escombros2.prefab using Guid(49712ffcede8b694c8c60221da1ba35b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18502487ca4b1e788f223adf1e4f3574') in 0.021140 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.238956 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Escombros2.prefab
+  artifactKey: Guid(49712ffcede8b694c8c60221da1ba35b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Escombros2.prefab using Guid(49712ffcede8b694c8c60221da1ba35b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8b8c2ed3bd3a91199b03b30eec9bb3d') in 0.029078 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 485.941051 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 7.5x7.5.prefab
+  artifactKey: Guid(fd06110884305dd419007075a0d4a02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 7.5x7.5.prefab using Guid(fd06110884305dd419007075a0d4a02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52d5e9c5a4914faea7ce1be72082beb8') in 0.138255 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 263.278005 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Lateral derecha.prefab
+  artifactKey: Guid(ba3ab5f57de1e994890496e9ae9fa6c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Lateral derecha.prefab using Guid(ba3ab5f57de1e994890496e9ae9fa6c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f1c5bb1157256fd42fce29677dcba7b') in 0.035710 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 5x5.prefab
+  artifactKey: Guid(1da7e0d43578d4d46b30bcf0a14ba7fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 5x5.prefab using Guid(1da7e0d43578d4d46b30bcf0a14ba7fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd18e6190201dc37c4ebebf7b6e1db50') in 0.040382 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Lateral inferior.prefab
+  artifactKey: Guid(1e754cfebce7b6344bd5c0c3163ab99b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Lateral inferior.prefab using Guid(1e754cfebce7b6344bd5c0c3163ab99b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d1958831ff578bebbfdc607a7d481f5') in 0.042182 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000315 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Lateral izquierda.prefab
+  artifactKey: Guid(9e6d6d0e7ff87d74aa4443c6286128b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Lateral izquierda.prefab using Guid(9e6d6d0e7ff87d74aa4443c6286128b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4623d563083b003bcda66e1819b1710') in 0.038773 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab
+  artifactKey: Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab using Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5b6cc8ef4eb71478108c626aa8b7aa5') in 0.042717 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000345 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cba72a41571d95aed82169e176dc5740') in 0.043818 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000330 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4ec3450e345a6bdbbeb29d14bdecf1b') in 0.044508 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000290 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Sand_Plane_Flat_A.prefab
-  artifactKey: Guid(4d61159bb4b605141a93dde33f259e95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Sand_Plane_Flat_A.prefab using Guid(4d61159bb4b605141a93dde33f259e95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf43b9821ca025a6f0f153ed6e8eb77d') in 0.034328 seconds 
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Lateral superior.prefab
+  artifactKey: Guid(37cd74ff4bad75d4792a1bfe5ed77223) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Lateral superior.prefab using Guid(37cd74ff4bad75d4792a1bfe5ed77223) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4eb101afc17fc8b58acddb4a3b86448') in 0.029256 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000305 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/SandPlane_Large_Flat_Alt.prefab
-  artifactKey: Guid(db50594edbceafe4ca6c4d3a1108ad95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/SandPlane_Large_Flat_Alt.prefab using Guid(db50594edbceafe4ca6c4d3a1108ad95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8c021cd8edcd99e468a6ecadc6a0f33') in 0.028484 seconds 
+  Time since last request: 35.964952 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23315635441646ab0141445b67381764') in 0.036632 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.705364 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37cac751466f9b34e90a42bf8bbf8203') in 0.047556 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 173.410339 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '053e5a39f500f9305ccd7d23b1336d5a') in 0.053327 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.551494 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00578bf649bca1b446a54848018fd715') in 0.055914 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.911122 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0b8e289fbd87aa0b3b864ed289d1250') in 0.042980 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.121734 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dfcf3c9477d4511200a0df5b214114a') in 0.038638 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.480757 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c835f69e81752ff016d5e5e866397dbc') in 0.041926 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.095624 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff0e0c222ac38e84006d2ba64b780b4d') in 0.041092 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.486448 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6994ebaaf7dcefb6953d00c2c2b4e7de') in 0.043962 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 61.646897 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '234b476396b3fbcfc99ccf576d401dd5') in 0.037142 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.419428 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2224cd899c38ea0e7f58d671eba52f76') in 0.045471 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.318677 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b67dca42b6ccf0c9b9acbd60841b95f') in 0.034210 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.094847 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b32905393df00328721bd22839c17231') in 0.039404 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.972229 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef724a21c2f4153f0b801119bc657e19') in 0.047047 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.697885 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eec164b40eb812ce1dd795a001fe0b93') in 0.041717 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 36.611894 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55e51aa62ec88a5e762b211962bc3b39') in 0.041718 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.329947 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3960897286835dc793b5d398fc727e7') in 0.033060 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.201417 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33dee49eea318532e050d9a797563098') in 0.035775 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.501755 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '668edd8841b76f066fbb41ebe2eb677f') in 0.033411 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.375481 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2022a9dd74cd4cf925aed725e19d1f29') in 0.038454 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.677966 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '390dc28ce7cacea56d4b4e04fdf570f7') in 0.044899 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.029416 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5d383763fb02c5927a112c4a0759cf8') in 0.030695 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.695404 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ee2c75d485f0e29c792c4384a6b593b') in 0.039314 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 48.079836 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Lateral superior.prefab
+  artifactKey: Guid(37cd74ff4bad75d4792a1bfe5ed77223) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Lateral superior.prefab using Guid(37cd74ff4bad75d4792a1bfe5ed77223) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7df4c73ac8ce166857b683334c3e8f5') in 0.022998 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000631 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 5x5.prefab
+  artifactKey: Guid(1da7e0d43578d4d46b30bcf0a14ba7fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 5x5.prefab using Guid(1da7e0d43578d4d46b30bcf0a14ba7fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e51226a3ec51e1babc21257e6a05df8') in 0.040365 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab
+  artifactKey: Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab using Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67d6d63339ef3f85f37e4d2509c8ca00') in 0.034309 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86d30fb9ca53cf4e1452417dc95449fb') in 0.036305 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000496 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8bf43f12c133dff09f83de6c6f952de') in 0.033581 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.136370 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Lateral inferior.prefab
+  artifactKey: Guid(1e754cfebce7b6344bd5c0c3163ab99b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Lateral inferior.prefab using Guid(1e754cfebce7b6344bd5c0c3163ab99b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59f1b20cbcf176db027af65c3293b1d5') in 0.023251 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000360 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 5x5.prefab
+  artifactKey: Guid(1da7e0d43578d4d46b30bcf0a14ba7fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 5x5.prefab using Guid(1da7e0d43578d4d46b30bcf0a14ba7fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21bf7ccf4d3d8e2dd441669b64bea811') in 0.036635 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000285 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab
+  artifactKey: Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab using Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9861148db51decc028e398f52dc584b4') in 0.043858 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08d717b28b36c6095fbebcb0fe0b17a6') in 0.033906 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000353 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ec8e298f752f17a7db2a0fa8c996e0f') in 0.034889 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.063174 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Lateral izquierda.prefab
+  artifactKey: Guid(9e6d6d0e7ff87d74aa4443c6286128b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Lateral izquierda.prefab using Guid(9e6d6d0e7ff87d74aa4443c6286128b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5adf3ee2e14c477e78768ed04b14d843') in 0.029427 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000724 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 5x5.prefab
+  artifactKey: Guid(1da7e0d43578d4d46b30bcf0a14ba7fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 5x5.prefab using Guid(1da7e0d43578d4d46b30bcf0a14ba7fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d77ad568c8e58818c5803bf44f46948') in 0.044302 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab
+  artifactKey: Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab using Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e03bd685fbf81221b9006bd6200940a') in 0.036258 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000456 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6696a99fdc3f7b95caed0f9945da5552') in 0.032792 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac1b4cc5c830b5d2524306a86d6242f0') in 0.033864 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.580601 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Lateral derecha.prefab
+  artifactKey: Guid(ba3ab5f57de1e994890496e9ae9fa6c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Lateral derecha.prefab using Guid(ba3ab5f57de1e994890496e9ae9fa6c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63cecf7a59281a785aa493673fc64878') in 0.021265 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000312 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 5x5.prefab
+  artifactKey: Guid(1da7e0d43578d4d46b30bcf0a14ba7fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 5x5.prefab using Guid(1da7e0d43578d4d46b30bcf0a14ba7fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e904752ce20a30b5d1b5b54a3df7f2b') in 0.038186 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000286 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab
+  artifactKey: Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab using Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '425fa4ce6c6b69f4cc1958d0e395d11e') in 0.034648 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce903a042a375f707726f713b13f7dc7') in 0.035508 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000276 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Sand_Pile_B.prefab
-  artifactKey: Guid(4912eb0a264f64e41822a54db1183293) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Sand_Pile_B.prefab using Guid(4912eb0a264f64e41822a54db1183293) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6eb8d5a4686ed6e34ba67972804a8e06') in 0.030573 seconds 
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab
+  artifactKey: Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 7.5x7.5.prefab using Guid(18ed1f031aecee54185caa54f158d8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea14b0cc6ee2b8e1ba139ca9498ea37b') in 0.033099 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.910111 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Debiles 7.5x7.5.prefab
+  artifactKey: Guid(cb8c1c5f305fa7e4aa15568e0dbb6f51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Debiles 7.5x7.5.prefab using Guid(cb8c1c5f305fa7e4aa15568e0dbb6f51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb848efe6f40b60cb1a90495afc2f567') in 0.139625 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000379 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Moderados 10x10.prefab
+  artifactKey: Guid(6394ab31b69f6b44a9a2824514859c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Moderados 10x10.prefab using Guid(6394ab31b69f6b44a9a2824514859c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0abd91ee617fa5e8dd3b9661fb218243') in 0.124550 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000313 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Debiles 12x12.prefab
+  artifactKey: Guid(c502439a59d59a74eac46a678a25b69d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Debiles 12x12.prefab using Guid(c502439a59d59a74eac46a678a25b69d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dc4b704a906467e1d0d5b9c98b776a8') in 0.161575 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Npc 1 5x5.prefab
+  artifactKey: Guid(cbf2ae0b6b962b947875d6531f0c8c29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Npc 1 5x5.prefab using Guid(cbf2ae0b6b962b947875d6531f0c8c29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1df08b6c85556d18f087e6601005645b') in 0.056447 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000305 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos MuchosDebiles 7.5x7.5.prefab
+  artifactKey: Guid(c4e4ee8ea99a9b243a9fcd8b7841b05a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos MuchosDebiles 7.5x7.5.prefab using Guid(c4e4ee8ea99a9b243a9fcd8b7841b05a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f134415a03394acbdd95f39da78a1fb8') in 0.140234 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000348 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 7.5x7.5.prefab
+  artifactKey: Guid(e522b16026c90254ca24854246fbe7f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 7.5x7.5.prefab using Guid(e522b16026c90254ca24854246fbe7f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '233b8ff21a776d4c529509068c3a0092') in 0.124817 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000482 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes2 5x5.prefab
+  artifactKey: Guid(b18c61bf915a66d45ae07da508d7ea14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes2 5x5.prefab using Guid(b18c61bf915a66d45ae07da508d7ea14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bf1a9bb7b332cc6e0bd484aa26d681b') in 0.184298 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000311 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes2 7.5x7.5.prefab
+  artifactKey: Guid(0f4dcce1e1151fd49ace1ec6e8a2662f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes2 7.5x7.5.prefab using Guid(0f4dcce1e1151fd49ace1ec6e8a2662f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25016798972fb3c11034efb630f53053') in 0.114958 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000295 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Sand_To_Grass_L-Corner.prefab
-  artifactKey: Guid(9607d06dda13bc145ac26ad819e50c60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Sand_To_Grass_L-Corner.prefab using Guid(9607d06dda13bc145ac26ad819e50c60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83950783934d7980429e0013cf9f0999') in 0.034870 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000336 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Platform_Medium_GrassVariant.prefab
-  artifactKey: Guid(098ae599500a3944392e1db2264b4f85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Platform_Medium_GrassVariant.prefab using Guid(098ae599500a3944392e1db2264b4f85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e717f20086297773881ac58c7b9dd823') in 0.030134 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000282 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/SandPlane_Large_CoastLine.prefab
-  artifactKey: Guid(00b59ffdbc3d6e046b9a235e73ec17cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/SandPlane_Large_CoastLine.prefab using Guid(00b59ffdbc3d6e046b9a235e73ec17cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '607f284fabd739231a01ff4718d64eb1') in 0.033504 seconds 
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a54e7d75519792bf7fa046e2c7195c25') in 0.078605 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000301 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Sand_Plane_Flat_B.prefab
-  artifactKey: Guid(2e435be2e7b92ca4789c1622bcf19b16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Sand_Plane_Flat_B.prefab using Guid(2e435be2e7b92ca4789c1622bcf19b16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2422e3c31586461bcf266a3e3b0da61') in 0.031872 seconds 
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Spawn Completo 5x5.prefab
+  artifactKey: Guid(dbd856371b5759d458464c7cf699cbae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Spawn Completo 5x5.prefab using Guid(dbd856371b5759d458464c7cf699cbae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc2b05ec09351aea62c5391fd947341f') in 0.088051 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000426 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Platform_Medium.prefab
-  artifactKey: Guid(bdd4b75b55a289442b2ce61112fb11c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Platform_Medium.prefab using Guid(bdd4b75b55a289442b2ce61112fb11c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d2a6c5feded3acbff459db6db8ab368') in 0.034796 seconds 
+  Time since last request: 0.000330 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos MuchosDebiles 10x10.prefab
+  artifactKey: Guid(2bf85dc826f1e9641a8cc60eb9190919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos MuchosDebiles 10x10.prefab using Guid(2bf85dc826f1e9641a8cc60eb9190919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34349301d76b019e8a64dacc239557b2') in 0.166063 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000306 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Sand_Pile_A.prefab
-  artifactKey: Guid(7c5e400add54e9c40b4538062c703736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Sand_Pile_A.prefab using Guid(7c5e400add54e9c40b4538062c703736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0546b1680cd24ebffae19142713c57ff') in 0.034247 seconds 
+  Time since last request: 0.000354 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 5x5.prefab
+  artifactKey: Guid(b0f672cad2bd3424da514a5122316e80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 5x5.prefab using Guid(b0f672cad2bd3424da514a5122316e80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcb69a6ec385fbc65ae384d6681bbe28') in 0.138551 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000262 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Platform_Small.prefab
-  artifactKey: Guid(71d23bf57c3e27c49b2b037909fd4954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Platform_Small.prefab using Guid(71d23bf57c3e27c49b2b037909fd4954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0af47007bf957f05817bc69e5fb62ad0') in 0.033862 seconds 
+  Time since last request: 0.000343 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos MuchosEnemigos 5x5.prefab
+  artifactKey: Guid(588d3086a43bfd04ea894f05d4fecc2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos MuchosEnemigos 5x5.prefab using Guid(588d3086a43bfd04ea894f05d4fecc2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89cfa2e99088170f5849a37ac07b88ea') in 0.167498 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000299 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 10x10.prefab
+  artifactKey: Guid(368b1f56fdb3844458c31a14696db4a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 10x10.prefab using Guid(368b1f56fdb3844458c31a14696db4a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6d28645b4f0bed5c422037e61a49047') in 0.153428 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Spawn Semivacio 5x5.prefab
+  artifactKey: Guid(5953675a55f3d0f4d869d3fb5f7de82c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Spawn Semivacio 5x5.prefab using Guid(5953675a55f3d0f4d869d3fb5f7de82c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c15b19acdaa0e236f8d0b1b6737c0ad2') in 0.088151 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000280 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 12x12.prefab
+  artifactKey: Guid(2da34b57df75c944f96afb42e143cf32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 12x12.prefab using Guid(2da34b57df75c944f96afb42e143cf32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c7170b31616a29ede5426bee55aafd3') in 0.150107 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000313 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Spawn Vacio 5x5.prefab
+  artifactKey: Guid(0c960ed777f1bf74a95ad6fc3c3e3e28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Spawn Vacio 5x5.prefab using Guid(0c960ed777f1bf74a95ad6fc3c3e3e28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02c0e0787d39e0c875e9eaf9264f50a5') in 0.048204 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 7.5x7.5.prefab
+  artifactKey: Guid(fd06110884305dd419007075a0d4a02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 7.5x7.5.prefab using Guid(fd06110884305dd419007075a0d4a02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd63b645d946edb408d72bf1a375f2e05') in 0.139259 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000360 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Sala Descanso 1 5x5.prefab
+  artifactKey: Guid(d7d0464fd3b401449b2caeb14a016a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Sala Descanso 1 5x5.prefab using Guid(d7d0464fd3b401449b2caeb14a016a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20568b24e1a2002ed2ca72a777532511') in 0.061514 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000291 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Sand_To_Grass_Edge.prefab
-  artifactKey: Guid(f92988feda30747479e53ef100623c02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Sand_To_Grass_Edge.prefab using Guid(f92988feda30747479e53ef100623c02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '862bdc5bd1dad068ada7ab1d4d0196b6') in 0.035078 seconds 
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Debiles2 5x5.prefab
+  artifactKey: Guid(4a82a99c9ec95df479c512c526d23ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Debiles2 5x5.prefab using Guid(4a82a99c9ec95df479c512c526d23ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6755387886f2cd2ba9be422c929f037') in 0.169964 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000331 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Sand_Pile_C.prefab
-  artifactKey: Guid(162f6a6893c338d488d6d9016ad374ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Sand_Pile_C.prefab using Guid(162f6a6893c338d488d6d9016ad374ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0912c8f68216f43deb63c59438cd4f3a') in 0.031318 seconds 
+  Time since last request: 0.000329 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Moderados 7.5x7.5.prefab
+  artifactKey: Guid(761524aa8cc7cc14a84f9ac4940e3a4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Moderados 7.5x7.5.prefab using Guid(761524aa8cc7cc14a84f9ac4940e3a4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cae34d14b3a34698fbc4cded407e54b') in 0.112107 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000350 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Sand_Plane_Medium_B.prefab
-  artifactKey: Guid(7621e9ad445ec36458b388a84c03b9ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Sand_Plane_Medium_B.prefab using Guid(7621e9ad445ec36458b388a84c03b9ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a7dc86c050993ef3ddde65e468b0184') in 0.038240 seconds 
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Debiles 10x10.prefab
+  artifactKey: Guid(db47323289326a543aba78a126751863) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Debiles 10x10.prefab using Guid(db47323289326a543aba78a126751863) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0dda3e7d010edbd908c5270b20e677d') in 0.132062 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000282 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/SandPlane_Large_Bumpy.prefab
-  artifactKey: Guid(ffd616160ac27764082b9fc7067e1e3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/SandPlane_Large_Bumpy.prefab using Guid(ffd616160ac27764082b9fc7067e1e3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9f433b0ea1b4cf958bbe3f4702d04dd') in 0.037182 seconds 
+  Time since last request: 0.000303 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos DistanciaModerados 12x12.prefab
+  artifactKey: Guid(51bd410bb3452de4a97a08f4bb242123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos DistanciaModerados 12x12.prefab using Guid(51bd410bb3452de4a97a08f4bb242123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6312af7d759ac3260e9a9f1dd6d17a0') in 0.126770 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000505 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/SandPlane_Large_Pool.prefab
-  artifactKey: Guid(0f273ed94f00aa04bb9773ef3f387d72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/SandPlane_Large_Pool.prefab using Guid(0f273ed94f00aa04bb9773ef3f387d72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20e496f0f17bca1f24929d8487b1bc80') in 0.035649 seconds 
+  Time since last request: 0.000598 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Npc 1 7.5x7.5.prefab
+  artifactKey: Guid(1759cf2a3c43faf428aeef8045bf7527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Npc 1 7.5x7.5.prefab using Guid(1759cf2a3c43faf428aeef8045bf7527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4c709338d95c718355a60765db6a0f7') in 0.066523 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000485 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Sand_To_Grass_Corner.prefab
-  artifactKey: Guid(ce423f5a7ca0cfa4f80221b65b8abd1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Sand_To_Grass_Corner.prefab using Guid(ce423f5a7ca0cfa4f80221b65b8abd1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58ca79691e4749213bf025b246cd7ea4') in 0.035832 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000317 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Small_A.prefab
-  artifactKey: Guid(5cb1b8ad9a4b0e145add46d70d0155c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Small_A.prefab using Guid(5cb1b8ad9a4b0e145add46d70d0155c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2afaadd6f32ac34516b2c53d587bc121') in 0.038753 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000389 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Sand_Plane_Bump_A.prefab
-  artifactKey: Guid(0f174da1321abbe4a98efe09af62e6bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Sand_Plane_Bump_A.prefab using Guid(0f174da1321abbe4a98efe09af62e6bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e33411074130ffb23c93b610e82505ed') in 0.038946 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000296 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/SandPlane_Large_Flat.prefab
-  artifactKey: Guid(6d64c57a7672b04438dd1b4dcbad1dec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/SandPlane_Large_Flat.prefab using Guid(6d64c57a7672b04438dd1b4dcbad1dec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed22421cd8e3626df9e4ad3fcde05fe2') in 0.035591 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000369 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Platform_Small_GrassVariant.prefab
-  artifactKey: Guid(f7b43761098f9964882fc65fc91802fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Platform_Small_GrassVariant.prefab using Guid(f7b43761098f9964882fc65fc91802fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7e82dfdebb7ea56144656cd5dd8a025') in 0.038624 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.751658 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Boulder_A.prefab
-  artifactKey: Guid(705f4b83479c7a847b0483e6bae08685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Boulder_A.prefab using Guid(705f4b83479c7a847b0483e6bae08685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e39f091b360a6a051874bc4ab3430e5') in 0.045787 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000351 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Boulder_B.prefab
-  artifactKey: Guid(a537cd0cd4b46ce42bc9e0e71c600424) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Boulder_B.prefab using Guid(a537cd0cd4b46ce42bc9e0e71c600424) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '755365fc072388926aa44aaaf1331866') in 0.032456 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000288 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Medium_D.prefab
-  artifactKey: Guid(cc59f3faa1927724295afa34257926f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Medium_D.prefab using Guid(cc59f3faa1927724295afa34257926f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a75487d4df41d460837e4ee1cdb508d4') in 0.032834 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000443 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Medium_B.prefab
-  artifactKey: Guid(120f6cb48fd75004dac1968f60ae1282) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Medium_B.prefab using Guid(120f6cb48fd75004dac1968f60ae1282) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9fb2ae178e181618559b6819d6e3eb3') in 0.029710 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000313 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Cave_Entry_B.prefab
-  artifactKey: Guid(1c500ba592ff6da499b984c6f47d6db2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Cave_Entry_B.prefab using Guid(1c500ba592ff6da499b984c6f47d6db2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4d9a7da9236154ba3537cb000945e40') in 0.033183 seconds 
+  Time since last request: 0.000283 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Jefe 12x12.prefab
+  artifactKey: Guid(89094ce15c0324642a069444cb5011cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Jefe 12x12.prefab using Guid(89094ce15c0324642a069444cb5011cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '732a43a49b14409ad14166ae38cd2981') in 0.124834 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000322 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Medium_A.prefab
-  artifactKey: Guid(71594090eb3d11d4c909235505df6cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Medium_A.prefab using Guid(71594090eb3d11d4c909235505df6cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17f32f6698120a966a6967545bb29494') in 0.034934 seconds 
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos DébilesRango 5x5.prefab
+  artifactKey: Guid(d01ad3295f46e854f9f3379c9bc368c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos DébilesRango 5x5.prefab using Guid(d01ad3295f46e854f9f3379c9bc368c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efc81e474cb8509a065cc5c3ea520188') in 0.169615 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000277 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Cave_Entry_A.prefab
-  artifactKey: Guid(84ec68b94586a9b4697df756d70a1cf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Cave_Entry_A.prefab using Guid(84ec68b94586a9b4697df756d70a1cf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1563c9ad9dce4b40459bafed6ec8d9f') in 0.033066 seconds 
+  Time since last request: 0.000294 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes2 12x12.prefab
+  artifactKey: Guid(5dddb99ba599943408f0c77443725c97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes2 12x12.prefab using Guid(5dddb99ba599943408f0c77443725c97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e6c41757e4531dd2e33af0f6ad0187a') in 0.131481 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000299 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos DebilesMuchos 12x12.prefab
+  artifactKey: Guid(38427f4281ca14b48bdfc69070e1c773) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos DebilesMuchos 12x12.prefab using Guid(38427f4281ca14b48bdfc69070e1c773) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4667816f8bdac8b00c7994b02d785c0') in 0.133593 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 68.387051 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab
+  artifactKey: Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab using Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24c2e709e60045816c10f1208844d739') in 0.036978 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.025263 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab
+  artifactKey: Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab using Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd5a8dc936f295ee43390becaf5be2b5') in 0.033447 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.196323 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab
+  artifactKey: Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab using Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c70a620f44694bdde6386ca12051cb8c') in 0.035656 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.635913 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab
+  artifactKey: Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab using Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a2229335e632c03812902dcb84e29ba') in 0.036258 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 28.418829 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab
+  artifactKey: Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab using Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9c0145a6a0ea16feaf8e81f133a7841') in 0.046600 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.692381 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab
+  artifactKey: Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab using Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9161986037a65a2f2171d37f7d0adce0') in 0.035725 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 27.664827 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab
+  artifactKey: Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab using Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '212465aad9a01f3c9800cf50d4be910e') in 0.035559 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.606521 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab
+  artifactKey: Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab using Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93df60f1f9a9f294caf6da7788b9187c') in 0.036926 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 25.196204 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab
+  artifactKey: Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab using Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5295eb95e7ecd5119632c510a667ee1b') in 0.040976 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.999667 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab
+  artifactKey: Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab using Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fec3f1eb766d3b0ae276aedef2be44f3') in 0.034140 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.885461 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab
+  artifactKey: Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab using Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '380980f5e2592ac3604244e41ec0d97b') in 0.033000 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.614680 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab
+  artifactKey: Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab using Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '225bfbc2e8286a56ba4151aeb8a96e1e') in 0.033680 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 25.408364 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab
+  artifactKey: Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab using Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '530fe1ddc7e9e46ac4753ea642d3bd5d') in 0.037797 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.786111 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab
+  artifactKey: Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab using Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1b48511a5970d5e668206e99f1265ac') in 0.039144 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.303799 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab
+  artifactKey: Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab using Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50b450816afb77cedbb56faff20ae033') in 0.035919 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.409721 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab
+  artifactKey: Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 10x10.prefab using Guid(3ef057f2585157d49a68656e80c6e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51eb7ecff3304e64bbeadac19cbbb731') in 0.032386 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 28.846564 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef0ca9e69681e7ad22731249d80699ea') in 0.037696 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.608144 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be1033aafae9671fc2ee9ffe2ebacf99') in 0.031876 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.437075 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3003b785f847bc6f9a98522e34d296c') in 0.037861 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.866425 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1beb595ad5e03c88586cfd6ed543fee') in 0.037514 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.631408 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdd762521d0043d47f1db68d0418fc73') in 0.035002 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.821001 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22d2ac95496e9af43f763873002ec3bd') in 0.036856 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.633931 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '937120c630f6c64700c509706eab3b0e') in 0.033890 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.584279 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cc801bb570fedac86302822ad3fd7cf') in 0.040062 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.318808 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96ffcceffabedf72582fc2dd6d3d996f') in 0.040402 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.562969 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fb1f778c3d39e450b28c6908b22fcdd') in 0.044498 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.283026 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dea0f0c827f93244a3048fb98afb6a4d') in 0.032664 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.000849 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0142bdfcfc299c323d4042fc7e8050f') in 0.039296 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.897407 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c3dedd8d8cebee70672b444c8eee9c0') in 0.036478 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.774261 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87e1834e212067db720ec517cb8ecf9e') in 0.039331 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.010565 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7e7c33815db7e75222fe7d4ed030c23') in 0.042569 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.578471 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1683c321dd56faec106d4732f10b4b9') in 0.036505 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 28.276583 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffdfbb4685b793eb90ca237336383d7d') in 0.037334 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.444168 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a698c1d93fb46327b9ca131aa553ac1') in 0.040031 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.994925 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6ed47cd7221077a0441862ff31a21f6') in 0.036079 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.419850 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b08967d9e7203782227d9bb2180a60c5') in 0.038751 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.772483 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab
+  artifactKey: Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Laterales y Salas vacias/Vacia 12x12.prefab using Guid(14b044530eff1484ab0753f1a36549a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b946267dc4341f35be2b52efc622fe40') in 0.041038 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.478063 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Debiles 10x10.prefab
+  artifactKey: Guid(db47323289326a543aba78a126751863) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Debiles 10x10.prefab using Guid(db47323289326a543aba78a126751863) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37c5c6b4f25ed274642931ef4d30f147') in 0.124662 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000292 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Medium_E.prefab
-  artifactKey: Guid(d7509b3f716acc4479707fd176053311) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Medium_E.prefab using Guid(d7509b3f716acc4479707fd176053311) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd03445a0f417f1dbcd4305e7748a2ee') in 0.035016 seconds 
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Moderados 10x10.prefab
+  artifactKey: Guid(6394ab31b69f6b44a9a2824514859c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Moderados 10x10.prefab using Guid(6394ab31b69f6b44a9a2824514859c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '697c24f50183b736c74411ba4acbec18') in 0.128011 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000277 seconds.
-  path: Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Medium_C.prefab
-  artifactKey: Guid(0343ecdc741cd7a4f87563f3cb10b96e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/LowPolyEnviroPack_LITE_builtIn/BeachArea_Set1/Prefabs/Rock_Medium_C.prefab using Guid(0343ecdc741cd7a4f87563f3cb10b96e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b809715d624e184d88094b7f85691161') in 0.034997 seconds 
+  Time since last request: 0.000329 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Debiles 12x12.prefab
+  artifactKey: Guid(c502439a59d59a74eac46a678a25b69d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Debiles 12x12.prefab using Guid(c502439a59d59a74eac46a678a25b69d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06374159557e009b40b471a8a34f959e') in 0.148522 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 10.988711 seconds.
+  Time since last request: 0.000284 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c80c74b021dc930844b4c5beb3f0cc87') in 0.072335 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000318 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos MuchosDebiles 10x10.prefab
+  artifactKey: Guid(2bf85dc826f1e9641a8cc60eb9190919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos MuchosDebiles 10x10.prefab using Guid(2bf85dc826f1e9641a8cc60eb9190919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa2aec8e82b2e16f0b5f12915cdafa26') in 0.128519 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 10x10.prefab
+  artifactKey: Guid(368b1f56fdb3844458c31a14696db4a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 10x10.prefab using Guid(368b1f56fdb3844458c31a14696db4a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c19d07654d17e1482b1f56e113d88dab') in 0.169264 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000330 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 12x12.prefab
+  artifactKey: Guid(2da34b57df75c944f96afb42e143cf32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 12x12.prefab using Guid(2da34b57df75c944f96afb42e143cf32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7d36e03d428ad13da074685ab1790b0') in 0.129816 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000295 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos DistanciaModerados 12x12.prefab
+  artifactKey: Guid(51bd410bb3452de4a97a08f4bb242123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos DistanciaModerados 12x12.prefab using Guid(51bd410bb3452de4a97a08f4bb242123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c20a15b263340bd7112bc2baa50aea11') in 0.122845 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Jefe 12x12.prefab
+  artifactKey: Guid(89094ce15c0324642a069444cb5011cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Jefe 12x12.prefab using Guid(89094ce15c0324642a069444cb5011cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f559f9b953a521b58a07c264382f471') in 0.127209 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes2 12x12.prefab
+  artifactKey: Guid(5dddb99ba599943408f0c77443725c97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes2 12x12.prefab using Guid(5dddb99ba599943408f0c77443725c97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7929fa087033769470dc56864e6852c3') in 0.221518 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000314 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos DebilesMuchos 12x12.prefab
+  artifactKey: Guid(38427f4281ca14b48bdfc69070e1c773) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos DebilesMuchos 12x12.prefab using Guid(38427f4281ca14b48bdfc69070e1c773) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7937def21fcc3dab767b2bf02c751cda') in 0.151169 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 308.354369 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 7.5x7.5.prefab
+  artifactKey: Guid(fd06110884305dd419007075a0d4a02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 7.5x7.5.prefab using Guid(fd06110884305dd419007075a0d4a02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a4aa78e0a3887e9d896313b46069b14') in 0.137195 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 55.222231 seconds.
   path: Assets/Resources/Prefabs/Egipto/Props/Antorcha2 Cuerpo.prefab
   artifactKey: Guid(380cd0830f741454782490203d8de4d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Props/Antorcha2 Cuerpo.prefab using Guid(380cd0830f741454782490203d8de4d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd1ec4225d3eafaa32a70a8587c0cd73') in 0.032705 seconds 
+Start importing Assets/Resources/Prefabs/Egipto/Props/Antorcha2 Cuerpo.prefab using Guid(380cd0830f741454782490203d8de4d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3292f934224ae13d1bb562590fb3c1a3') in 0.028108 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Escombros.prefab
+  artifactKey: Guid(22b03f13c86bb89419df8a8fd20048cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Escombros.prefab using Guid(22b03f13c86bb89419df8a8fd20048cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83d8f2e1136b3d36630fdfa3713ef7ed') in 0.034465 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.906114 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Debiles 12x12.prefab
+  artifactKey: Guid(c502439a59d59a74eac46a678a25b69d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Debiles 12x12.prefab using Guid(c502439a59d59a74eac46a678a25b69d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db002039d356fd4b46f459cde33eed7d') in 0.128628 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000270 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Moderados 10x10.prefab
+  artifactKey: Guid(6394ab31b69f6b44a9a2824514859c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Moderados 10x10.prefab using Guid(6394ab31b69f6b44a9a2824514859c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b58b63fd4850ad27da3f41317a6213db') in 0.119551 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos MuchosDebiles 10x10.prefab
+  artifactKey: Guid(2bf85dc826f1e9641a8cc60eb9190919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos MuchosDebiles 10x10.prefab using Guid(2bf85dc826f1e9641a8cc60eb9190919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '169dc153866e2afdf65ca5f06e43cf8f') in 0.135384 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000314 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 10x10.prefab
+  artifactKey: Guid(368b1f56fdb3844458c31a14696db4a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 10x10.prefab using Guid(368b1f56fdb3844458c31a14696db4a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3df46dbafa5a284730bd475248cb9592') in 0.160753 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000359 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 12x12.prefab
+  artifactKey: Guid(2da34b57df75c944f96afb42e143cf32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes 12x12.prefab using Guid(2da34b57df75c944f96afb42e143cf32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7519fba9f811e042f60333b118afe7c8') in 0.129795 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000292 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 7.5x7.5.prefab
+  artifactKey: Guid(fd06110884305dd419007075a0d4a02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 7.5x7.5.prefab using Guid(fd06110884305dd419007075a0d4a02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7017fae446c7e6d1b0591047b9e4609e') in 0.133420 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000302 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Jefe 12x12.prefab
+  artifactKey: Guid(89094ce15c0324642a069444cb5011cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Jefe 12x12.prefab using Guid(89094ce15c0324642a069444cb5011cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '578e9cb10bef04dd7f7271a58d24e42f') in 0.129548 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000296 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Props/Desert_Ram_Altar 1.prefab
-  artifactKey: Guid(16c7881a9024db9488486bfa53e7c333) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Props/Desert_Ram_Altar 1.prefab using Guid(16c7881a9024db9488486bfa53e7c333) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60aa3a0a913da2c1634c201cda7fc893') in 0.025990 seconds 
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes2 12x12.prefab
+  artifactKey: Guid(5dddb99ba599943408f0c77443725c97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Enemigos Fuertes2 12x12.prefab using Guid(5dddb99ba599943408f0c77443725c97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61c48a684f2dd57a9d9b684053934672') in 0.122448 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000288 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Props/Desert_Ram_Altar 1 1.prefab
-  artifactKey: Guid(a220be625fa5451498314f67dcc237f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Props/Desert_Ram_Altar 1 1.prefab using Guid(a220be625fa5451498314f67dcc237f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af608af9112dabe77c4bc2b5ffcfd152') in 0.037985 seconds 
+  Time since last request: 143.720687 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Escombros3.prefab
+  artifactKey: Guid(7b0d618d479ee3647a4ee37edefefaf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Escombros3.prefab using Guid(7b0d618d479ee3647a4ee37edefefaf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e2dc1db44f6a25a0e284f87fb24b33b') in 0.018187 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000313 seconds.
-  path: Assets/Resources/Prefabs/Egipto/Props/AntorchaPared.prefab
-  artifactKey: Guid(3154fa50412c43a47b09072ee5dfefca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Egipto/Props/AntorchaPared.prefab using Guid(3154fa50412c43a47b09072ee5dfefca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a187c7610cc20f87bfd0794a371ed8bd') in 0.027269 seconds 
+  Time since last request: 3.548593 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/Escombros3.prefab
+  artifactKey: Guid(7b0d618d479ee3647a4ee37edefefaf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/Escombros3.prefab using Guid(7b0d618d479ee3647a4ee37edefefaf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5530535cdaf39173b0906f3838817f7e') in 0.029150 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 353.417510 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/muchasMonedas.prefab
+  artifactKey: Guid(25893c98352b8084fb6686cf934944cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/muchasMonedas.prefab using Guid(25893c98352b8084fb6686cf934944cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04174de1927d613320f352daacd42c00') in 0.042828 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 23.640856 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Jefe 12x12.prefab
+  artifactKey: Guid(89094ce15c0324642a069444cb5011cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Jefe 12x12.prefab using Guid(89094ce15c0324642a069444cb5011cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f2f0b51ce6f2dc33dd414c088fd7e90') in 0.126048 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000276 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f79d8d47fe9dbeeebf7177ac9babb53b') in 0.104828 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000293 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 7.5x7.5.prefab
+  artifactKey: Guid(fd06110884305dd419007075a0d4a02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 7.5x7.5.prefab using Guid(fd06110884305dd419007075a0d4a02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0129c3598435421d84bb932510a0947') in 0.127295 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 24.187511 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba7bedf4d036ef4b78c67c67a1a897af') in 0.114567 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.615741 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1405be0943a1513c2eb28e6c981786d1') in 0.137925 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.761273 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1be2a79a9b33f8e977fe4073fc9e9551') in 0.117653 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.552972 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b296a5dd9ea89055d31dca9afb946a3') in 0.106308 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.910506 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57e6067abd7da7987868b4fa6c97ebae') in 0.107344 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.644658 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '872d02ed808670dc5f80a61c4b9899c9') in 0.155724 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.904706 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36d9ddf7be0c3315aedf0f1f85c955e6') in 0.114243 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.227519 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c256ad9ae41d953ebb181c52b28f3386') in 0.109686 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 171.590815 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Jefe 12x12.prefab
+  artifactKey: Guid(89094ce15c0324642a069444cb5011cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Jefe 12x12.prefab using Guid(89094ce15c0324642a069444cb5011cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31def073340b1a2b41230e27edf7a59c') in 0.130183 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000290 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55d53a51597cb95eed0d3dc65dfd65bb') in 0.116515 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 7.5x7.5.prefab
+  artifactKey: Guid(fd06110884305dd419007075a0d4a02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 7.5x7.5.prefab using Guid(fd06110884305dd419007075a0d4a02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6de15a361f8733452d8792d920577d0') in 0.136441 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 63.212788 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76678de2374be147c8377200fe7dbfef') in 0.108623 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.077226 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cce025e09295e3cb26e27c3cc2ba03b') in 0.107813 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.500660 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0944d88bab78eecf6d47267ef9c9c7c8') in 0.134775 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 67.715460 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4d2d7d2ec8cc28d291dc9dea6310101') in 0.113892 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.457413 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7138b97b39817360668f121214518d61') in 0.111223 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.531273 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67e873d315f37ff693b2ff436c912755') in 0.130047 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.683332 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4c9f25e6ded49dca1edbb9288291ae3') in 0.136667 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 27.411932 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '811a652f0fedd6b6aab50889445dd693') in 0.112309 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.744225 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43ab7120d9a05339e9826a540ea092db') in 0.119436 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.938828 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Props/muchasMonedas.prefab
+  artifactKey: Guid(25893c98352b8084fb6686cf934944cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Props/muchasMonedas.prefab using Guid(25893c98352b8084fb6686cf934944cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '639f74ff31011c828a299fd9601af4cd') in 0.034466 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 33.912788 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '180e57f96fc00a984de572359e52f92e') in 0.142761 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.039045 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e773d04654f4020498ffb82a59bd245') in 0.142751 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.603208 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f689c9346b44749563302e6ab4c9f2ed') in 0.124349 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.499037 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69cde4958f3d7cf9a8cc4d6800381d03') in 0.158384 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.510095 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '730292961f0f390e23b8e74c47d84e85') in 0.135749 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.770037 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d2c034c3ed6789dff8cdff1174045d0') in 0.120631 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.626981 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea12d1020a38883b3ae466aabc990a82') in 0.125715 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 23.480778 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f08918bae9e72d5216f1eef9d5cda9fe') in 0.121850 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.736231 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f636634f5af00051cc0d5390eff4f64') in 0.151342 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.089902 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ea4091cf0ebb62bd290c17ccf8ef5d5') in 0.126809 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.109011 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60bf129add4f0c091dba754be6661b1e') in 0.125729 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.288341 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1ba965241a5967397d3726302b28a62') in 0.156518 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.393890 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a40844b83658b4350ee3b40c435208e1') in 0.134099 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 46.707806 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9a0bc22db04515b5d23ef4bad1ab010') in 0.130252 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.133786 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '492c506fd7e3ce1cb0d54ed92305367f') in 0.136355 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.882821 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1322e2cde559b9ca35caa6b3422cbed9') in 0.134252 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.166981 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb675749c86ad08a6603dfb1b286e98c') in 0.131985 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.155017 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8de6f2d0fd2832416b1b6dd821b08c9a') in 0.130808 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.351225 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81857b3feb585a4aa7e62a63d994c339') in 0.136426 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.212983 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a38df4c88b5210e5aa563e2a111ab9d8') in 0.136828 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.701365 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de09ab3e5300816e3fcf1b948a241de9') in 0.121741 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 250.663482 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b573a12bbf3033d546e57b0167a21af') in 0.128610 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.474954 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f926511a81fdb48720d26ed39e75b6bd') in 0.127589 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.666446 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3136d7d9ba235f2e8513ce954a10f21b') in 0.135958 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.129837 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '149687be9285d760439753c8aae1ae60') in 0.145192 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.750516 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22c7fc27fca4b36624bdabd584bc911b') in 0.123784 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 138.403406 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd538c3b43a8b16a8e58d0751ed178092') in 0.140550 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.760442 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69be6ce2e9e146ed7cba779eefa61bc8') in 0.175801 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.365237 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04e42096ee3e9b692c6ee4c0b41d4f2d') in 0.129291 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.324340 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a6e6bc119a575716918b23304a527b3') in 0.129621 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.710419 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf8f57394c3f818c3db981451b709186') in 0.119964 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.516930 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '277369a10e82d0b154ed7fe4b6ee2144') in 0.153727 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.782602 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bae6708cd9031e668a0954536ab75bb2') in 0.137248 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.304164 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a258950bc7572f936e852782dcc7e075') in 0.124089 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.945539 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c404d27ff90ac5abae9dd9dd34439e9') in 0.134537 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.978361 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '298b31f39ec5b9e6c08619a8e9247b13') in 0.122600 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.964084 seconds.
+  path: Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab
+  artifactKey: Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Egipto/Layouts/Salas/Minijefe 1 10x10.prefab using Guid(a8e79d73229ddc74ca584d12fe8095ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f23b181ae5894406375ec19d9c13237f') in 0.128738 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003915 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.726 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1728ms)
+		BeginReloadAssembly (438ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (26ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (248ms)
+		EndReloadAssembly (1189ms)
+			LoadAssemblies (179ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (407ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (443ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (76ms)
+				ProcessInitializeOnLoadAttributes (332ms)
+				ProcessInitializeOnLoadMethodAttributes (16ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1360 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 163.1 MB.
+System memory in use after: 163.2 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1855.
+Total: 4.218200 ms (FindLiveObjects: 0.207700 ms CreateObjectMapping: 0.073900 ms MarkObjects: 3.811600 ms  DeleteObjects: 0.123900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
