@@ -27,7 +27,8 @@ public class MiniMapGen : MonoBehaviour
     {
         if (Input.GetKeyDown("m"))
         {
-            if (!MapaAbierto)
+            MapaAbierto = !MapaAbierto;
+            if (MapaAbierto)
             {
                 ActualizarMiniMapa(GameManage.MiniSalaActual, GameManage.SalaActual);
                 MiniMapCamera.GetComponent<Camera>().orthographicSize = 2750;
@@ -38,7 +39,6 @@ public class MiniMapGen : MonoBehaviour
                 MiniMapCamera.GetComponent<Camera>().orthographicSize = 789;
 
             }
-            MapaAbierto = !MapaAbierto;
             salaMini.transform.GetChild(0).gameObject.SetActive(MapaAbierto);
             salaMini.transform.GetChild(1).gameObject.SetActive(!MapaAbierto);
         }
@@ -108,18 +108,20 @@ public class MiniMapGen : MonoBehaviour
     {
         if (SalaReal.GetComponent<Room>().IsClear)
         {
+            /*int puente = SalasPasadas.IndexOf(SalaReal) + 1;
+            SalasPasadas[puente].GetComponent<MeshRenderer>().material = Completada;*/
             SalaActual.GetComponent<MeshRenderer>().material = Completada;
         }
 
-        if (MapaAbierto)
+        if (!MapaAbierto)
         {
-            Player.transform.position = new Vector3(SalaActual.transform.position.x, 551, SalaActual.transform.position.z);
             MiniMapCamera.transform.position = new Vector3(SalaActual.transform.position.x, 600, SalaActual.transform.position.z);
         }
         else
         {
             MiniMapCamera.transform.position = new Vector3(Spawn.transform.position.x, 600, Spawn.transform.position.z);
         }
+        Player.transform.position = new Vector3(SalaActual.transform.position.x, 551, SalaActual.transform.position.z);
     }
 
     public void GenerarPuente(GameObject Sala, GameObject SalaReal, List<GameObject> mapArray)
@@ -136,22 +138,26 @@ public class MiniMapGen : MonoBehaviour
                     Puente = Instantiate(Puentes[0].gameObject, new Vector3(Sala.transform.position.x, Sala.transform.position.y, Sala.transform.position.z - 200), Quaternion.identity);
                     Puente.transform.Rotate(0.0f, 90.0f, 0.0f, Space.Self);
                     SalasPasadas.Add(SalaReal);
+                    SalasPasadas.Add(Puente);
                 }
                 if (SalaReal.GetComponent<Room>().valorDeCelda == mapArray[k].GetComponent<Room>().valorDeCelda - 10)
                 {
                     Puente = Instantiate(Puentes[0].gameObject, new Vector3(Sala.transform.position.x, Sala.transform.position.y, Sala.transform.position.z + 200), Quaternion.identity);
                     Puente.transform.Rotate(0.0f, 90.0f, 0.0f, Space.Self);
                     SalasPasadas.Add(SalaReal);
+                    SalasPasadas.Add(Puente);
                 }
                 if (SalaReal.GetComponent<Room>().valorDeCelda == mapArray[k].GetComponent<Room>().valorDeCelda + 1)
                 {
-                    Instantiate(Puentes[0].gameObject, new Vector3(Sala.transform.position.x - 200, Sala.transform.position.y, Sala.transform.position.z), Quaternion.identity);
+                    Puente = Instantiate(Puentes[0].gameObject, new Vector3(Sala.transform.position.x - 200, Sala.transform.position.y, Sala.transform.position.z), Quaternion.identity);
                     SalasPasadas.Add(SalaReal);
+                    SalasPasadas.Add(Puente);
                 }
                 if (SalaReal.GetComponent<Room>().valorDeCelda == mapArray[k].GetComponent<Room>().valorDeCelda - 1)
                 {
-                    Instantiate(Puentes[0].gameObject, new Vector3(Sala.transform.position.x + 200, Sala.transform.position.y, Sala.transform.position.z), Quaternion.identity);
+                    Puente = Instantiate(Puentes[0].gameObject, new Vector3(Sala.transform.position.x + 200, Sala.transform.position.y, Sala.transform.position.z), Quaternion.identity);
                     SalasPasadas.Add(SalaReal);
+                    SalasPasadas.Add(Puente);
                 }
             }
         }
