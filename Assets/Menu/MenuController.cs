@@ -33,9 +33,11 @@ public class MenuController : MonoBehaviour
     public TextMeshProUGUI TMP_nombre;
     public TextMeshProUGUI TMP_descripcion;
     public TextMeshProUGUI TMP_puntos;
-  
+    
+    public Image imagen;
+    public Sprite imagen_jugador; 
 
-    public int contadorDePersonajes = 0;
+    public int posicionPersonaje = 0;
 
     public int menuActual = 0; 
 
@@ -62,6 +64,8 @@ public class MenuController : MonoBehaviour
     public AudioMixer mixer;
    // public AudioSource fxSource;
     //public AudioClip clickSound;
+     
+
 
     private float lastVolume;
     
@@ -104,7 +108,7 @@ public class MenuController : MonoBehaviour
         
         botones_archivo.SetActive(true);
     
-        //audioSource1.Play(); 
+        audioSource2.Play();
        
     }
 
@@ -118,6 +122,7 @@ public class MenuController : MonoBehaviour
         botones_archivo.SetActive(false);
         menuActual = 2;
         audioSource2.Play();
+        
     }
    
         private void ActivateMenu3()
@@ -134,6 +139,7 @@ public class MenuController : MonoBehaviour
         archivo = archivo_Aguardar;
         menuActual = 2; 
         ActivateMenu2();
+        audioSource2.Play();
          
     }
 
@@ -147,13 +153,14 @@ public class MenuController : MonoBehaviour
         menuActual = 3;
         ActivateMenu3();  
         ActualizarInformacion();
+        audioSource2.Play();
      
     }
 
       public void ActualizarInformacion()
     {
 
-        Ficha personaje = lista_Personajes.ObtenerPersonaje(contadorDePersonajes);
+        Ficha personaje = lista_Personajes.ObtenerPersonaje(posicionPersonaje);
         //personaje.objeto_Jugador.SetActive(true);
         
         // personaje.sprite= lista_Personajes[contadorDePersonajes].Objeto_Jugador;
@@ -161,10 +168,30 @@ public class MenuController : MonoBehaviour
         personajesopo.objetoimagen();
         personajesopo.Objeto_Jugador.SetActive(True);
        
-        //lista_Personajes.contador_personajes.Objeto_Jugador.SetActive(true);
+        //  lista_Personajes.contador_personajes.Objeto_Jugador.SetActive(true);
 */        
- 
-         if(contadorDePersonajes == 0 ){        
+        TMP_nombre.text = personaje.nombre_Personaje;
+        TMP_descripcion.text = personaje.descripcion_Personaje;
+        TMP_puntos.text =  personaje.Puntos_Base;
+        imagen.sprite = personaje.imagen_personaje;
+      
+
+        
+       
+    /* 
+      for(int i =0; i < lista_Personajes.contadorDePersonajes; i++)
+        {
+        Ficha ficha = lista_Personajes.ObtenerPersonaje(i);
+              if(i== posicionPersonaje){
+               // lista_Personajes.personajes[contadorDePersonajes].objeto_Jugador.SetActive(true);
+                ficha.objeto_Jugador.SetActive(true);
+            }
+            else{
+                //lista_Personajes.personajes[i].objeto_Jugador.SetActive(false);
+                ficha.objeto_Jugador.SetActive(false);
+                }
+        }
+    if(contadorDePersonajes == 0 ){        
         esqueleto1.SetActive(true);
         esqueleto12.SetActive(false);
         
@@ -173,8 +200,6 @@ public class MenuController : MonoBehaviour
             esqueleto12.SetActive(true);
             esqueleto1.SetActive(false);
         }
-       
-    /*
         for(int i =0; i <= lista_Personajes.contadorDePersonajes; i++)
         {
             if(i== contadorDePersonajes){
@@ -185,9 +210,7 @@ public class MenuController : MonoBehaviour
                  }
         }
 */
-        TMP_nombre.text = personaje.nombre_Personaje;
-        TMP_descripcion.text = personaje.descripcion_Personaje;
-        TMP_puntos.text =  personaje.Puntos_Base;
+       
         Guardar();
     }  
 
@@ -199,16 +222,18 @@ public class MenuController : MonoBehaviour
        // Ficha personaje = lista_Personajes.ObtenerPersonaje(contadorDePersonajes);
        // personaje.objeto_Jugador.SetActive(false);
     
-        contadorDePersonajes--;
+        posicionPersonaje--;
 
-        if (contadorDePersonajes < 0)
+        if (posicionPersonaje < 0)
         {
           
-            contadorDePersonajes = lista_Personajes.contadorDePersonajes - 1;
+            posicionPersonaje = lista_Personajes.contadorDePersonajes - 1;
           
         }
         
         ActualizarInformacion();
+        audioSource2.Play();
+        Debug.Log(posicionPersonaje);
        
     }
     public void SiguientePersonaje()
@@ -221,26 +246,29 @@ public class MenuController : MonoBehaviour
         //Ficha personaje = lista_Personajes.ObtenerPersonaje(contadorDePersonajes);
         //personaje.objeto_Jugador.SetActive(false);
        
-        contadorDePersonajes++;
-        if (contadorDePersonajes >= lista_Personajes.contadorDePersonajes)
+        posicionPersonaje++;
+        if (posicionPersonaje >= lista_Personajes.contadorDePersonajes)
         {
             
-            contadorDePersonajes = 0;
+            posicionPersonaje = 0;
         }
 
         ActualizarInformacion();
+        audioSource2.Play();
+        Debug.Log(posicionPersonaje);
         
     }
 
  public void Guardar()
     {
-        PlayerPrefs.SetInt("contadorDePersonajes", contadorDePersonajes);
+        PlayerPrefs.SetInt("posicionPersonaje", posicionPersonaje);
     }
 
 
 
     public void  salirDelJuego()
-    {
+    {   
+        audioSource2.Play();
         Application.Quit();
     }
 
@@ -252,12 +280,14 @@ public class MenuController : MonoBehaviour
         if(menuActual == 3 ||   menuActual == 4)
         {
             ActivateMenu2();
+            audioSource2.Play();
         }
         else
         {
             if(menuActual == 2)
             {
                 ActivateMenu1();
+                audioSource2.Play();
             }
             else{
                         Application.Quit();
@@ -268,8 +298,9 @@ public class MenuController : MonoBehaviour
 
     public void CargarNivel()
     {
-        contadorDePersonajes = PlayerPrefs.GetInt("contadorDePersonajes");
-        SceneManager.LoadScene("Partida_Falsa");
+        posicionPersonaje = PlayerPrefs.GetInt("posicionPersonaje");
+        audioSource2.Play();
+        SceneManager.LoadScene("Partida");
     }
     
     public void Opciones(){
@@ -280,6 +311,7 @@ public class MenuController : MonoBehaviour
             menu4.SetActive(true);
             menu5.SetActive(false);
             menu6.SetActive(false);
+            audioSource2.Play();
             menuActual = 4;
     }  
 
@@ -289,6 +321,7 @@ public class MenuController : MonoBehaviour
             menu1.SetActive(false);          
             menu4.SetActive(false);
             menu5.SetActive(true);
+            audioSource2.Play();
             menuActual = 5;
 
     }
@@ -301,6 +334,7 @@ public class MenuController : MonoBehaviour
             menu4.SetActive(false);
             menu5.SetActive(false);
             menu6.SetActive(true);
+            audioSource2.Play();
             menuActual = 6;
     }  
 

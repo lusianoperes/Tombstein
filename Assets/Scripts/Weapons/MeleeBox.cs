@@ -5,26 +5,33 @@ using UnityEngine;
 
 public class MeleeBox : MonoBehaviour
 {
-    public GameObject jugador;
+    public int damage = 0;
     
-    public void ResizeBox()
+    private IEnumerator LifeTime(float timeWhileAlive)
     {
-        Weapon primaria = jugador.GetComponent<Inventory>().primaryWeapon;
-        transform.parent.localScale = new Vector3(primaria.weaponWidth, transform.parent.localScale.y , primaria.weaponRange);
+        yield return new WaitForSeconds(timeWhileAlive);
+        Destroy(transform.parent.gameObject);
+    }
+
+    void Start(){
+        Transform FirstP = transform.parent;
+        Melee weaponData = FirstP.transform.parent.GetComponent<Melee>();
+        InitializeBoxValues(weaponData.weaponDamage, weaponData.fullPlayerReference.transform.Find("MeleeSpawn") );
+        StartCoroutine(LifeTime(weaponData.attackDuration));
+    }
+    public void InitializeBoxValues(int finalDamge, Transform meleePoint)
+    {
+        damage = finalDamge;
+        transform.parent.rotation = meleePoint.rotation;
     }
 
     void OnTriggerEnter(Collider col)
-    {
+    {   
         if (col.gameObject.CompareTag("Enemy"))
         {   
-            Weapon primaria = jugador.GetComponent<Inventory>().primaryWeapon;
             Enemy enemigo = col.gameObject.GetComponent<Enemy>();
-            enemigo.RecieveDamage(primaria.weaponDamage);
-        }
-        else
-        {
-
+            enemigo.RecieveDamage(damage);
         }
     }
     
-}
+}// hacer que el rescalado sea por medio del padre, el instanciado es el padre, luego se accede ahijo y se edita

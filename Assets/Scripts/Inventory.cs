@@ -5,50 +5,37 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public bool InventarioAbierto = false;
+    
     public GameObject inventario;
 
     public Weapon primaryWeapon;
     public Weapon secondaryWeapon;
 
-    public List<Consumible> consumibles; //En el awake limitar el largo (inicial 3)
+    public Consumible[] consumibles; 
 
-    public List<Reliquia> reliquias; //En el awake limitar el largo (inicial 5)
+    public Reliquia[] reliquias; 
 
-    public BodyPart headPart;
-    public BodyPart leftArmPart;
-    public BodyPart rightArmPart;
-    public BodyPart torsoPart;
-    public BodyPart leftLegPart;
-    public BodyPart rightLegPart;
+    public BodyPart[] headPart;
+    public BodyPart[] armPart;
+    public BodyPart[] torsoPart;
+    public BodyPart[] legPart;
+    public Armor headProtection;
+    public Armor torsoProtection;
+    public Armor legProtection;
+    public Armor feetProtection;
 
-    public List<Item> objetos; //En el awake limitar el largo (inicial grid 9x9)
+    public Item[] objetos; 
      
-   /* void Update()
+    void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            if (!InventarioAbierto)
-            {
-                InventarioAbierto = true;
-                // Asegúrate de que inventarioObject no sea nulo antes de usarlo
-                if (objetos != null)
-                {
-                    inventario.SetActive(InventarioAbierto);
-                }
-
-                // Cambié GetComponenet a GetComponent
-                GameObject.FindGameObjectWithTag("GenerarEventosInventario").GetComponent<InventoryController>().showInventory();
-            }
-            else
-            {
-                // Asegúrate de que inventarioObject no sea nulo antes de usarlo
-                if (objetos != null)
-                {
-                    inventario.SetActive(false);
-                }
-                InventarioAbierto = false;
-            }
-        }
-    }*/
+        consumibles = new Consumible[3];
+        reliquias = new Reliquia[5];
+        objetos = new Item[25];
+        headPart = new BodyPart[3];
+        armPart = new BodyPart[3];
+        torsoPart = new BodyPart[3];
+        legPart = new BodyPart[3];
+        
+    }
+   
 }

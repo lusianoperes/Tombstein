@@ -9,9 +9,13 @@ public class Jugador : MonoBehaviour
     public PlayerController playerMovement;
     public int maxHp;
     public int currentHp;
-
-    public float finalDamage;
-
+    public float Fuerza;
+    public float Destreza;
+    public float Armadura;
+    public float Estamina;
+    public int Agilidad;
+    public float finalStrength;
+    
     public enum Personaje
     {
         Fredi,
@@ -20,24 +24,39 @@ public class Jugador : MonoBehaviour
         Ringo
     }
 
-    public Personaje personajeSelect;
-
-    public void SetJugador(Personaje pers)
+    private Personaje personajeSelect;
+    
+    public void SetJugador(int persPos)
     {
         
-        switch (pers)
+        switch (persPos)
         {
-            case Personaje.Pickle:
+            case 0:
                 maxHp = 800;
                 playerMovement.Speed = 6f;
+                Fuerza = 50f;
+                Destreza = 10f;
+                Armadura = 0f;
+                Estamina = 2f;
+                Agilidad = 2;
                 break;
-            case Personaje.Vagabond:
+            case 1:
                 maxHp = 200;
-                playerMovement.Speed = 7f;
+                playerMovement.Speed = 12f;
+                Fuerza = 10f;
+                Destreza = 30f;
+                Armadura = 0f;
+                Estamina = 10f;
+                Agilidad = 5;
                 break;
-            case Personaje.Ringo:
+            case 2:
                 maxHp = 150;
-                playerMovement.Speed = 7f;   
+                playerMovement.Speed = 20f;
+                Fuerza = 15f;
+                Destreza = 20f;
+                Armadura = 0f;
+                Estamina = 20f;
+                Agilidad = 3;
                 break;
             default:
                 maxHp = 200;
@@ -49,7 +68,7 @@ public class Jugador : MonoBehaviour
     public void Start()
     {
         playerMovement = this.GetComponent<PlayerController>();
-        SetJugador(personajeSelect);
+        SetJugador(PlayerPrefs.GetInt("posicionPersonaje"));
         currentHp=maxHp;
     }
 

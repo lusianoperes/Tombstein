@@ -19,7 +19,8 @@ public class PlayerProjectile : MonoBehaviour
     }
 
     void Start()
-    {
+    {   
+        
         StartCoroutine(LifeTime(lastingTime));
 
     }

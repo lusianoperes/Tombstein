@@ -332,74 +332,88 @@ public class DungeonManager : MonoBehaviour
         return valorMasAlejado;
     }
     
-    public void BuscarPorNombre(int Posi, int Posk, string Direccion, string direccionContraria, GameManage gameManage)
+    public void BuscarPorNombre(GameObject mapArrayi, GameObject mapArrayk, int k, string Direccion, string direccionContraria, GameManage gameManage, List<GameObject> MinimapPiso)
     {
-        mapArray[Posi].transform.GetChild(0).Find("Lateral " + Direccion).Find("Puerta").gameObject.SetActive(false);
-        mapArray[Posi].transform.GetChild(0).Find("Lateral " + Direccion).Find("Puerta Invisible").gameObject.SetActive(false);
-        mapArray[Posi].transform.GetChild(0).Find("Lateral " + Direccion).Find("Marco").gameObject.SetActive(true);
-        mapArray[Posi].transform.GetChild(0).Find("Lateral " + Direccion).Find("Relleno").GetComponent<BoxCollider>().enabled = false;
+        mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion).Find("Puerta").gameObject.SetActive(false);
+        mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion).Find("Puerta Invisible").gameObject.SetActive(false);
+        mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion).Find("Marco").gameObject.SetActive(true);
+        mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion).Find("Relleno").GetComponent<BoxCollider>().enabled = false;
 
-        mapArray[Posi].transform.GetChild(0).Find("Lateral " + Direccion).Find("Spawnpoint").gameObject.AddComponent<Tepear>();
-        mapArray[Posi].transform.GetChild(0).Find("Lateral " + Direccion).Find("Spawnpoint").gameObject.GetComponent<Tepear>().gameManage = gameManage;
-        mapArray[Posi].transform.GetChild(0).Find("Lateral " + Direccion).Find("Spawnpoint").gameObject.GetComponent<Tepear>().plano = mapArray[Posk].transform.GetChild(0).Find("Lateral " + direccionContraria).Find("TPPlayer").gameObject;
-        mapArray[Posi].transform.GetChild(0).Find("Lateral " + Direccion).Find("Spawnpoint").gameObject.GetComponent<Tepear>().piso = mapArray[Posk].transform.GetChild(0).Find("Piso").gameObject;
+        if (!mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion).Find("Spawnpoint").gameObject.TryGetComponent<Tepear>(out Tepear hinge))
+            mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion).Find("Spawnpoint").gameObject.AddComponent<Tepear>();
+
+        mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion).Find("Spawnpoint").gameObject.GetComponent<Tepear>().gameManage = gameManage;
+        mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion).Find("Spawnpoint").gameObject.GetComponent<Tepear>().plano = mapArrayk.transform.GetChild(0).Find("Lateral " + direccionContraria).Find("TPPlayer").gameObject;
+        mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion).Find("Spawnpoint").gameObject.GetComponent<Tepear>().Sala = mapArrayk;
+        mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion).Find("Spawnpoint").gameObject.GetComponent<Tepear>().MiniMapPlano = MinimapPiso[k];
     }
 
-    public void SetearObjetosDefault(int Posi)
+    public void SetearObjetosDefault(GameObject mapArrayi, bool SacarMarco)
     {
         string[] Direccion = new string[] {
-            "inferior", "superior", "derecha", "izquierda"};
+            "inferior", "superior", "derecha", "izquierda"
+        };
 
         for (int i=0;i<Direccion.Length;i++)
         {
-            mapArray[Posi].transform.GetChild(0).Find("Lateral " + Direccion[i]).Find("Puerta").gameObject.SetActive(false);
-            mapArray[Posi].transform.GetChild(0).Find("Lateral " + Direccion[i]).Find("Puerta Invisible").gameObject.SetActive(true);
-            mapArray[Posi].transform.GetChild(0).Find("Lateral " + Direccion[i]).Find("Marco").gameObject.SetActive(false);
-            mapArray[Posi].transform.GetChild(0).Find("Lateral " + Direccion[i]).Find("Relleno").GetComponent<BoxCollider>().enabled = true;
+            if (SacarMarco)
+            {
+                mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion[i]).Find("Marco").gameObject.SetActive(false);
+                mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion[i]).Find("AntorchasMarcoOff").gameObject.SetActive(true);  
+            }
+            
+            mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion[i]).Find("Puerta").gameObject.SetActive(true);
+            mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion[i]).Find("Puerta Invisible").gameObject.SetActive(true);
+            mapArrayi.transform.GetChild(0).Find("Lateral " + Direccion[i]).Find("Relleno").GetComponent<BoxCollider>().enabled = true;
         }
     }
 
-    public List<GameObject> IngresarPuertasScripts(ref List<GameObject> mapArray, GameManage gameManage)
+    public List<GameObject> IngresarPuertasScripts(ref List<GameObject> mapArray, GameManage gameManage, ref List<GameObject> MinimapArray)
     {
         for (int i = 0; i< mapArray.Count; i++)
         {
-            SetearObjetosDefault(i);
-                    
-            for (int k = 0; k < mapArray.Count; k++)
-            {
+            SetearObjetosDefault(mapArray[i],true);
 
-                if (mapArray[i].GetComponent<Room>().valorDeCelda == mapArray[k].GetComponent<Room>().valorDeCelda + 10)
-                {
-
-                    BuscarPorNombre(i,k, "inferior", "superior",gameManage);
-
-                }
-                if (mapArray[i].GetComponent<Room>().valorDeCelda == mapArray[k].GetComponent<Room>().valorDeCelda - 10)
-                {
-
-                    BuscarPorNombre(i, k, "superior", "inferior", gameManage);
-
-                }
-                if (mapArray[i].GetComponent<Room>().valorDeCelda == mapArray[k].GetComponent<Room>().valorDeCelda + 1)
-                {
-
-                    BuscarPorNombre(i, k, "izquierda", "derecha", gameManage);
-
-                }
-                if (mapArray[i].GetComponent<Room>().valorDeCelda == mapArray[k].GetComponent<Room>().valorDeCelda - 1)
-                {
-
-                    BuscarPorNombre(i, k, "derecha", "izquierda", gameManage);
-
-                }
-            }
+            IngresarPuertasScriptsSolo(ref mapArray, mapArray[i], gameManage, ref MinimapArray);
         }
 
             return mapArray;
     }
+
+    public void IngresarPuertasScriptsSolo(ref List<GameObject> mapArrayList,GameObject mapArray, GameManage gameManage, ref List<GameObject> MinimapArray)
+    {
+            SetearObjetosDefault(mapArray,true);
+
+            for (int k = 0; k < mapArrayList.Count; k++)
+            {
+
+                if (mapArray.GetComponent<Room>().valorDeCelda == mapArrayList[k].GetComponent<Room>().valorDeCelda + 10)
+                {
+
+                    BuscarPorNombre(mapArray, mapArrayList[k],k, "inferior", "superior", gameManage, MinimapArray);
+
+                }
+                if (mapArray.GetComponent<Room>().valorDeCelda == mapArrayList[k].GetComponent<Room>().valorDeCelda - 10)
+                {
+
+                    BuscarPorNombre(mapArray, mapArrayList[k],k, "superior", "inferior", gameManage, MinimapArray);
+
+                }
+                if (mapArray.GetComponent<Room>().valorDeCelda == mapArrayList[k].GetComponent<Room>().valorDeCelda + 1)
+                {
+
+                    BuscarPorNombre(mapArray, mapArrayList[k], k, "izquierda", "derecha", gameManage, MinimapArray);
+
+                }
+                if (mapArray.GetComponent<Room>().valorDeCelda == mapArrayList[k].GetComponent<Room>().valorDeCelda - 1)
+                {
+
+                    BuscarPorNombre(mapArray, mapArrayList[k], k, "derecha", "izquierda", gameManage, MinimapArray);
+                }
+            }
+
+    }
 }
-
-
 
 
 

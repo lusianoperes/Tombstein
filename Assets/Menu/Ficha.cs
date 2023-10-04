@@ -7,6 +7,8 @@ using UnityEngine;
 public class Ficha 
 {
     public GameObject objeto_Jugador;
+    
+    public Sprite imagen_personaje; 
 
     public string nombre_Personaje;
 

@@ -1,14 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Slot : MonoBehaviour
 {
-    public int id; 
-
-    public Item item;
-
-    
-
+    public enum SlotType 
+    {   
+        Anything,
+        Armor,
+        Weapon,
+        Consumible,
+        BodyPart,
+        Reliquia
+    }
+    public SlotType slotype;
+    public Armor.ArmorpartType slotarmorType;
+    public BodyPart.BodypartType slotbodyType;
+    public Weapon.WeaponType weaponType;
+    void Start()
+    {
+        
+    }
+//.parent.GetSiblingIndex
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }

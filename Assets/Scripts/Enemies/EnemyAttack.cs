@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-   // public Transform seguirA;
-   // private Transform ataque;
     public int damage;
     public float lastingTime;
-    public float size = 1f;
     
     private IEnumerator LifeTime(float timeWhileAlive)
     {

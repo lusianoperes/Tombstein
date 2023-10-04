@@ -6,9 +6,7 @@ using UnityEngine;
 public class Distance : Weapon
 {
     public float bulletSpeed;
-    public PlayerController playerControl;
     public PlayerProjectile bulletPrefab;
-    public Transform canonPoint;
 
 
     public enum DistanceType
@@ -19,7 +17,7 @@ public class Distance : Weapon
         toggleHoldable
     }
     
-
+    
     /*
     triggerOnly:
     int weaponDamage -- Daño de la bala
@@ -55,30 +53,21 @@ public class Distance : Weapon
 
     float delayAfter --- Delay Interno del disparo
     float cooldown --- Cada cuanto se puede disparar (cadencia)
----------------------------------------------------------------------
-    toggleOnly:
-    int weaponDamage --- No se usa
-    float weaponWidth --- No se usa
-    float weaponRange --- No se usa
-    
-    float delayBefore --- Inicio del activable post click
-    float timeDuring --- Duración del efecto activable
-
-    float delayAfter --- Delay Interno del activable
-    float cooldown --- Cada cuanto se puede disparar (cadencia)
 -------<<----------------<------<<-----------<--------<---------------------
     */
-    
+   // fullPlayerReference.transform.Find("BulletSpawn");//canon point
+
     public DistanceType distanceType;
     
     public virtual IEnumerator TriggerOnly_DoFire() 
     {
-        //Comienza Disparo
-        playerControl.isDoinSomething = true;
-        //Disparo Ocurriendo. Aplica Daño.
-        yield return new WaitForSeconds(delayBefore);
+        
+
+        playerControllerReference.isDoinSomething = true; //Comienza Disparo
+        var canonPoint = fullPlayerReference.transform.Find("BulletSpawn");
+        yield return new WaitForSeconds(delayBefore); 
         hitsound.Play();
-        var bullet = Instantiate(bulletPrefab, canonPoint.transform.position, Quaternion.identity);
+        var bullet = Instantiate(bulletPrefab, canonPoint.transform.position, Quaternion.identity); //Disparo Ocurriendo. Aplica Daño.
         PlayerProjectile bulletData = bullet.GetComponent<PlayerProjectile>();
         bulletData.damage = weaponDamage;
         bulletData.lastingTime = timeDuring;
@@ -88,16 +77,16 @@ public class Distance : Weapon
         bullet.transform.rotation = canonPoint.transform.rotation;
         yield return new WaitForSeconds(delayAfter);
                 
-        //Fin del Disparo
-        playerControl.isDoinSomething = false;
+        
+        playerControllerReference.isDoinSomething = false; //Fin del Disparo
     }
 
     public virtual IEnumerator TriggerHoldable_DoFire(float holdedTime) 
     {
-        //Comienza Disparo
-        playerControl.isDoinSomething = true;
-        //Disparo Ocurriendo. Aplica Daño.
-        yield return new WaitForSeconds(delayBefore);
+        
+        playerControllerReference.isDoinSomething = true; //Comienza Disparo
+        var canonPoint = fullPlayerReference.transform.Find("BulletSpawn");
+        yield return new WaitForSeconds(delayBefore); //Disparo Ocurriendo. Aplica Daño.
 
         hitsound.Play();
         var bullet = Instantiate(bulletPrefab, canonPoint.transform.position, Quaternion.identity);
@@ -113,15 +102,15 @@ public class Distance : Weapon
         bullet.transform.rotation = canonPoint.transform.rotation;
         yield return new WaitForSeconds(delayAfter);
                 
-        //Fin del Disparo
-        playerControl.isDoinSomething = false;
+       
+        playerControllerReference.isDoinSomething = false; //Fin del Disparo
     }
 
 
    /* public virtual IEnumerator ToggleHoldable_DoFire(float holdedTime) 
     {
         //Comienza Disparo
-        playerControl.isDoinSomething = true;
+        playerControllerReference.isDoinSomething = true;
         //Disparo Ocurriendo. Aplica Daño.
         yield return new WaitForSeconds(delayBefore);
 
@@ -138,7 +127,7 @@ public class Distance : Weapon
         yield return new WaitForSeconds(delayAfter);
                 
         //Fin del Disparo
-        playerControl.isDoinSomething = false;
+        playerControllerReference.isDoinSomething = false;
     }*/
 
 

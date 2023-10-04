@@ -5,13 +5,13 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Listas : ScriptableObject
 {
-    public Ficha[] personajes;
+    public List<Ficha> personajes;
 
     public int contadorDePersonajes
     {
         get
         {
-            return personajes.Length;
+            return personajes.Count;
         }
     }
 

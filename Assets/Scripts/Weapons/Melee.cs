@@ -4,34 +4,32 @@ using UnityEngine;
 
 public class Melee : Weapon
 {
-    public PlayerController player;
-    public GameObject meleeHitbox;
+
+    public GameObject weaponHitBox;
+    
+    
     public IEnumerator DoAttack()
     {   
-        //Setea ataque
-        player.isDoinSomething = true;
-        meleeHitbox.GetComponent<MeleeBox>().ResizeBox();
-        meleeHitbox.SetActive(false);
-        hitsound.Play();
         
-        
-        //Comienza Ataque
-        yield return new WaitForSeconds(delayBefore);
+        playerControllerReference.isDoinSomething = true; //Setea ataque
 
-        //Ataque Ocurriendo. Aplica Daño.
-        meleeHitbox.SetActive(true);
+        yield return new WaitForSeconds(delayBefore); //Comienza Ataque
+
+        hitsound.Play();
+        var meleeHitBox = Instantiate(weaponHitBox, fullPlayerReference.transform.Find("MeleeSpawn").position, Quaternion.identity, this.transform); //Disparo Ocurriendo. Aplica Daño.
+       
+       
         
-        yield return new WaitForSeconds(timeDuring);
+        yield return new WaitForSeconds(timeDuring);//Termina Ataque
+        
+       
+        yield return new WaitForSeconds(delayAfter); //Volviendo a reposo
         
         
-        //Termina Ataque
-        meleeHitbox.SetActive(false);
-        //Vuelve a reposo
-        yield return new WaitForSeconds(delayAfter);
-        
-        //Fin del ataque
-        player.isDoinSomething = false;
+        playerControllerReference.isDoinSomething = false; //Fin del ataque
     }
 
 
 }
+////////////// TOCA REAHACER TODOasdaslnf  
+

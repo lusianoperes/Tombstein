@@ -15,7 +15,7 @@ public class Weapon : Item
     public AudioSource hitsound;      
 
     public int weaponDamage;
-    public float weaponWidth;
+    public float attackDuration;
     public float weaponRange; //rango de arma en melee , tiempo maximo mantenido en holdableDistance
     
     public float delayBefore;
