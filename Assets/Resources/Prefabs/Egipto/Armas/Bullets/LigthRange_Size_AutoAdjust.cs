@@ -19,4 +19,3 @@ public class LigthRange_Size_AutoAdjust : MonoBehaviour
         light.range = originalRange * Mathf.Max(parentScale.x, parentScale.y, parentScale.z);
     }
 }
-

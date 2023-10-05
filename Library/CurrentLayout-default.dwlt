@@ -119,10 +119,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 730.8
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 677, y: 492}
+  m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 194
+  controlID: 75
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,10 +144,10 @@ MonoBehaviour:
     y: 0
     width: 1204
     height: 730.8
-  m_MinSize: {x: 403, y: 492}
+  m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 195
+  controlID: 76
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,10 +169,10 @@ MonoBehaviour:
     y: 0
     width: 1204
     height: 428
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+  m_MinSize: {x: 402, y: 221}
+  m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 196
+  controlID: 77
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -192,8 +192,8 @@ MonoBehaviour:
     y: 0
     width: 266.4
     height: 428
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -272,8 +272,8 @@ MonoBehaviour:
     y: 0
     width: 332
     height: 730.8
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -338,7 +338,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -396,21 +396,21 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 319}
-      m_SelectedIDs: a0c4feff
-      m_LastClickedID: -80736
-      m_ExpandedIDs: 460fffff520fffffa2990000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 78bafbff7abbfbffd6bbfbffc8160200
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Mud_01
-        m_OriginalName: Mud_01
+        m_Name: 'Statue_Pedestal (Missing Prefab with guid: 22d5920762e594f4e9de30162a07c2af)'
+        m_OriginalName: 'Statue_Pedestal (Missing Prefab with guid: 22d5920762e594f4e9de30162a07c2af)'
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -77296
+        m_UserData: -262256
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -459,9 +459,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -16.189022, y: 0.67688787, z: -6.3070292}
+    m_Target: {x: 3.5238552, y: 6.2823334, z: -7.367061}
     speed: 2
-    m_Value: {x: -16.189022, y: 0.67688787, z: -6.3070292}
+    m_Value: {x: 3.5238552, y: 6.2823334, z: -7.367061}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -484,7 +484,7 @@ MonoBehaviour:
       m_Fade:
         m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -508,13 +508,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.22334108, y: -0.6816564, z: 0.23164964, w: 0.6571655}
+    m_Target: {x: -0.28252688, y: -0.66056395, z: 0.29670164, w: -0.6292194}
     speed: 2
-    m_Value: {x: 0.22298616, y: -0.68261933, z: 0.2319769, w: 0.6561211}
+    m_Value: {x: -0.28255963, y: -0.6619634, z: 0.29852414, w: -0.62677574}
   m_Size:
-    m_Target: 2.8203564
+    m_Target: 39.93544
     speed: 2
-    m_Value: 2.6989057
+    m_Value: 38.215733
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -602,36 +602,36 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Prefabs/Egipto/craftpix-891167-free-farming-crops-3d-low-poly-models/fbx
+    - Assets/Resources/Prefabs/Egipto/Layouts/Salas 2
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 88
   m_LastFolders:
-  - Assets/Resources/Prefabs/Egipto/craftpix-891167-free-farming-crops-3d-low-poly-models/fbx
+  - Assets/Resources/Prefabs/Egipto/Layouts/Salas 2
   m_LastFoldersGridSize: 88
   m_LastProjectPath: C:\Users\franco\Documents\Franco\Poli 6to\Juegos\Tombstein
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 286.2}
-    m_SelectedIDs: c2990000
-    m_LastClickedID: 39362
-    m_ExpandedIDs: 000000002c3c0000303c0000323c0000343c0000363c00003a3c00003e3c0000f099000000ca9a3b
+    scrollPos: {x: 0, y: 294.2}
+    m_SelectedIDs: 2c520000
+    m_LastClickedID: 21036
+    m_ExpandedIDs: 00000000e2510000e4510000e6510000e8510000ea510000ee5100000c52000012520000145200001c52000032520000365200003852000042520000bce900006cf10000d4f80000e0f80000c2020100ca020100d40e0100042001000e20010010200100c60d020000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Desert_Village_LowPoly_HDRP
+      m_OriginalName: Desert_Village_LowPoly_HDRP
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 61808
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -645,7 +645,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002c3c000000ca9a3b
+    m_ExpandedIDs: 00000000e2510000e4510000e6510000e8510000ea510000ec510000ee510000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -697,7 +697,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 371.2}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 88
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 305
