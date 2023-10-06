@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8355823742273563446}
   - component: {fileID: 4925252412797789331}
   - component: {fileID: 7187452193872695385}
+  - component: {fileID: -7080270787080194682}
   m_Layer: 0
   m_Name: artichoke
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-7080270787080194682
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8700402253339423116}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4598809, y: 1.3688828, z: 0.47386575}
+  m_Center: {x: 0.025879078, y: 0.6782748, z: 0.058637373}

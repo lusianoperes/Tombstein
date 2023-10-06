@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 1040162910318775163}
   - component: {fileID: 3151500959479090304}
   - component: {fileID: 804591757615786487}
+  - component: {fileID: 6777260611600164478}
   m_Layer: 0
   m_Name: Tent_Base
   m_TagString: Untagged
@@ -162,6 +163,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6777260611600164478
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6156586878853893314}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.7752247, y: 4.3681164, z: 4.938059}
+  m_Center: {x: -0.13507307, y: -0.63216305, z: 0.08900535}
 --- !u!1 &8420341035796819915
 GameObject:
   m_ObjectHideFlags: 0

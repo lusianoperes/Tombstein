@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1590540953678833875}
   - component: {fileID: 2431212654798563190}
   - component: {fileID: 457555504733033404}
+  - component: {fileID: -2697298607006552104}
   m_Layer: 0
   m_Name: beet
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-2697298607006552104
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114840516155454057}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.37109274, y: 0.5089412, z: 0.3808721}
+  m_Center: {x: 0.028001681, y: 0.1515331, z: -0.012028769}

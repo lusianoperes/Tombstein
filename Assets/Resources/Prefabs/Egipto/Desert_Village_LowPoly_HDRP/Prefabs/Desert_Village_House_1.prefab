@@ -252,6 +252,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5352343557794043645}
+  - component: {fileID: 3753896674298719979}
   m_Layer: 0
   m_Name: Desert_Village_House_1
   m_TagString: Untagged
@@ -282,6 +283,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3753896674298719979
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4687271631823457351}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.8033834, y: 6.257061, z: 9.480462}
+  m_Center: {x: 0.18365121, y: 2.6285305, z: 0.97460604}
 --- !u!1 &5701918243218071447
 GameObject:
   m_ObjectHideFlags: 0

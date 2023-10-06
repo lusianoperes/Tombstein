@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2263852730858632198}
   - component: {fileID: 2937764799581223843}
   - component: {fileID: 1090432740597141353}
+  - component: {fileID: 1317444693928943175}
   m_Layer: 0
   m_Name: Desert_Village_Bench 1
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1317444693928943175
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450443565427601084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.37285042, y: 0.62961495, z: 1.711174}
+  m_Center: {x: -0.003986053, y: -0.03546673, z: 0.029081881}

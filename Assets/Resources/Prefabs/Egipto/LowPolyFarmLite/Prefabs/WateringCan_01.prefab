@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3928642541961028766}
   - component: {fileID: 3928642541959931486}
   - component: {fileID: 6874692661040567030}
+  - component: {fileID: -8194299148794924960}
   m_Layer: 0
   m_Name: WateringCan_01
   m_TagString: Untagged
@@ -96,3 +97,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 1311afae6eeeaa84fbfa2d81fcaf9a8d, type: 3}
+--- !u!65 &-8194299148794924960
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3928642541961935006}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.24936616, y: 0.47910798, z: 0.57734764}
+  m_Center: {x: 0.000000007450581, y: 0.040513873, z: 0.08970654}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9101762695745198685}
   - component: {fileID: 5323306881459181048}
   - component: {fileID: 7927698938202988850}
+  - component: {fileID: 5830902606215615087}
   m_Layer: 0
   m_Name: grap
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5830902606215615087
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8431904389823398119}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.68984807, y: 1.8410844, z: 0.63308907}
+  m_Center: {x: -0.053457573, y: 0.90532786, z: -0.048751086}

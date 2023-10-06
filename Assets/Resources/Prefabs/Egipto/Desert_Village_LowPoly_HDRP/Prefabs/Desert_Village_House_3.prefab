@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 1086838337765985822}
   - component: {fileID: 5688964059303988895}
   - component: {fileID: 2618920021604580262}
+  - component: {fileID: 5879033021671722781}
   m_Layer: 0
   m_Name: House_3_Stairs_to_Roof
   m_TagString: Untagged
@@ -243,6 +244,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5879033021671722781
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2457109157145693200}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6260836, y: 3.6027434, z: 0.98765814}
+  m_Center: {x: -0.008211791, y: -0.018239496, z: -0.006314307}
 --- !u!1 &4920150806143047189
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,6 +466,7 @@ GameObject:
   - component: {fileID: 5179525785865264455}
   - component: {fileID: 2385512111949742984}
   - component: {fileID: 2295329372109569635}
+  - component: {fileID: 1632872955790366148}
   m_Layer: 0
   m_Name: House_3_Base
   m_TagString: Untagged
@@ -522,3 +537,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1632872955790366148
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7823484944738251380}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.7738705, y: 3.1, z: 5.7738705}
+  m_Center: {x: 0.37491596, y: 0.028007448, z: 0.032711864}
