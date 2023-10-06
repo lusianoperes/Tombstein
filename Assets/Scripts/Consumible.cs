@@ -5,6 +5,6 @@ using UnityEngine;
 public class Consumible : Item
 {
     
-
+    public EfectoPasivo efectoPasivo; 
     
 }

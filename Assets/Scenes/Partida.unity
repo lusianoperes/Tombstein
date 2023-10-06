@@ -341,6 +341,12 @@ MonoBehaviour:
   playerControllerReference: {fileID: 0}
   armorpartType: 0
   armorProtection: 0
+  extraHp: 0
+  fuerzaExtra: 0
+  destrezaExtra: 0
+  estaminaExtra: 0
+  velocidadExtra: 0
+  agilidadExtra: 0
 --- !u!114 &55966610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1333,6 +1339,12 @@ MonoBehaviour:
   playerControllerReference: {fileID: 0}
   bodypartType: 0
   armorProtection: 0
+  extraHp: 0
+  fuerzaExtra: 0
+  destrezaExtra: 0
+  estaminaExtra: 0
+  velocidadExtra: 0
+  agilidadExtra: 0
 --- !u!114 &156244975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8792,6 +8804,12 @@ MonoBehaviour:
   playerControllerReference: {fileID: 0}
   bodypartType: 0
   armorProtection: 0
+  extraHp: 0
+  fuerzaExtra: 0
+  destrezaExtra: 0
+  estaminaExtra: 0
+  velocidadExtra: 0
+  agilidadExtra: 0
 --- !u!114 &1059688062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9445,6 +9463,12 @@ MonoBehaviour:
   playerControllerReference: {fileID: 0}
   bodypartType: 1
   armorProtection: 0
+  extraHp: 0
+  fuerzaExtra: 0
+  destrezaExtra: 0
+  estaminaExtra: 0
+  velocidadExtra: 0
+  agilidadExtra: 0
 --- !u!114 &1090760300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10433,6 +10457,12 @@ MonoBehaviour:
   playerControllerReference: {fileID: 0}
   bodypartType: 0
   armorProtection: 0
+  extraHp: 0
+  fuerzaExtra: 0
+  destrezaExtra: 0
+  estaminaExtra: 0
+  velocidadExtra: 0
+  agilidadExtra: 0
 --- !u!114 &1221283188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11188,6 +11218,12 @@ MonoBehaviour:
   fullPlayerReference: {fileID: 0}
   playerControllerReference: {fileID: 0}
   armorProtection: 0
+  extraHp: 0
+  fuerzaExtra: 0
+  destrezaExtra: 0
+  estaminaExtra: 0
+  velocidadExtra: 0
+  agilidadExtra: 0
 --- !u!114 &1274445585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13492,6 +13528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde8de786810b9d4cb4d33c809b4e150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  efectosPasivos: []
 --- !u!4 &1481223766
 Transform:
   m_ObjectHideFlags: 0
@@ -15266,6 +15303,12 @@ MonoBehaviour:
   fullPlayerReference: {fileID: 0}
   playerControllerReference: {fileID: 0}
   armorProtection: 0
+  extraHp: 0
+  fuerzaExtra: 0
+  destrezaExtra: 0
+  estaminaExtra: 0
+  velocidadExtra: 0
+  agilidadExtra: 0
 --- !u!54 &1605020985
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17982,8 +18025,9 @@ GameObject:
   - component: {fileID: 1891535464}
   - component: {fileID: 1891535463}
   - component: {fileID: 1891535462}
-  - component: {fileID: 1891535461}
   - component: {fileID: 1891535466}
+  - component: {fileID: 1891535467}
+  - component: {fileID: 1891535461}
   m_Layer: 8
   m_Name: omar (4)
   m_TagString: Untagged
@@ -18014,16 +18058,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1891535459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 994e3c6e03ddedd4f913312a0cac6591, type: 3}
+  m_Script: {fileID: 11500000, guid: 94255848d60f3b64889c21275f1c5e3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: ssdsad
-  itemDescription: 
-  imagenAsociada: {fileID: 21300000, guid: 02800fb9cff14da47a04572790384d8b, type: 3}
-  fullPlayerReference: {fileID: 0}
-  playerControllerReference: {fileID: 0}
-  armorpartType: 3
-  armorProtection: 0
+  duracionEfecto: 2.97
+  coeficienteEfecto: 3.06
+  effectType: 0
 --- !u!114 &1891535462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18114,6 +18154,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1891535467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891535459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b13a9f30103087446a5532e8725e5cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 
+  itemDescription: 
+  imagenAsociada: {fileID: 0}
+  fullPlayerReference: {fileID: 0}
+  playerControllerReference: {fileID: 0}
+  efectoPasivo: {fileID: 1891535461}
 --- !u!1 &1895720217
 GameObject:
   m_ObjectHideFlags: 0
@@ -18629,6 +18687,12 @@ MonoBehaviour:
   playerControllerReference: {fileID: 0}
   armorpartType: 1
   armorProtection: 0
+  extraHp: 0
+  fuerzaExtra: 0
+  destrezaExtra: 0
+  estaminaExtra: 0
+  velocidadExtra: 0
+  agilidadExtra: 0
 --- !u!114 &1964230679
 MonoBehaviour:
   m_ObjectHideFlags: 0

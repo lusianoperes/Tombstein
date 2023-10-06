@@ -12,6 +12,12 @@ public class Armor : Item
         FeetPart,
     }
     public ArmorpartType armorpartType;
-    public int armorProtection;
-    
+    public float armorProtection;
+    public int extraHp;
+    public float fuerzaExtra;
+    public float destrezaExtra;
+    public float estaminaExtra;
+    public float velocidadExtra;
+    public int agilidadExtra;
+
 }

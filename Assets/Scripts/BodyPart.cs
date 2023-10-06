@@ -15,4 +15,10 @@ public class BodyPart : Item
     public BodypartType bodypartType;
     
     public int armorProtection;
+    public int extraHp;
+    public float fuerzaExtra;
+    public float destrezaExtra;
+    public float estaminaExtra;
+    public float velocidadExtra;
+    public int agilidadExtra;
 }

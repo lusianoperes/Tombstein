@@ -109,6 +109,7 @@ public class GameManage : MonoBehaviour
             List<GameObject> SalasWithTag = new List<GameObject>();
             SalasWithTag = FindGameObjectByTag(Sala, "Enemy");
             Counter = SalasWithTag.Count;
+            Debug.Log(Counter);
             if(Counter == 0)
             {
                 MakeClear();

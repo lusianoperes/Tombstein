@@ -569,18 +569,48 @@ public class DraggableObject : MonoBehaviour, IPointerDownHandler, IDragHandler,
             {
 
                 jugador.GetComponent<Jugador>().Armadura -= item.GetComponent<Armor>().armorProtection;
+                jugador.GetComponent<Jugador>().maxHp -= item.GetComponent<Armor>().extraHp;
+                if (jugador.GetComponent<Jugador>().maxHp < jugador.GetComponent<Jugador>().currentHp)
+                {
+                    jugador.GetComponent<Jugador>().currentHp = jugador.GetComponent<Jugador>().maxHp;
+                }
+                jugador.GetComponent<Jugador>().Fuerza -= item.GetComponent<Armor>().fuerzaExtra;
+                jugador.GetComponent<Jugador>().Destreza -= item.GetComponent<Armor>().destrezaExtra;
+                jugador.GetComponent<Jugador>().Estamina -= item.GetComponent<Armor>().estaminaExtra;
+                jugador.GetComponent<Jugador>().Agilidad -= item.GetComponent<Armor>().agilidadExtra;
+                jugador.GetComponent<Jugador>().playerMovement.Speed -= item.GetComponent<Armor>().velocidadExtra;
 
             }
             else if (item.GetComponent<Reliquia>() != null)
             {
 
                 jugador.GetComponent<Jugador>().Armadura -= item.GetComponent<Reliquia>().armorProtection;
+                jugador.GetComponent<Jugador>().maxHp -= item.GetComponent<Reliquia>().extraHp;
+                if (jugador.GetComponent<Jugador>().maxHp < jugador.GetComponent<Jugador>().currentHp)
+                {
+                    jugador.GetComponent<Jugador>().currentHp = jugador.GetComponent<Jugador>().maxHp;
+                }
+                jugador.GetComponent<Jugador>().Fuerza -= item.GetComponent<Reliquia>().fuerzaExtra;
+                jugador.GetComponent<Jugador>().Destreza -= item.GetComponent<Reliquia>().destrezaExtra;
+                jugador.GetComponent<Jugador>().Estamina -= item.GetComponent<Reliquia>().estaminaExtra;
+                jugador.GetComponent<Jugador>().Agilidad -= item.GetComponent<Reliquia>().agilidadExtra;
+                jugador.GetComponent<Jugador>().playerMovement.Speed -= item.GetComponent<Reliquia>().velocidadExtra;
 
             }
             else if (item.GetComponent<BodyPart>() != null)
             {
 
                 jugador.GetComponent<Jugador>().Armadura -= item.GetComponent<BodyPart>().armorProtection;
+                jugador.GetComponent<Jugador>().maxHp -= item.GetComponent<BodyPart>().extraHp;
+                if (jugador.GetComponent<Jugador>().maxHp < jugador.GetComponent<Jugador>().currentHp)
+                {
+                    jugador.GetComponent<Jugador>().currentHp = jugador.GetComponent<Jugador>().maxHp;
+                }
+                jugador.GetComponent<Jugador>().Fuerza -= item.GetComponent<BodyPart>().fuerzaExtra;
+                jugador.GetComponent<Jugador>().Destreza -= item.GetComponent<BodyPart>().destrezaExtra;
+                jugador.GetComponent<Jugador>().Estamina -= item.GetComponent<BodyPart>().estaminaExtra;
+                jugador.GetComponent<Jugador>().Agilidad -= item.GetComponent<BodyPart>().agilidadExtra;
+                jugador.GetComponent<Jugador>().playerMovement.Speed -= item.GetComponent<BodyPart>().velocidadExtra;
 
             }
 
@@ -599,23 +629,42 @@ public class DraggableObject : MonoBehaviour, IPointerDownHandler, IDragHandler,
             {
 
                 jugador.GetComponent<Jugador>().Armadura += item.GetComponent<Armor>().armorProtection;
+                jugador.GetComponent<Jugador>().Armadura += item.GetComponent<Armor>().armorProtection;
+                jugador.GetComponent<Jugador>().maxHp += item.GetComponent<Armor>().extraHp;
+                jugador.GetComponent<Jugador>().Fuerza += item.GetComponent<Armor>().fuerzaExtra;
+                jugador.GetComponent<Jugador>().Destreza += item.GetComponent<Armor>().destrezaExtra;
+                jugador.GetComponent<Jugador>().Estamina += item.GetComponent<Armor>().estaminaExtra;
+                jugador.GetComponent<Jugador>().Agilidad += item.GetComponent<Armor>().agilidadExtra;
+                jugador.GetComponent<Jugador>().playerMovement.Speed += item.GetComponent<Armor>().velocidadExtra;
 
             }
             else if (item.GetComponent<Reliquia>() != null)
             {
 
                 jugador.GetComponent<Jugador>().Armadura += item.GetComponent<Reliquia>().armorProtection;
+                jugador.GetComponent<Jugador>().maxHp += item.GetComponent<Reliquia>().extraHp;
+                jugador.GetComponent<Jugador>().Fuerza += item.GetComponent<Reliquia>().fuerzaExtra;
+                jugador.GetComponent<Jugador>().Destreza += item.GetComponent<Reliquia>().destrezaExtra;
+                jugador.GetComponent<Jugador>().Estamina += item.GetComponent<Reliquia>().estaminaExtra;
+                jugador.GetComponent<Jugador>().Agilidad += item.GetComponent<Reliquia>().agilidadExtra;
+                jugador.GetComponent<Jugador>().playerMovement.Speed += item.GetComponent<Reliquia>().velocidadExtra;
 
             }
             else if (item.GetComponent<BodyPart>() != null)
             {
 
                 jugador.GetComponent<Jugador>().Armadura += item.GetComponent<BodyPart>().armorProtection;
+                jugador.GetComponent<Jugador>().maxHp += item.GetComponent<BodyPart>().extraHp;
+            
+                jugador.GetComponent<Jugador>().Fuerza += item.GetComponent<BodyPart>().fuerzaExtra;
+                jugador.GetComponent<Jugador>().Destreza += item.GetComponent<BodyPart>().destrezaExtra;
+                jugador.GetComponent<Jugador>().Estamina += item.GetComponent<BodyPart>().estaminaExtra;
+                jugador.GetComponent<Jugador>().Agilidad += item.GetComponent<BodyPart>().agilidadExtra;
+                jugador.GetComponent<Jugador>().playerMovement.Speed += item.GetComponent<BodyPart>().velocidadExtra;
 
             }
 
         }
-
 
     }
 

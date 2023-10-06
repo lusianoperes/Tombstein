@@ -8,7 +8,6 @@ public class Item : MonoBehaviour
     public string itemName;
     public string itemDescription;
     public Sprite imagenAsociada;
-    
     public GameObject fullPlayerReference;
     public PlayerController playerControllerReference;
 
