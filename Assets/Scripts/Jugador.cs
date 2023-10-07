@@ -77,17 +77,4 @@ public class Jugador : MonoBehaviour
         currentHp -= damage;
     }
 
-    public void ApplyKnockback (Transform enemy) {
-        StartCoroutine(knockback(enemy));
-    }
-
-    protected IEnumerator knockback (Transform enemy) //Pendiente de ver que no parezca un tp a otra posicion
-    {
-        Rigidbody rb = GetComponent<Rigidbody>();
-        Vector3 knockbackDirection = (transform.position - enemy.position).normalized;
-        knockbackDirection.y = 0;
-        rb.AddForce(100 * knockbackDirection, ForceMode.Impulse);
-        yield return new WaitForSeconds(5);
-        rb.velocity = Vector3.zero;
-    }
 }

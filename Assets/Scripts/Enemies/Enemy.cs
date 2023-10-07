@@ -41,8 +41,6 @@ public class Enemy : MonoBehaviour {
     {
         player = GameObject.Find("Jugador").transform;
         enemyCurrentHp = enemyMaxHp;
-        navMeshAgent.speed = enemySpeed;
-        navMeshAgent.stoppingDistance = attackRange;
         TextoVida.GetComponent<TextMeshProUGUI>().text = enemyMaxHp+"";
     }
 
@@ -55,7 +53,7 @@ public class Enemy : MonoBehaviour {
     }
     protected EnemyState currentState = EnemyState.Idle;
 
-    protected void Update() //Todo lo que estaba en EnemyAI (o algo así) ahora está en el update
+    protected void Update() //Todo lo que estaba en EnemyAI ahora está en el update
     {
         if(!isDoingSomething){
             switch (currentState)
@@ -94,8 +92,11 @@ public class Enemy : MonoBehaviour {
 
     public virtual IEnumerator Attack() //Separado en una funcion para generalizar
     {
+        LookAtTarget(player);
         SpawnAttack(attack1);
+        //DashTo(player.position,5,8); //Ejemplo de un dash hacia el jugador mientras ataca
         isDoingSomething = true;
+        navMeshAgent.SetDestination(transform.position); //Solucion a un bug de transicion entre estados Repositioning - Attacking
         yield return new WaitForSeconds(attackCasting);
         lastAttack = Time.time;
         isDoingSomething = false;
@@ -103,6 +104,7 @@ public class Enemy : MonoBehaviour {
 
     public virtual void Reposition() //Separado en una funcion para generalizar
     {
+        navMeshAgent.speed = enemySpeed;
         LookAtTarget(player);
         Vector3 directionToPlayer = player.position - transform.position;
         float distanceToPlayer = directionToPlayer.magnitude;
@@ -117,11 +119,20 @@ public class Enemy : MonoBehaviour {
     }
 
     public virtual void Move(Transform target){
+        navMeshAgent.speed = enemySpeed;
         navMeshAgent.stoppingDistance = attackRange;
         if (Time.time >= pathUpdateDeadline) {
             pathUpdateDeadline = Time.time + pathUpdateDelay;
             navMeshAgent.SetDestination(target.position);
         }
+    }
+
+    protected void DashTo (Vector3 position, float displacement, float velocity)
+    {
+        Vector3 direction = (position - transform.position).normalized * displacement + transform.position;
+        navMeshAgent.SetDestination(direction);
+        navMeshAgent.stoppingDistance = 0;
+        navMeshAgent.speed = velocity;
     }
 
     public void SpawnAttack(GameObject attackPrefab)
@@ -134,7 +145,9 @@ public class Enemy : MonoBehaviour {
     
         attackStats.damage = attackDamage;
         attackStats.lastingTime = attackDuration;
-        attackStats.setEnemy(transform);
+        Vector3 knockbackDirection = (player.position - transform.position).normalized;
+        knockbackDirection.y = 0;
+        attackStats.setKnockbackDirection(knockbackDirection);
         //attackStats.Uniform_ResizeAttack(attackSize);
 
         if (attackStats.isProjectile)
@@ -151,6 +164,17 @@ public class Enemy : MonoBehaviour {
         lookPos.y = 0;
         Quaternion rotation = Quaternion.LookRotation(lookPos);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 0.2f);
+    }
+
+    protected bool isLookingAtTarget (Transform target) {
+        Vector3 directionToTarget = (target.position - transform.position).normalized;
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 50))
+        {
+            return hit.collider.gameObject == target.gameObject;
+        }
+        return false;
     }
 
     public void Die()

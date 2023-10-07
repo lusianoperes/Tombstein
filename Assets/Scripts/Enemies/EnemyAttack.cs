@@ -8,7 +8,9 @@ public class EnemyAttack : MonoBehaviour
     public float lastingTime;
     public bool isProjectile; //La hitbox corresponde a un disparo o no
     public bool hasKnockback; //La hitbox causa retroceso al jugador
-    protected Transform enemy;
+    public float knockbackForce;
+    public float knockbackTime;
+    protected Vector3 knockbackDirection;
     protected bool hasAppliedKnockback = false;
     
     protected IEnumerator LifeTime(float timeWhileAlive)
@@ -30,14 +32,14 @@ public class EnemyAttack : MonoBehaviour
             Jugador player = other.gameObject.GetComponent<Jugador>();
             player.RecibirDanio(damage);
             if (hasKnockback && !hasAppliedKnockback) { //Aplicar knockback al jugador
-                player.ApplyKnockback(enemy);
+                other.gameObject.GetComponent<PlayerController>().ApplyKnockback(knockbackDirection, knockbackTime, knockbackForce);
                 hasAppliedKnockback = true;
             }
         }
     }
 
-    public void setEnemy (Transform position) { //Para saber donde esta el enemigo que lo creo (soluciona bugs del knockback)
-        enemy = position;
+    public void setKnockbackDirection (Vector3 direction) {
+        knockbackDirection = direction;
     }
     
     public void Uniform_ResizeAttack(float sizeVar)

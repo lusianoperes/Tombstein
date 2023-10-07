@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public bool chargedStarted = false;
     public float timeCounterA = 0f;
     public float timeCounterB = 0f;
+    private float knockbackCounter = 0; //Contador del knockback
 
 
     IEnumerator CooldownPrimary(float cOOLdown)
@@ -129,9 +130,13 @@ public class PlayerController : MonoBehaviour
     {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
-
-        moveInput = new Vector3(h, 0f, v); //.normalized;
-
+        if (knockbackCounter <= 0) //Si esta aplicandose un knockback no se puede mover
+        {
+            moveInput = new Vector3(h, 0f, v); //.normalized;
+        } else {
+            knockbackCounter -= Time.deltaTime;
+        }
+        
         Vector3 currentVelocity = PlayerRigidbody.velocity;
 
         Vector3 newVelocity = new Vector3(moveInput.x * Speed * SpeedMultiple, currentVelocity.y, moveInput.z * Speed * SpeedMultiple);
@@ -207,7 +212,9 @@ public class PlayerController : MonoBehaviour
         cooldownActivo = false;
         
     }
-
-
     
+    public void ApplyKnockback (Vector3 direction, float time, float force) { //Aplicar knockback al jugador
+        knockbackCounter = time;
+        moveInput = direction * force;
+    }
 }
