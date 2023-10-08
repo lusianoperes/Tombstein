@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public GameObject inventarioVisual;
     public GameObject panelPausa;
     public InventoryManager inventoryManager;
+    public EffectManager effectManager;
     public Vector3 moveInput;
     public GameObject equipamiento;
 
@@ -228,6 +229,18 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public void UsarConsumible()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            effectManager.efectosPasivos.Add(PlayerInventory.consumibles[1].gameObject.GetComponent<EfectoPasivo>());
+        }
+    }
+
+    public void CambiarConsumible()
+    {
+
+    }
     public void AbrirCerrarInventario()
     {
         if (Input.GetKeyDown(KeyCode.Tab))

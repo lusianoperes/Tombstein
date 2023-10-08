@@ -9,13 +9,19 @@ public class EfectoPasivo : MonoBehaviour
     public enum EffectType
     {
         armorBoost,
+        armorDebuff,
         instantHealth,
         healthRegeneration,
         strenghtBoost,
+        strenghtDebuff,
         dexterityBoost,
+        dexterityDebuff,
         staminaBoost,
+        staminaDebuff,
         agilityBoost,
+        agilityDebuff,
         speedBoost,
+        speedDebuff,
         bodyPartCooldownReduction,
         poison
     }
@@ -25,10 +31,15 @@ public class EfectoPasivo : MonoBehaviour
     {
         switch (effectType)
         {
-            case EffectType.armorBoost:
+            case EffectType.armorBoost :
                 jugador.ModificarArmadura(coeficienteEfecto);
                 yield return new WaitForSeconds(duracionEfecto);
                 jugador.ModificarArmadura(-coeficienteEfecto);
+                break;
+            case EffectType.armorDebuff :
+                jugador.ModificarArmadura(-coeficienteEfecto);
+                yield return new WaitForSeconds(duracionEfecto);
+                jugador.ModificarArmadura(coeficienteEfecto);
                 break;
             case EffectType.instantHealth:
                 jugador.Curar(coeficienteEfecto);
@@ -45,25 +56,50 @@ public class EfectoPasivo : MonoBehaviour
                 yield return new WaitForSeconds(duracionEfecto);
                 jugador.ModificarFuerza(-coeficienteEfecto);
                 break;
+            case EffectType.strenghtDebuff:
+                jugador.ModificarFuerza(-coeficienteEfecto);
+                yield return new WaitForSeconds(duracionEfecto);
+                jugador.ModificarFuerza(coeficienteEfecto);
+                break;
             case EffectType.dexterityBoost:
                 jugador.ModificarDestreza(coeficienteEfecto);
                 yield return new WaitForSeconds(duracionEfecto);
                 jugador.ModificarDestreza(-coeficienteEfecto);
+                break;
+            case EffectType.dexterityDebuff:
+                jugador.ModificarDestreza(-coeficienteEfecto);
+                yield return new WaitForSeconds(duracionEfecto);
+                jugador.ModificarDestreza(coeficienteEfecto);
                 break;
             case EffectType.staminaBoost:
                 jugador.ModificarEstamina(coeficienteEfecto);
                 yield return new WaitForSeconds(duracionEfecto);
                 jugador.ModificarEstamina(-coeficienteEfecto);
                 break;
+            case EffectType.staminaDebuff:
+                jugador.ModificarEstamina(-coeficienteEfecto);
+                yield return new WaitForSeconds(duracionEfecto);
+                jugador.ModificarEstamina(coeficienteEfecto);
+                break;
             case EffectType.agilityBoost:
                 jugador.ModificarAgilidad(coeficienteEfecto);
                 yield return new WaitForSeconds(duracionEfecto);
                 jugador.ModificarAgilidad(-coeficienteEfecto);
                 break;
+            case EffectType.agilityDebuff:
+                jugador.ModificarAgilidad(-coeficienteEfecto);
+                yield return new WaitForSeconds(duracionEfecto);
+                jugador.ModificarAgilidad(coeficienteEfecto);
+                break;
             case EffectType.speedBoost:
                 jugador.ModificarVelocidad(coeficienteEfecto);
                 yield return new WaitForSeconds(duracionEfecto);
                 jugador.ModificarVelocidad(-coeficienteEfecto);
+                break;
+            case EffectType.speedDebuff:
+                jugador.ModificarVelocidad(-coeficienteEfecto);
+                yield return new WaitForSeconds(duracionEfecto);
+                jugador.ModificarVelocidad(coeficienteEfecto);
                 break;
             case EffectType.bodyPartCooldownReduction:
                 jugador.ModificarCooldownBodypart(coeficienteEfecto);
