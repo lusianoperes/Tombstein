@@ -11,7 +11,9 @@ public class EnemyAttack : MonoBehaviour
     public float knockbackForce;
     public float knockbackTime;
     protected Vector3 knockbackDirection;
+    protected bool hasDoneDamage = false;
     protected bool hasAppliedKnockback = false;
+    //Faltan añadir efectos
     
     protected IEnumerator LifeTime(float timeWhileAlive)
     {
@@ -27,14 +29,18 @@ public class EnemyAttack : MonoBehaviour
     
     protected void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Player") && !hasDoneDamage)
         {
             Jugador player = other.gameObject.GetComponent<Jugador>();
             player.RecibirDanio(damage);
+            hasDoneDamage = true;
             if (hasKnockback && !hasAppliedKnockback) { //Aplicar knockback al jugador
                 other.gameObject.GetComponent<PlayerController>().ApplyKnockback(knockbackDirection, knockbackTime, knockbackForce);
                 hasAppliedKnockback = true;
             }
+        }
+        if (isProjectile) {
+            Destroy(gameObject);
         }
     }
 
