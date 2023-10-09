@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using System;
 
 public class EfectoPasivo : MonoBehaviour
 {
     public float duracionEfecto;
     public float coeficienteEfecto;
+    public Sprite effectSprite;
+
+    public bool DarEfectoAlJugador_finished = false;
+    public bool MostrarEfectoVisualmente_finished = false;
     public enum EffectType
     {
         armorBoost,
@@ -29,14 +35,29 @@ public class EfectoPasivo : MonoBehaviour
 
     public IEnumerator AplicarEfecto(Jugador jugador)
     {
+        jugador.effectManager.efectosPasivos.Add(this);
+        Debug.Log("antes de dar efecto");
+
+        StartCoroutine(DarEfectoAlJugador(jugador));
+        StartCoroutine(MostrarEfectoVisualmente(jugador));
+        
+        yield return new WaitUntil(() => DarEfectoAlJugador_finished && MostrarEfectoVisualmente_finished);
+
+        Debug.Log("Ambas corutinas han terminado");
+
+    }
+
+    public IEnumerator DarEfectoAlJugador(Jugador jugador)
+    {
+        Debug.Log("jugador");
         switch (effectType)
         {
-            case EffectType.armorBoost :
+            case EffectType.armorBoost:
                 jugador.ModificarArmadura(coeficienteEfecto);
                 yield return new WaitForSeconds(duracionEfecto);
                 jugador.ModificarArmadura(-coeficienteEfecto);
                 break;
-            case EffectType.armorDebuff :
+            case EffectType.armorDebuff:
                 jugador.ModificarArmadura(-coeficienteEfecto);
                 yield return new WaitForSeconds(duracionEfecto);
                 jugador.ModificarArmadura(coeficienteEfecto);
@@ -117,5 +138,27 @@ public class EfectoPasivo : MonoBehaviour
 
                 break;
         }
+        DarEfectoAlJugador_finished = true;
+        yield break;
+    }
+    public IEnumerator MostrarEfectoVisualmente(Jugador jugador)
+    {
+        float maxWidth = 129.14f;
+        GameObject effectHolder = Instantiate(Resources.Load<GameObject>("Prefabs/EffectHolder"), jugador.effectManager.gameObject.transform);
+        float duracion = duracionEfecto;
+        effectHolder.transform.GetChild(0).GetComponent<Image>().sprite = effectSprite;
+
+        while (duracion >= 0)
+        {
+            Debug.Log(duracion);
+            effectHolder.transform.GetChild(1).GetChild(0).GetComponent<RectTransform>().sizeDelta = new Vector2(duracion * maxWidth / duracionEfecto, effectHolder.transform.GetChild(1).GetChild(0).GetComponent<RectTransform>().rect.height);
+            duracion -= Time.deltaTime;
+            Debug.Log(duracion);
+            yield return null;
+            Debug.Log("paso el tiempo pa");
+
+        }
+        MostrarEfectoVisualmente_finished = true;
+        yield break;
     }
 }

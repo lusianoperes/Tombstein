@@ -15,9 +15,9 @@ public class EffectManager : MonoBehaviour
         jugadoroObj = GameObject.Find("Jugador");
         jugador = jugadoroObj.GetComponent<Jugador>();
     }
-    public void Update()
+    /*public void Update()
     {
-        ApplyEffects(jugador);
+        //ApplyEffects(jugador);
     }
     public void ApplyEffects(Jugador jugador)
     {
@@ -27,5 +27,5 @@ public class EffectManager : MonoBehaviour
         }
 
         efectosPasivos.Clear();
-    }
+    }*/
 }

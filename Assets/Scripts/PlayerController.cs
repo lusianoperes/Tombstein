@@ -72,6 +72,8 @@ public class PlayerController : MonoBehaviour
         MovimientoCursor();
         AgarrarObjeto();
         AbrirCerrarInventario();
+        CambiarConsumible();
+        UsarConsumible();
 
         if (PlayerInventory.primaryWeapon != null && Input.GetMouseButton(0) && !(isDoinSomething) && !(primaryOnCooldown))
         {
@@ -231,15 +233,80 @@ public class PlayerController : MonoBehaviour
 
     public void UsarConsumible()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C) && !inventoryManager.isInventoryOpen)
         {
-            effectManager.efectosPasivos.Add(PlayerInventory.consumibles[1].gameObject.GetComponent<EfectoPasivo>());
+
+            //añadir efecto del consumible al effectmanager
+            if (PlayerInventory.consumibles[1] != null)
+            {
+                Debug.Log("efecto consmuidosdoosos");
+                //EfectoPasivo efectoAux = new EfectoPasivo(PlayerInventory.consumibles[1].efectoPasivo);
+                /*EfectoPasivo efectoAux= new EfectoPasivo();
+                efectoAux.duracionEfecto = PlayerInventory.consumibles[1].efectoPasivo.duracionEfecto;
+                efectoAux.coeficienteEfecto = PlayerInventory.consumibles[1].efectoPasivo.coeficienteEfecto;
+                efectoAux.effectSprite = PlayerInventory.consumibles[1].efectoPasivo.effectSprite;
+                efectoAux.effectType = PlayerInventory.consumibles[1].efectoPasivo.effectType;
+                efectoAux.DarEfectoAlJugador_finished = false;
+                efectoAux.MostrarEfectoVisualmente_finished = false;
+                Debug.Log(gameObject.GetComponent<Jugador>());*/
+                StartCoroutine(PlayerInventory.consumibles[1].efectoPasivo.AplicarEfecto(gameObject.GetComponent<Jugador>()));
+                //activar collider de slot parent
+                equipamiento.transform.Find("Consumibles").Find("SelectedConsumible").GetComponent<BoxCollider2D>().enabled = true;
+                //eliminar consumible visualmente
+                //Destroy(equipamiento.transform.Find("Consumibles").Find("SelectedConsumible").GetChild(1).gameObject);
+                //eliminar consumible lógicamente
+                //PlayerInventory.consumibles[1] = null;
+            }
+
         }
     }
 
     public void CambiarConsumible()
     {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            GameObject auxLeft = null;
+            GameObject auxMid = null;
+            GameObject auxRight = null;
+            //Intercambiar visualmente
+            if (equipamiento.transform.Find("Consumibles").Find("LeftConsumible").childCount > 1)
+            {
+                auxLeft = equipamiento.transform.Find("Consumibles").Find("LeftConsumible").GetChild(1).gameObject;
+            }
+            if (equipamiento.transform.Find("Consumibles").Find("SelectedConsumible").childCount > 1)
+            {
+                auxMid = equipamiento.transform.Find("Consumibles").Find("SelectedConsumible").GetChild(1).gameObject;
+            }
+            if (equipamiento.transform.Find("Consumibles").Find("RightConsumible").childCount > 1)
+            {
+                auxRight = equipamiento.transform.Find("Consumibles").Find("RightConsumible").GetChild(1).gameObject;
+            }
 
+            if (auxLeft != null)
+            {
+                auxLeft.transform.parent = equipamiento.transform.Find("Consumibles").Find("SelectedConsumible").transform;
+                auxLeft.transform.localPosition = Vector3.zero;
+            }
+            if (auxMid != null)
+            {
+                auxMid.transform.parent = equipamiento.transform.Find("Consumibles").Find("RightConsumible").transform;
+                auxMid.transform.localPosition = Vector3.zero;
+            }
+            if (auxRight != null)
+            {
+                auxRight.transform.parent = equipamiento.transform.Find("Consumibles").Find("LeftConsumible").transform;
+                auxRight.transform.localPosition = Vector3.zero;
+            }
+
+
+            //Intercambiar lógicamente
+            Consumible auxiliar = null;
+            auxiliar = PlayerInventory.consumibles[0];
+            PlayerInventory.consumibles[0] = PlayerInventory.consumibles[2];
+            PlayerInventory.consumibles[2] = PlayerInventory.consumibles[1];
+            PlayerInventory.consumibles[1] = auxiliar;
+
+        }
     }
     public void AbrirCerrarInventario()
     {
@@ -364,7 +431,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (objetoMasCercano == null && objetoMasCercanoAnterior != null)
         {
-            if(objetoMasCercanoAnterior.gameObject.GetComponent<Outline>() != null)
+            if (objetoMasCercanoAnterior.gameObject.GetComponent<Outline>() != null)
             {
                 Outline outline = objetoMasCercanoAnterior.gameObject.GetComponent<Outline>();
                 Destroy(outline);

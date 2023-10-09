@@ -285,12 +285,12 @@ public class DraggableObject : MonoBehaviour, IPointerDownHandler, IDragHandler,
                             switch (slotParent.transform.name)
                             {
                                 case "RightConsumible":
-                                    aplastadoAux = jugador.GetComponent<Inventory>().consumibles[0];
-                                    jugador.GetComponent<Inventory>().consumibles[0] = null;
-                                    break;
-                                case "LeftConsumible":
                                     aplastadoAux = jugador.GetComponent<Inventory>().consumibles[2];
                                     jugador.GetComponent<Inventory>().consumibles[2] = null;
+                                    break;
+                                case "LeftConsumible":
+                                    aplastadoAux = jugador.GetComponent<Inventory>().consumibles[0];
+                                    jugador.GetComponent<Inventory>().consumibles[0] = null;
                                     break;
                                 case "SelectedConsumible":
                                     aplastadoAux = jugador.GetComponent<Inventory>().consumibles[1];
@@ -420,10 +420,10 @@ public class DraggableObject : MonoBehaviour, IPointerDownHandler, IDragHandler,
                             switch (closestCollider.transform.name)
                             {
                                 case "RightConsumible":
-                                    jugador.GetComponent<Inventory>().consumibles[0] = aplastadoAux as Consumible;
+                                    jugador.GetComponent<Inventory>().consumibles[2] = aplastadoAux as Consumible;
                                     break;
                                 case "LeftConsumible":
-                                    jugador.GetComponent<Inventory>().consumibles[2] = aplastadoAux as Consumible;
+                                    jugador.GetComponent<Inventory>().consumibles[0] = aplastadoAux as Consumible;
                                     break;
                                 case "SelectedConsumible":
                                     jugador.GetComponent<Inventory>().consumibles[1] = aplastadoAux as Consumible;
@@ -517,10 +517,10 @@ public class DraggableObject : MonoBehaviour, IPointerDownHandler, IDragHandler,
                         switch (slotParent.transform.name)
                         {
                             case "RightConsumible":
-                                jugador.GetComponent<Inventory>().consumibles[0] = null;
+                                jugador.GetComponent<Inventory>().consumibles[2] = null;
                                 break;
                             case "LeftConsumible":
-                                jugador.GetComponent<Inventory>().consumibles[2] = null;
+                                jugador.GetComponent<Inventory>().consumibles[0] = null;
                                 break;
                             case "SelectedConsumible":
                                 jugador.GetComponent<Inventory>().consumibles[1] = null;
@@ -786,12 +786,12 @@ public class DraggableObject : MonoBehaviour, IPointerDownHandler, IDragHandler,
                 switch (aplastado.transform.parent.name)
                 {
                     case "RightConsumible":
-                        aplastadoAux = jugador.GetComponent<Inventory>().consumibles[0];
-                        jugador.GetComponent<Inventory>().consumibles[0] = TiradoToAplastado(aplastadoAux, jugador, tirado, aplastado) as Consumible;
-                        break;
-                    case "LeftConsumible":
                         aplastadoAux = jugador.GetComponent<Inventory>().consumibles[2];
                         jugador.GetComponent<Inventory>().consumibles[2] = TiradoToAplastado(aplastadoAux, jugador, tirado, aplastado) as Consumible;
+                        break;
+                    case "LeftConsumible":
+                        aplastadoAux = jugador.GetComponent<Inventory>().consumibles[0];
+                        jugador.GetComponent<Inventory>().consumibles[0] = TiradoToAplastado(aplastadoAux, jugador, tirado, aplastado) as Consumible;
                         break;
                     case "SelectedConsumible":
                         aplastadoAux = jugador.GetComponent<Inventory>().consumibles[1];
@@ -901,13 +901,13 @@ public class DraggableObject : MonoBehaviour, IPointerDownHandler, IDragHandler,
                 switch (tirado.GetComponent<DraggableObject>().slotParent.name)
                 {
                     case "RightConsumible":
-                        copiaTirado = jugador.GetComponent<Inventory>().consumibles[0];
-                        jugador.GetComponent<Inventory>().consumibles[0] = aplastadoAux as Consumible;
+                        copiaTirado = jugador.GetComponent<Inventory>().consumibles[2];
+                        jugador.GetComponent<Inventory>().consumibles[2] = aplastadoAux as Consumible;
                         return copiaTirado;
                         break;
                     case "LeftConsumible":
-                        copiaTirado = jugador.GetComponent<Inventory>().consumibles[2];
-                        jugador.GetComponent<Inventory>().consumibles[2] = aplastadoAux as Consumible;
+                        copiaTirado = jugador.GetComponent<Inventory>().consumibles[0];
+                        jugador.GetComponent<Inventory>().consumibles[0] = aplastadoAux as Consumible;
                         return copiaTirado;
                         break;
                     case "SelectedConsumible":

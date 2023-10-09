@@ -77,11 +77,6 @@ public class Jugador : MonoBehaviour
     }
 
 
-    public void Update()
-    {
-        effectManager.ApplyEffects(this);
-    }
-
     public void AgregarEfectoPasivo(EfectoPasivo efecto)
     {
         effectManager.efectosPasivos.Add(efecto);
