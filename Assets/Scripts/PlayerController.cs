@@ -249,13 +249,13 @@ public class PlayerController : MonoBehaviour
                 efectoAux.DarEfectoAlJugador_finished = false;
                 efectoAux.MostrarEfectoVisualmente_finished = false;
                 Debug.Log(gameObject.GetComponent<Jugador>());*/
-                StartCoroutine(PlayerInventory.consumibles[1].efectoPasivo.AplicarEfecto(gameObject.GetComponent<Jugador>()));
+                StartCoroutine(PlayerInventory.consumibles[1].efectoPasivo.AplicarEfecto(gameObject.GetComponent<Jugador>(), equipamiento.transform.Find("Consumibles").Find("SelectedConsumible").GetChild(1).gameObject));
                 //activar collider de slot parent
                 equipamiento.transform.Find("Consumibles").Find("SelectedConsumible").GetComponent<BoxCollider2D>().enabled = true;
                 //eliminar consumible visualmente
-                //Destroy(equipamiento.transform.Find("Consumibles").Find("SelectedConsumible").GetChild(1).gameObject);
+                equipamiento.transform.Find("Consumibles").Find("SelectedConsumible").GetChild(1).parent = null;
                 //eliminar consumible lógicamente
-                //PlayerInventory.consumibles[1] = null;
+                PlayerInventory.consumibles[1] = null;
             }
 
         }

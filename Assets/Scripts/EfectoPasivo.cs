@@ -33,7 +33,7 @@ public class EfectoPasivo : MonoBehaviour
     }
     public EffectType effectType;
 
-    public IEnumerator AplicarEfecto(Jugador jugador)
+    public IEnumerator AplicarEfecto(Jugador jugador, GameObject objetoVisual)
     {
         jugador.effectManager.efectosPasivos.Add(this);
         Debug.Log("antes de dar efecto");
@@ -44,7 +44,7 @@ public class EfectoPasivo : MonoBehaviour
         yield return new WaitUntil(() => DarEfectoAlJugador_finished && MostrarEfectoVisualmente_finished);
 
         Debug.Log("Ambas corutinas han terminado");
-
+        Destroy(objetoVisual);
     }
 
     public IEnumerator DarEfectoAlJugador(Jugador jugador)
@@ -159,6 +159,7 @@ public class EfectoPasivo : MonoBehaviour
 
         }
         MostrarEfectoVisualmente_finished = true;
+        Destroy(effectHolder);
         yield break;
     }
 }
