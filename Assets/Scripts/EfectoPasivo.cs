@@ -28,7 +28,7 @@ public class EfectoPasivo : MonoBehaviour
         agilityDebuff,
         speedBoost,
         speedDebuff,
-        bodyPartCooldownReduction,
+        //bodyPartCooldownReduction,
         poison
     }
     public EffectType effectType;
@@ -122,11 +122,11 @@ public class EfectoPasivo : MonoBehaviour
                 yield return new WaitForSeconds(duracionEfecto);
                 jugador.ModificarVelocidad(coeficienteEfecto);
                 break;
-            case EffectType.bodyPartCooldownReduction:
+            /*case EffectType.bodyPartCooldownReduction:
                 jugador.ModificarCooldownBodypart(coeficienteEfecto);
                 yield return new WaitForSeconds(duracionEfecto);
                 jugador.ModificarCooldownBodypart(1 / coeficienteEfecto);
-                break;
+                break;*/
             case EffectType.poison:
                 for (int i = 0; i < duracionEfecto; i++)
                 {

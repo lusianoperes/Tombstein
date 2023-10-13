@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BodyPart : Item
 {
-    
+    public float useCooldown;
     public enum BodypartType 
     {   
         HeadPart,
@@ -21,4 +21,12 @@ public class BodyPart : Item
     public float estaminaExtra;
     public float velocidadExtra;
     public int agilidadExtra;
+
+    public IEnumerator UsarParte()
+    {
+        
+        Debug.Log("Has usado la parte del cuerpo");
+        yield return null;
+
+    }
 }

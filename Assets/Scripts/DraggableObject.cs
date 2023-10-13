@@ -16,6 +16,7 @@ public class DraggableObject : MonoBehaviour, IPointerDownHandler, IDragHandler,
     public GameObject nombreItem;
     public GameObject descripcionItem;
     public GameObject spriteItem;
+    public GameObject bodypartsHud; 
     private bool isDragging = false;
     private Vector2 offset;
 
@@ -27,6 +28,7 @@ public class DraggableObject : MonoBehaviour, IPointerDownHandler, IDragHandler,
         nombreItem = inventarioVisual.GetComponent<InventoryManager>().nombreDescriptor;
         descripcionItem = inventarioVisual.GetComponent<InventoryManager>().descripcionDescriptor;
         spriteItem = inventarioVisual.GetComponent<InventoryManager>().spriteDescriptor;
+        bodypartsHud = jugador.GetComponent<PlayerController>().bodypartsHud;
     }
 
     public void OnPointerEnter(PointerEventData eventData)

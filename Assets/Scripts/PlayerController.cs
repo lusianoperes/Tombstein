@@ -3,18 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody PlayerRigidbody;
     public Inventory PlayerInventory;
+    public Jugador jugador;
     public GameObject inventarioVisual;
     public GameObject panelPausa;
     public InventoryManager inventoryManager;
     public EffectManager effectManager;
     public Vector3 moveInput;
     public GameObject equipamiento;
+    public GameObject bodypartsHud;
 
     public float Speed = 7f; // Velocidad base del personaje
     public float SpeedMultiple = 1.0f; // Velocidad adicional para mi personaje
@@ -32,6 +35,11 @@ public class PlayerController : MonoBehaviour
     public bool chargedStarted = false;
     public float timeCounterA = 0f;
     public float timeCounterB = 0f;
+    public bool headOnCooldown = false;
+    public bool torsoOnCooldown = false;
+    public bool armOnCooldown = false;
+    public bool legOnCooldown = false;
+    
 
     private Weapon primaria;
     private Weapon secundaria;
@@ -63,6 +71,7 @@ public class PlayerController : MonoBehaviour
     {
         PlayerRigidbody = GetComponent<Rigidbody>();
         PlayerInventory = GetComponent<Inventory>();
+        jugador = GetComponent<Jugador>();
         inventoryManager = inventarioVisual.GetComponent<InventoryManager>();
     }
 
@@ -74,6 +83,7 @@ public class PlayerController : MonoBehaviour
         AbrirCerrarInventario();
         CambiarConsumible();
         UsarConsumible();
+        HabilidadesBodyParts();
 
         if (PlayerInventory.primaryWeapon != null && Input.GetMouseButton(0) && !(isDoinSomething) && !(primaryOnCooldown))
         {
@@ -240,15 +250,6 @@ public class PlayerController : MonoBehaviour
             if (PlayerInventory.consumibles[1] != null)
             {
                 Debug.Log("efecto consmuidosdoosos");
-                //EfectoPasivo efectoAux = new EfectoPasivo(PlayerInventory.consumibles[1].efectoPasivo);
-                /*EfectoPasivo efectoAux= new EfectoPasivo();
-                efectoAux.duracionEfecto = PlayerInventory.consumibles[1].efectoPasivo.duracionEfecto;
-                efectoAux.coeficienteEfecto = PlayerInventory.consumibles[1].efectoPasivo.coeficienteEfecto;
-                efectoAux.effectSprite = PlayerInventory.consumibles[1].efectoPasivo.effectSprite;
-                efectoAux.effectType = PlayerInventory.consumibles[1].efectoPasivo.effectType;
-                efectoAux.DarEfectoAlJugador_finished = false;
-                efectoAux.MostrarEfectoVisualmente_finished = false;
-                Debug.Log(gameObject.GetComponent<Jugador>());*/
                 StartCoroutine(PlayerInventory.consumibles[1].efectoPasivo.AplicarEfecto(gameObject.GetComponent<Jugador>(), equipamiento.transform.Find("Consumibles").Find("SelectedConsumible").GetChild(1).gameObject));
                 //activar collider de slot parent
                 equipamiento.transform.Find("Consumibles").Find("SelectedConsumible").GetComponent<BoxCollider2D>().enabled = true;
@@ -398,6 +399,78 @@ public class PlayerController : MonoBehaviour
                 inventarioVisual.SetActive(true);
                 panelPausa.SetActive(true);
             }
+        }
+    }
+
+    public void HabilidadesBodyParts()
+    {
+        if (Input.GetKeyDown(KeyCode.R) && PlayerInventory.headPart[1] != null && !headOnCooldown)
+        {
+            Debug.Log("usaste partecabesa");
+            StartCoroutine(PlayerInventory.headPart[1].UsarParte());
+            StartCoroutine(CooldownEnHudBodyparts(bodypartsHud.transform.GetChild(0).Find("HeadAbility").GetChild(0).gameObject, PlayerInventory.headPart[1].useCooldown));
+        }
+        if (Input.GetKeyDown(KeyCode.T) && PlayerInventory.torsoPart[1] != null && !torsoOnCooldown && !isDoinSomething)
+        {
+            StartCoroutine(PlayerInventory.torsoPart[1].UsarParte());
+            StartCoroutine(CooldownEnHudBodyparts(bodypartsHud.transform.GetChild(0).Find("TorsoAbility").GetChild(0).gameObject, PlayerInventory.torsoPart[1].useCooldown));
+        }
+        if (Input.GetKeyDown(KeyCode.Q) && PlayerInventory.armPart[1] != null && !armOnCooldown && !isDoinSomething)
+        {
+            StartCoroutine(PlayerInventory.armPart[1].UsarParte());
+            StartCoroutine(CooldownEnHudBodyparts(bodypartsHud.transform.GetChild(0).Find("ArmAbility").GetChild(0).gameObject, PlayerInventory.armPart[1].useCooldown));
+        }
+        if ((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && PlayerInventory.legPart[1] != null && !legOnCooldown)
+        {
+            StartCoroutine(PlayerInventory.legPart[1].UsarParte());
+            StartCoroutine(CooldownEnHudBodyparts(bodypartsHud.transform.GetChild(0).Find("LegAbility").GetChild(0).gameObject, PlayerInventory.legPart[1].useCooldown));
+        }
+    }
+
+    public IEnumerator CooldownEnHudBodyparts(GameObject textoBP, float cooldown)
+    {
+        switch(textoBP.name)
+        {
+            case "HeadCooldownText":
+            headOnCooldown = true;
+            break;
+            case "TorsoCooldownText":
+            torsoOnCooldown = true;
+            isDoinSomething = true;
+            break;
+            case "ArmCooldownText":
+            armOnCooldown = true;
+            isDoinSomething = true;
+            break;
+            case "LegCooldownText":
+            legOnCooldown = true;
+            break;
+        }
+
+        textoBP.GetComponent<TextMeshProUGUI>().enabled = true;
+        for(int i = 0; i < cooldown; i++)
+        {
+            textoBP.GetComponent<TextMeshProUGUI>().text = (cooldown - i).ToString();
+            yield return new WaitForSeconds(1);
+        }
+        textoBP.GetComponent<TextMeshProUGUI>().enabled = false;
+        
+        switch(textoBP.name)
+        {
+            case "HeadCooldownText":
+            headOnCooldown = false;
+            break;
+            case "TorsoCooldownText":
+            torsoOnCooldown = false;
+            isDoinSomething = false;
+            break;
+            case "ArmCooldownText":
+            armOnCooldown = false;
+            isDoinSomething = false;
+            break;
+            case "LegCooldownText":
+            legOnCooldown = false;
+            break;
         }
     }
     public void AgarrarObjeto()

@@ -114,13 +114,13 @@ public class Jugador : MonoBehaviour
     {
         Agilidad += (int)agilidad;
     }
-    public void ModificarCooldownBodypart(float bodypartCooldown)
+    /*public void ModificarCooldownBodypart(float bodypartCooldown)
     {
         headCurrentCooldown = headCurrentCooldown * (float)(bodypartCooldown * 0.01);
         armsCurrentCooldown = armsCurrentCooldown * (float)(bodypartCooldown * 0.01);
         torsoCurrentCooldown = torsoCurrentCooldown * (float)(bodypartCooldown * 0.01);
         legsCurrentCooldown = legsCurrentCooldown * (float)(bodypartCooldown * 0.01);
-    }
+    }*/
 
     public void RecibirDanio(int damage)
     {
