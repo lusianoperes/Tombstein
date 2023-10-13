@@ -101,7 +101,7 @@ public class Enemy : MonoBehaviour {
             isDoingSomething = true;
             yield return new WaitForSeconds(baseAttackCasting);
             SpawnAttack(baseAttack);
-            DashTo(player.position, 5, 8); //Ejemplo de un dash hacia el jugador mientras ataca
+            //DashTo(player.position, 5, 8); //Ejemplo de un dash hacia el jugador mientras ataca
             if (!baseAttack.GetComponent<EnemyAttack>().isProjectile){
                 yield return new WaitForSeconds(baseAttack.GetComponent<EnemyAttack>().lastingTime);
             }
