@@ -109,9 +109,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f2364e9010683b5898ef28c892e6db0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
-  lastingTime: 0
-  size: 0
+  damage: 5
+  lastingTime: 3
+  isProjectile: 0
+  hasKnockback: 0
+  knockbackForce: 3
+  knockbackTime: 0.25
 --- !u!54 &6666673184720259403
 Rigidbody:
   m_ObjectHideFlags: 0
