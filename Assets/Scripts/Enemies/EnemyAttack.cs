@@ -10,6 +10,7 @@ public class EnemyAttack : MonoBehaviour
     public bool hasKnockback; //La hitbox causa retroceso al jugador
     public float knockbackForce;
     public float knockbackTime;
+    public bool destroyOnCollide; //Para enemigos como la serpiente que terminan el ataque cuando colisionan
     protected Vector3 knockbackDirection;
     protected bool hasDoneDamage = false;
     protected bool hasAppliedKnockback = false;
@@ -39,7 +40,7 @@ public class EnemyAttack : MonoBehaviour
                 hasAppliedKnockback = true;
             }
         }
-        if (isProjectile) {
+        if (destroyOnCollide) {
             Destroy(gameObject);
         }
     }

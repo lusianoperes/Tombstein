@@ -26,17 +26,19 @@ public class Enemy : MonoBehaviour {
 
     protected NavMeshAgent navMeshAgent;
     protected Transform player;
-    protected bool isDoingSomething;
+    protected bool isDoingSomething = false;
     protected float pathUpdateDelay = 0.2f;
     protected float pathUpdateDeadline;
     protected float escapeDistance = 2f;
+    protected bool isDashing = false;
 
     protected void Awake() {
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
-    protected void Start()
+    public virtual void Start()
     {
+        //navMeshAgent.radius = transform.localScale.x > transform.localScale.z? transform.localScale.x : transform.localScale.z;
         player = GameObject.Find("Jugador").transform;
         enemyCurrentHp = enemyMaxHp;
         TextoVida.GetComponent<TextMeshProUGUI>().text = enemyMaxHp+"";
@@ -51,7 +53,7 @@ public class Enemy : MonoBehaviour {
     }
     protected EnemyState currentState = EnemyState.Idle;
 
-    protected void Update() //Todo lo que estaba en EnemyAI ahora está en el update
+    protected void Update()
     {
         if(!isDoingSomething){
             switch (currentState)
@@ -93,17 +95,19 @@ public class Enemy : MonoBehaviour {
 
     public virtual IEnumerator Attack() //Separado en una funcion para generalizar
     {
-        LookAtTarget(player);
-        navMeshAgent.SetDestination(transform.position);
-        isDoingSomething = true;
-        yield return new WaitForSeconds(baseAttackCasting);
-        SpawnAttack(baseAttack);
-        if (!baseAttack.GetComponent<EnemyAttack>().isProjectile){
-            yield return new WaitForSeconds(baseAttack.GetComponent<EnemyAttack>().lastingTime);
+        if (!isDashing){
+            LookAtTarget(player);
+            //navMeshAgent.SetDestination(transform.position);
+            isDoingSomething = true;
+            yield return new WaitForSeconds(baseAttackCasting);
+            SpawnAttack(baseAttack);
+            DashTo(player.position, 5, 8); //Ejemplo de un dash hacia el jugador mientras ataca
+            if (!baseAttack.GetComponent<EnemyAttack>().isProjectile){
+                yield return new WaitForSeconds(baseAttack.GetComponent<EnemyAttack>().lastingTime);
+            }
+            StartCoroutine(setBaseAttackCooldown());
+            isDoingSomething = false;
         }
-        //DashTo(player.position,5,8); //Ejemplo de un dash hacia el jugador mientras ataca
-        StartCoroutine(setBaseAttackCooldown());
-        isDoingSomething = false;
     }
 
     public virtual bool isInCooldown(){
@@ -141,12 +145,53 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    protected void DashTo (Vector3 position, float displacement, float velocity)
+    protected void DashTo (Vector3 position, float displacement, float speed)
     {
         Vector3 direction = (position - transform.position).normalized * displacement + transform.position;
-        navMeshAgent.SetDestination(direction);
-        navMeshAgent.stoppingDistance = 0;
-        navMeshAgent.speed = velocity;
+        LookAtTarget(player);
+        StartCoroutine(dash (transform.position, direction, speed));
+    }
+
+    protected IEnumerator dash (Vector3 startPosition, Vector3 target, float speed)
+    {
+        isDashing = true;
+        navMeshAgent.enabled = false;
+        float journeyLength = Vector3.Distance(startPosition, target);
+        float startTime = Time.time;
+        float fractionOfJourney;
+        while (true)
+        {
+            float journeyTime = Time.time - startTime;
+            float distanceCovered = journeyTime * speed;
+            fractionOfJourney = distanceCovered / journeyLength;
+
+            transform.position = Vector3.Lerp(startPosition, target, fractionOfJourney);
+
+            if (fractionOfJourney >= 1.0f) {
+                transform.position = target;
+                isDashing = false;
+                navMeshAgent.enabled = true;
+                yield break;
+            } else if (HasCollidedWithObstacle()) {
+                isDashing = false;
+                navMeshAgent.enabled = true;
+                yield break;
+            }
+
+            yield return null;
+        }
+        
+        transform.position = target;
+        isDashing = false;
+    }
+
+    private bool HasCollidedWithObstacle()
+    {
+        Vector3 raycastOrigin = transform.position + Vector3.up * 0.5f;
+        Vector3 raycastDirection = transform.forward;
+        float raycastDistance = 0.3f;
+        RaycastHit hit;
+        return Physics.Raycast(raycastOrigin, raycastDirection, out hit, raycastDistance);
     }
 
     public void SpawnAttack(GameObject attackPrefab)

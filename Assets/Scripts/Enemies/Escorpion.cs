@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using JetBrains.Annotations;
+using TMPro;
+using UnityEngine.AI;
 
 public class Escorpion : Enemy
 {
@@ -10,6 +13,20 @@ public class Escorpion : Enemy
     public GameObject sting;    
     protected bool isStingInCooldown = false;
     protected bool betweenAttacks = false;
+
+    public override void Start(){
+        player = GameObject.Find("Jugador").transform;
+        TextoVida.GetComponent<TextMeshProUGUI>().text = enemyMaxHp+"";
+        //Valores default de atributos
+        enemyMaxHp = 100;
+        enemyCurrentHp = enemyMaxHp;
+        enemySpeed = 3.5f;
+        enemyRange = 2;
+        baseAttackCooldown = 5;
+        baseAttackCasting = 0.25f;
+        stingCooldown = 5;
+        stingCasting = 0.25f;
+    }
 
     public override IEnumerator Attack()
     {
