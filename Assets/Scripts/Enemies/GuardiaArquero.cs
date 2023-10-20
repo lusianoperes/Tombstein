@@ -5,18 +5,17 @@ using JetBrains.Annotations;
 using TMPro;
 using UnityEngine.AI;
 
-public class Serpiente : Enemy
+public class GuardiaArquero : Enemy
 {
-    void Start()
-    {
+    public override void Start(){
         player = GameObject.Find("Jugador").transform;
         //Valores default de atributos
         enemyMaxHp = 50;
         enemyCurrentHp = enemyMaxHp;
         enemySpeed = 3.5f;
-        enemyRange = 10;
+        enemyRange = 15;
         baseAttackCooldown = 5;
-        baseAttackCasting = 0.25f;
+        baseAttackCasting = 3;
         //
         TextoVida.GetComponent<TextMeshProUGUI>().text = enemyMaxHp+"";
     }
@@ -28,9 +27,7 @@ public class Serpiente : Enemy
         isDoingSomething = true;
         yield return new WaitForSeconds(baseAttackCasting);
         SpawnAttack(baseAttack);
-        DashTo(player.position, 10, 8);
-        yield return new WaitUntil(()=>!isDashing);
-        //yield return new WaitForSeconds(baseAttack.GetComponent<EnemyAttack>().lastingTime);
+        yield return new WaitForSeconds(baseAttack.GetComponent<EnemyAttack>().lastingTime);
         StartCoroutine(setBaseAttackCooldown());
         isDoingSomething = false;
     }

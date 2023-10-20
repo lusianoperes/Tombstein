@@ -97,7 +97,7 @@ public class Enemy : MonoBehaviour {
     {
         if (!isDashing){
             LookAtTarget(player);
-            //navMeshAgent.SetDestination(transform.position);
+            navMeshAgent.SetDestination(transform.position);
             isDoingSomething = true;
             yield return new WaitForSeconds(baseAttackCasting);
             SpawnAttack(baseAttack);
@@ -148,6 +148,7 @@ public class Enemy : MonoBehaviour {
     protected void DashTo (Vector3 position, float displacement, float speed)
     {
         Vector3 direction = (position - transform.position).normalized * displacement + transform.position;
+        direction.y = transform.position.y;
         LookAtTarget(player);
         StartCoroutine(dash (transform.position, direction, speed));
     }
@@ -187,7 +188,7 @@ public class Enemy : MonoBehaviour {
 
     private bool HasCollidedWithObstacle()
     {
-        Vector3 raycastOrigin = transform.position + Vector3.up * 0.5f;
+        Vector3 raycastOrigin = transform.position + Vector3.up * 0.5f;// + transform.forward.normalized * transform.localScale.z / 2;
         Vector3 raycastDirection = transform.forward;
         float raycastDistance = 0.3f;
         RaycastHit hit;
@@ -196,7 +197,7 @@ public class Enemy : MonoBehaviour {
 
     public void SpawnAttack(GameObject attackPrefab)
     {
-        Vector3 attackSpawn = transform.position + transform.forward * transform.localScale.z;
+        Vector3 attackSpawn = transform.position + transform.forward * (transform.localScale.z);
         GameObject attackInstantiated = Instantiate(attackPrefab, attackSpawn, Quaternion.identity);
 
         attackInstantiated.transform.rotation = transform.rotation;
@@ -221,6 +222,12 @@ public class Enemy : MonoBehaviour {
         lookPos.y = 0;
         Quaternion rotation = Quaternion.LookRotation(lookPos);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 0.2f);
+    }
+
+    protected void LookAtTargetWithoutSlerp (Transform target) {
+        Vector3 lookPos = target.position;
+        lookPos.y = transform.position.y;
+        transform.LookAt(lookPos);
     }
 
     protected bool isLookingAtTarget (Transform target) {

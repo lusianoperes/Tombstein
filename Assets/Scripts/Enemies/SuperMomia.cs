@@ -5,17 +5,17 @@ using JetBrains.Annotations;
 using TMPro;
 using UnityEngine.AI;
 
-public class GuardiaDaga : Enemy
+public class SuperMomia : Enemy
 {
     public override void Start(){
         player = GameObject.Find("Jugador").transform;
         //Valores default de atributos
-        enemyMaxHp = 50;
+        enemyMaxHp = 300;
         enemyCurrentHp = enemyMaxHp;
-        enemySpeed = 3.5f;
+        enemySpeed = 6;
         enemyRange = 2;
-        baseAttackCooldown = 5;
-        baseAttackCasting = 0.25f;
+        baseAttackCooldown = 3;
+        baseAttackCasting = 0.5f;
         //
         TextoVida.GetComponent<TextMeshProUGUI>().text = enemyMaxHp+"";
     }
@@ -29,7 +29,20 @@ public class GuardiaDaga : Enemy
         SpawnAttack(baseAttack);
         DashTo(player.position, 3, 8);
         yield return new WaitForSeconds(baseAttack.GetComponent<EnemyAttack>().lastingTime);
+        LookAtTargetWithoutSlerp(player);
+        SpawnAttack(baseAttack);
+        DashTo(player.position, 3, 8);
+        yield return new WaitForSeconds(baseAttack.GetComponent<EnemyAttack>().lastingTime);
+        LookAtTargetWithoutSlerp(player);
+        SpawnAttack(baseAttack);
+        DashTo(player.position, 3, 8);
+        yield return new WaitForSeconds(baseAttack.GetComponent<EnemyAttack>().lastingTime);
+        LookAtTargetWithoutSlerp(player);
+        SpawnAttack(baseAttack);
+        DashTo(player.position, 3, 8);
+        yield return new WaitForSeconds(baseAttack.GetComponent<EnemyAttack>().lastingTime);
         StartCoroutine(setBaseAttackCooldown());
+
         isDoingSomething = false;
     }
 }

@@ -14,7 +14,6 @@ public class EnemyAttack : MonoBehaviour
     protected Vector3 knockbackDirection;
     protected bool hasDoneDamage = false;
     protected bool hasAppliedKnockback = false;
-    //Faltan añadir efectos
     
     protected IEnumerator LifeTime(float timeWhileAlive)
     {

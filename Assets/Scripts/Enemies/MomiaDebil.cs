@@ -9,14 +9,15 @@ public class MomiaDebil : Enemy
 {
     public override void Start(){
         player = GameObject.Find("Jugador").transform;
-        TextoVida.GetComponent<TextMeshProUGUI>().text = enemyMaxHp+"";
         //Valores default de atributos
-        enemyMaxHp = 100;
+        enemyMaxHp = 50;
         enemyCurrentHp = enemyMaxHp;
-        enemySpeed = 3.5f;
+        enemySpeed = 2f;
         enemyRange = 2;
         baseAttackCooldown = 5;
         baseAttackCasting = 0.25f;
+        //
+        TextoVida.GetComponent<TextMeshProUGUI>().text = enemyMaxHp+"";
     }
 
     public override IEnumerator Attack()
