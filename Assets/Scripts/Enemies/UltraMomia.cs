@@ -29,7 +29,6 @@ public class UltraMomia : Enemy
 
     public override IEnumerator Attack()
     {
-        LookAtTarget(player);
         isDoingSomething = true;
         SpawnAttack(firstWave, transform.position);
         yield return new WaitForSeconds(10);
