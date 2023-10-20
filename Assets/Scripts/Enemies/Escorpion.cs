@@ -33,18 +33,19 @@ public class Escorpion : Enemy
     {
         LookAtTarget(player);
         navMeshAgent.SetDestination(transform.position);
+        Vector3 attackSpawn = transform.position + transform.forward * (transform.localScale.z);
         if (!isStingInCooldown) {
             isDoingSomething = true;
             yield return new WaitForSeconds(stingCasting);
-            SpawnAttack(sting);
+            SpawnAttack(sting, attackSpawn);
             yield return new WaitForSeconds(sting.GetComponent<EnemyAttack>().lastingTime);
             StartCoroutine(setStingCooldown());
         } else {
             isDoingSomething = true;
             yield return new WaitForSeconds(baseAttackCasting);
-            SpawnAttack(baseAttack);
+            SpawnAttack(baseAttack, attackSpawn);
             yield return new WaitForSeconds(baseAttack.GetComponent<EnemyAttack>().lastingTime);
-            SpawnAttack(baseAttack);
+            SpawnAttack(baseAttack, attackSpawn);
             yield return new WaitForSeconds(baseAttack.GetComponent<EnemyAttack>().lastingTime);
             StartCoroutine(setBaseAttackCooldown());
         }

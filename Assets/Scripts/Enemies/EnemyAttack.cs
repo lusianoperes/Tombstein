@@ -11,6 +11,7 @@ public class EnemyAttack : MonoBehaviour
     public float knockbackForce;
     public float knockbackTime;
     public bool destroyOnCollide; //Para enemigos como la serpiente que terminan el ataque cuando colisionan
+    public bool areEnemies;
     protected Vector3 knockbackDirection;
     protected bool hasDoneDamage = false;
     protected bool hasAppliedKnockback = false;
@@ -24,7 +25,9 @@ public class EnemyAttack : MonoBehaviour
     protected void Start()
     {   
         //Uniform_ResizeAttack(size);
-        StartCoroutine(LifeTime(lastingTime));
+        if (!areEnemies){
+            StartCoroutine(LifeTime(lastingTime));
+        }
     }
     
     protected void OnTriggerEnter(Collider other)

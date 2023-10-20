@@ -7,6 +7,13 @@ using UnityEngine.AI;
 
 public class UltraMomia : Enemy
 {
+    [Header("Enemies")]
+    public GameObject firstWave;
+    public GameObject secondWave;
+    public GameObject thirdWave;
+    public GameObject fourthWave;
+    public GameObject fifthWave;
+
     public override void Start(){
         player = GameObject.Find("Jugador").transform;
         //Valores default de atributos
@@ -24,15 +31,15 @@ public class UltraMomia : Enemy
     {
         LookAtTarget(player);
         isDoingSomething = true;
-        //Spawnea 5 momias débiles
+        SpawnAttack(firstWave, transform.position);
         yield return new WaitForSeconds(10);
-        //Spawnea 4 momias débiles y 1 Momia pesada
+        SpawnAttack(secondWave, transform.position);
         yield return new WaitForSeconds(10);
-        //Spawnea 2 supermomias
+        SpawnAttack(thirdWave, transform.position);
         yield return new WaitForSeconds(15);
-        //Spawnea 3 momias pesadas y 1 Supermomia
+        SpawnAttack(fourthWave, transform.position);
         yield return new WaitForSeconds(15);
-        //Spawnea 2 supermomias 5 enemigos débiles y 2 momias pesadas
+        SpawnAttack(fifthWave, transform.position);
         yield return new WaitForSeconds(20);
         isDoingSomething = false;
     }

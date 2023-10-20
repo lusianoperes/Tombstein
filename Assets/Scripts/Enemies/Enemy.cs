@@ -100,7 +100,8 @@ public class Enemy : MonoBehaviour {
             navMeshAgent.SetDestination(transform.position);
             isDoingSomething = true;
             yield return new WaitForSeconds(baseAttackCasting);
-            SpawnAttack(baseAttack);
+            Vector3 attackSpawn = transform.position + transform.forward * (transform.localScale.z);
+            SpawnAttack(baseAttack, attackSpawn);
             //DashTo(player.position, 5, 8); //Ejemplo de un dash hacia el jugador mientras ataca
             if (!baseAttack.GetComponent<EnemyAttack>().isProjectile){
                 yield return new WaitForSeconds(baseAttack.GetComponent<EnemyAttack>().lastingTime);
@@ -195,9 +196,8 @@ public class Enemy : MonoBehaviour {
         return Physics.Raycast(raycastOrigin, raycastDirection, out hit, raycastDistance);
     }
 
-    public void SpawnAttack(GameObject attackPrefab)
+    public void SpawnAttack(GameObject attackPrefab, Vector3 attackSpawn)
     {
-        Vector3 attackSpawn = transform.position + transform.forward * (transform.localScale.z);
         GameObject attackInstantiated = Instantiate(attackPrefab, attackSpawn, Quaternion.identity);
 
         attackInstantiated.transform.rotation = transform.rotation;
@@ -212,7 +212,7 @@ public class Enemy : MonoBehaviour {
         {
             Rigidbody rb = attackInstantiated.GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * baseAttackSpeed, ForceMode.VelocityChange);
-        } else {
+        } else if (!attackStats.areEnemies) {
             attackInstantiated.transform.parent = transform; //La hitbox ahora es hijo del enemigo para que esta lo siga
         }
     }

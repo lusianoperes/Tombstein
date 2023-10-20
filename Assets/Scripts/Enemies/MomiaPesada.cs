@@ -26,7 +26,8 @@ public class MomiaPesada : Enemy
         navMeshAgent.SetDestination(transform.position);
         isDoingSomething = true;
         yield return new WaitForSeconds(baseAttackCasting);
-        SpawnAttack(baseAttack);
+        Vector3 attackSpawn = transform.position + transform.forward * (transform.localScale.z);
+        SpawnAttack(baseAttack,attackSpawn);
         yield return new WaitForSeconds(baseAttack.GetComponent<EnemyAttack>().lastingTime);
         StartCoroutine(setBaseAttackCooldown());
         isDoingSomething = false;

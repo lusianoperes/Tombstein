@@ -27,7 +27,8 @@ public class Serpiente : Enemy
         navMeshAgent.SetDestination(transform.position);
         isDoingSomething = true;
         yield return new WaitForSeconds(baseAttackCasting);
-        SpawnAttack(baseAttack);
+        Vector3 attackSpawn = transform.position + transform.forward * (transform.localScale.z);
+        SpawnAttack(baseAttack,attackSpawn);
         DashTo(player.position, 10, 8);
         yield return new WaitUntil(()=>!isDashing);
         //yield return new WaitForSeconds(baseAttack.GetComponent<EnemyAttack>().lastingTime);

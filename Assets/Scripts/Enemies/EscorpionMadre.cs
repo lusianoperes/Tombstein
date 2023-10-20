@@ -14,12 +14,18 @@ public class EscorpionMadre : Enemy
     protected bool isStingInCooldown = false;
     protected bool betweenAttacks = false;
 
+    [Header("Enemies")]
+    public GameObject fiveScorpions;
+    public GameObject tenScorpions;
+    protected bool isFiveScorpionsInCooldown = false;
+    protected bool isTenScorpionsInCooldown = false;
+
     public override void Start(){
         player = GameObject.Find("Jugador").transform;
         //Valores default de atributos
         enemyMaxHp = 1000;
         enemyCurrentHp = enemyMaxHp;
-        enemySpeed = 2.75f;
+        enemySpeed = 0;
         enemyRange = 100;
         baseAttackCooldown = 5;
         baseAttackCasting = 0.5f;
@@ -32,35 +38,38 @@ public class EscorpionMadre : Enemy
     public override IEnumerator Attack()
     {
         LookAtTarget(player);
+        isDoingSomething = true;
         if (enemyCurrentHp > 700) {
-            //crea 5 escorpiones
+            SpawnAttack(fiveScorpions, transform.position);
+            StartCoroutine(setFiveScorpionsCooldown());
         } else if (enemyCurrentHp > 500) {
-            //crea 10 escorpiones
+            SpawnAttack(tenScorpions, transform.position);
+            StartCoroutine(setTenScorpionsCooldown());
         } else {
-            enemyRange = 2;
+            enemySpeed = 2.75f;
+            enemyRange = 4;
             navMeshAgent.SetDestination(transform.position);
+            Vector3 attackSpawn = transform.position + transform.forward * (transform.localScale.z);
             if (!isStingInCooldown) {
-                isDoingSomething = true;
                 yield return new WaitForSeconds(stingCasting);
-                SpawnAttack(sting);
+                SpawnAttack(sting, attackSpawn);
                 yield return new WaitForSeconds(sting.GetComponent<EnemyAttack>().lastingTime);
                 StartCoroutine(setStingCooldown());
             } else {
-                isDoingSomething = true;
                 yield return new WaitForSeconds(baseAttackCasting);
-                SpawnAttack(baseAttack);
+                SpawnAttack(baseAttack,attackSpawn);
                 yield return new WaitForSeconds(baseAttack.GetComponent<EnemyAttack>().lastingTime);
-                SpawnAttack(baseAttack);
+                SpawnAttack(baseAttack,attackSpawn);
                 yield return new WaitForSeconds(baseAttack.GetComponent<EnemyAttack>().lastingTime);
                 StartCoroutine(setBaseAttackCooldown());
             }
             StartCoroutine(setCooldownBetweenAttacks());
-            isDoingSomething = false;
         }
+        isDoingSomething = false;
     }
 
     public override bool isInCooldown(){
-        return (isBaseAttackInCooldown && isStingInCooldown) || betweenAttacks;
+        return (isBaseAttackInCooldown && isStingInCooldown) || betweenAttacks || isFiveScorpionsInCooldown || isTenScorpionsInCooldown;
     }
 
     protected IEnumerator setStingCooldown(){
@@ -73,5 +82,17 @@ public class EscorpionMadre : Enemy
         betweenAttacks = true;
         yield return new WaitForSeconds(0.25f);
         betweenAttacks = false;
+    }
+
+    protected IEnumerator setFiveScorpionsCooldown(){
+        isFiveScorpionsInCooldown = true;
+        yield return new WaitForSeconds(10);
+        isFiveScorpionsInCooldown = false;
+    }
+
+    protected IEnumerator setTenScorpionsCooldown(){
+        isTenScorpionsInCooldown = true;
+        yield return new WaitForSeconds(10);
+        isTenScorpionsInCooldown = false;
     }
 }
