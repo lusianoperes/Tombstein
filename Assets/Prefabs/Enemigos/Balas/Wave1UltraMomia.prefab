@@ -1,0 +1,368 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8507452589871325961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1033997518965249780}
+  - component: {fileID: 1348187145180404196}
+  m_Layer: 0
+  m_Name: Wave1UltraMomia
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1033997518965249780
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8507452589871325961}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.59, y: 1.0062481, z: 83.07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 373909599587552393}
+  - {fileID: 6761316341866690786}
+  - {fileID: 9160293514808739602}
+  - {fileID: 4897860045639634848}
+  - {fileID: 6435456030405268690}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1348187145180404196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8507452589871325961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f2364e9010683b5898ef28c892e6db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  lastingTime: 0
+  isProjectile: 0
+  hasKnockback: 0
+  knockbackForce: 0
+  knockbackTime: 0
+  destroyOnCollide: 0
+  areEnemies: 1
+--- !u!1001 &2066486118085884135
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1033997518965249780}
+    m_Modifications:
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.764665
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.382103
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754037, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_Name
+      value: Momia debil (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+--- !u!4 &373909599587552393 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+  m_PrefabInstance: {fileID: 2066486118085884135}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4670958257311654076
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1033997518965249780}
+    m_Modifications:
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754037, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_Name
+      value: Momia debil
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+--- !u!4 &6435456030405268690 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+  m_PrefabInstance: {fileID: 4670958257311654076}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4920397562848955532
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1033997518965249780}
+    m_Modifications:
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.972943
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.25730133
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754037, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_Name
+      value: Momia debil (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+--- !u!4 &6761316341866690786 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+  m_PrefabInstance: {fileID: 4920397562848955532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6513743427054828494
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1033997518965249780}
+    m_Modifications:
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.08741492
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.8163147
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754037, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_Name
+      value: Momia debil (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+--- !u!4 &4897860045639634848 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+  m_PrefabInstance: {fileID: 6513743427054828494}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7386502121693377404
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1033997518965249780}
+    m_Modifications:
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.96541
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.9025269
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845850088812754037, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+      propertyPath: m_Name
+      value: Momia debil (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+--- !u!4 &9160293514808739602 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1845850088812754030, guid: 30e338df6df9d3f46b45264f7aa00683, type: 3}
+  m_PrefabInstance: {fileID: 7386502121693377404}
+  m_PrefabAsset: {fileID: 0}
