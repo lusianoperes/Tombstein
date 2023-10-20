@@ -392,22 +392,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: Wolfram
-  melee: 1
   enemyMaxHp: 50
-  enemyCurentHp: 50
-  enemyDamage: 10
-  disAtaqueYEnemigo: 3
-  velAtaqueDistancia: 3
-  attackSize: 1
-  cadenciaAtaqueEnemigo: 2
-  duracionAtaque: 0.2
-  attackDistance: 5
-  attackBox: {fileID: 7093964316592075325, guid: c2c62e3e3d863e34d83c357681fa9516, type: 3}
-  raycastLayer:
-    serializedVersion: 2
-    m_Bits: 0
+  enemySpeed: 3.5
+  enemyRange: 2
   RellenoVida: {fileID: 4853808480840714249}
   TextoVida: {fileID: 4853808480676104679}
+  baseAttackCooldown: 3
+  baseAttackSpeed: 3
+  baseAttackCasting: 0.25
+  baseAttack: {fileID: 1256915675213131534, guid: 708fc20b254e6b741997a05b04c9937e, type: 3}
 --- !u!195 &7153519829828856942
 NavMeshAgent:
   m_ObjectHideFlags: 0

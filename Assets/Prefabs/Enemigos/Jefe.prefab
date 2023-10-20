@@ -358,22 +358,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: EnemigoFuerte
-  melee: 0
   enemyMaxHp: 1500
-  enemyCurentHp: 1500
-  enemyDamage: 70
-  disAtaqueYEnemigo: 2
-  velAtaqueDistancia: 20
-  attackSize: 1
-  cadenciaAtaqueEnemigo: 5
-  duracionAtaque: 1
-  attackDistance: 15
-  attackBox: {fileID: 6484799358309390487, guid: 2e16829eba2b8ff4db64b0f6945935ce, type: 3}
-  raycastLayer:
-    serializedVersion: 2
-    m_Bits: 0
+  enemySpeed: 3.5
+  enemyRange: 20
   RellenoVida: {fileID: 8984355633950258142}
   TextoVida: {fileID: 8984355635526251056}
+  baseAttackCooldown: 5
+  baseAttackSpeed: 3
+  baseAttackCasting: 0
+  baseAttack: {fileID: 6484799358309390487, guid: 2e16829eba2b8ff4db64b0f6945935ce, type: 3}
 --- !u!195 &6680120980368594873
 NavMeshAgent:
   m_ObjectHideFlags: 0
